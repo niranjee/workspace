@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_zBVkUN2wEe2XuKZv3TTpmQ" targetNamespace="http://tns.tibco.com/bw/composite/complex_mappings" name="complex_mappings" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_zqP-cN2wEe2XuKZv3TTpmQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zqcywN2wEe2XuKZv3TTpmQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zqi5YN2wEe2XuKZv3TTpmQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zqpnEN2wEe2XuKZv3TTpmQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zqw70N2wEe2XuKZv3TTpmQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zq2bYN2wEe2XuKZv3TTpmQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zq8iAN2wEe2XuKZv3TTpmQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zrCooN2wEe2XuKZv3TTpmQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_zrIvQN2wEe2XuKZv3TTpmQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SMWpsO8nEe25WI12mMnvlw" name="newProperty" type="dataformat:DataFormat" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_zarRYN2wEe2XuKZv3TTpmQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zarRYd2wEe2XuKZv3TTpmQ" processName="complex_mappings.merging_multiple_to_single"/>
+  </sca:component>
+  <sca:component xmi:id="_Q6P1UN3TEe2XuKZv3TTpmQ" name="Componentmerging_single_to_multiple" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Q6P1Ud3TEe2XuKZv3TTpmQ" processName="complex_mappings.merging_single_to_multiple"/>
+  </sca:component>
+  <sca:component xmi:id="_RJWGoN3mEe2XuKZv3TTpmQ" name="Componentmerging_two_list" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_RJWGod3mEe2XuKZv3TTpmQ" processName="complex_mappings.merging_two_list"/>
+  </sca:component>
+  <sca:component xmi:id="_FebGoN6hEe2gBvCSKgWfAw" name="Componentmerging_data" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FebGod6hEe2gBvCSKgWfAw" processName="complex.merging_data"/>
+  </sca:component>
+  <sca:component xmi:id="_BE6LIO8oEe25WI12mMnvlw" name="Component1Process" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BE6LIe8oEe25WI12mMnvlw" processName="complex.Process"/>
+  </sca:component>
+</sca:composite>

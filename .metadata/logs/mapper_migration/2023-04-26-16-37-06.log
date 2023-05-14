@@ -1,0 +1,11 @@
+2023-04-26 16:37:06,337 [Worker-103] INFO  com.tibco.bw.migration.debug  - Generating BW 6 application for BW5 project/projects at C:\Users\NiranjanBatana\Desktop\mapper_migration
+2023-04-26 16:37:06,637 [Worker-103] INFO  com.tibco.bw.migration.debug  - Migrating Global Variables..
+2023-04-26 16:37:06,869 [Worker-103] INFO  com.tibco.bw.migration.debug  - Migrating Shared Resources..
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/baseDocument       file:/d:/workspace/mapper_migration/Schemas/ae/baseDocument.xsd
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/baseDocument   with location   d:/workspace/mapper_migration/Schemas/ae/baseDocument.xsd
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/xmlns/ae2xsd/2002/05       file:/d:/workspace/mapper_migration/Schemas/ae2xsd.xsd
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/xmlns/ae2xsd/2002/05   with location   d:/workspace/mapper_migration/Schemas/ae2xsd.xsd
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/xmlns/ae2xsd/2002/05       file:/d:/workspace/mapper_migration/Schemas/ae2xsd.xsd
+2023-04-26 16:37:06,938 [Worker-103] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/xmlns/ae2xsd/2002/05   with location   d:/workspace/mapper_migration/Schemas/ae2xsd.xsd
+2023-04-26 16:37:06,938 [Worker-103] INFO  com.tibco.bw.migration.debug  - Migrating Processes..
+2023-04-26 16:37:06,938 [Worker-103] INFO  com.tibco.bw.migration.debug  - Process Migration Order is => 

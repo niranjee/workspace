@@ -1,0 +1,826 @@
+2023-04-21 09:42:18,124 [Worker-10] INFO  com.tibco.bw.migration.debug  - Generating BW 6 application for BW5 project/projects at C:\Users\NiranjanBatana\Downloads\AMS_AUCDAT_PUB\AMS_AUCDAT_PUB
+2023-04-21 09:42:21,960 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating Global Variables..
+2023-04-21 09:42:22,347 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating Shared Resources..
+2023-04-21 09:42:22,432 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Exception/ExceptionRequest.xsd
+2023-04-21 09:42:22,463 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Logging/LogRequest.xsd
+2023-04-21 09:42:22,501 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/RequestHeader.xsd
+2023-04-21 09:42:22,548 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/Resources/Definitions/XSD/SuspendEngineErrorList.xsd
+2023-04-21 09:42:22,563 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/Schemas/AMS_AUCDATA_V1.0.xsd
+2023-04-21 09:42:22,594 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating XML Schema resource :C:/Users/NiranjanBatana/Downloads/AMS_AUCDAT_PUB/AMS_AUCDAT_PUB/Schemas/FILE_TRGMSG_V1.0.xsd
+2023-04-21 09:42:22,944 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedjmscon  com.tibco.bw.tools.migrator.v6.palette.jms.connection.JMSConnectionMigrator@7e82596
+2023-04-21 09:42:23,271 [Worker-10] INFO  com.tibco.bw.migration.debug  - Creating JMS Shared Resource for URI : d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/Connections/JMS/CommonLEClient.sharedjmscon
+2023-04-21 09:42:23,436 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedjmsapp  com.tibco.bw.tools.migrator.v6.palette.jms.properties.ApplicationPropertiesMigrator@5bc45ad1
+2023-04-21 09:42:23,674 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedjmscon  com.tibco.bw.tools.migrator.v6.palette.jms.connection.JMSConnectionMigrator@7e82596
+2023-04-21 09:42:23,937 [Worker-10] INFO  com.tibco.bw.migration.debug  - Creating JMS Shared Resource for URI : d:/workspace/AMS_AUCDAT_PUB/Resources/Connections/EMS/ESB_JMSConnection.sharedjmscon
+2023-04-21 09:42:23,937 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedjmscon  com.tibco.bw.tools.migrator.v6.palette.jms.connection.JMSConnectionMigrator@7e82596
+2023-04-21 09:42:24,175 [Worker-10] INFO  com.tibco.bw.migration.debug  - Creating JMS Shared Resource for URI : d:/workspace/AMS_AUCDAT_PUB/Resources/Connections/EMS/JMS-Connection.sharedjmscon
+2023-04-21 09:42:24,175 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedparse  com.tibco.bw.tools.migrator.v6.palette.parse.sharedResource.DataFormatSharedResourceTypeMigrator@78ed7b1
+2023-04-21 09:42:24,808 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Found Migrator for fileExtensionsharedvariable  com.tibco.bw.tools.migrator.v6.palette.general.activities.sharedresource.SharedVariableResourceTypeMigrator@6568dddd
+2023-04-21 09:42:25,026 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating "d:/workspace/AMS_AUCDAT_PUB/Resources/SharedVariables/SuspendEngineErrorList.sharedvariable" Resource
+2023-04-21 09:42:25,028 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating Schema
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/CommonLE2/namespace/Public/Exception/ExceptionRequest.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Exception/ExceptionRequest.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/CommonLE2/namespace/Public/Exception/ExceptionRequest.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Exception/ExceptionRequest.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/CommonLE2/namespace/Public/Logging/LogRequest.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Logging/LogRequest.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/CommonLE2/namespace/Public/Logging/LogRequest.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/Logging/LogRequest.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/CommonLE2/namespace/Public/Common/RequestHeader.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/RequestHeader.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/CommonLE2/namespace/Public/Common/RequestHeader.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/CLE/SharedResources/SchemaDefinitions/Technical/Common/RequestHeader.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://hcamerica.com/canonicalmodels/Customer/Private/SuspendEngineErrors/1.0       file:/d:/workspace/AMS_AUCDAT_PUB/Resources/Definitions/XSD/SuspendEngineErrorList.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/canonicalmodels/Customer/Private/SuspendEngineErrors/1.0   with location   d:/workspace/AMS_AUCDAT_PUB/Resources/Definitions/XSD/SuspendEngineErrorList.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://hcamerica.com/Schema/Auction/AMS_AUCDATA_V1.0       file:/d:/workspace/AMS_AUCDAT_PUB/Schemas/AMS_AUCDATA_V1.0.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/Schema/Auction/AMS_AUCDATA_V1.0   with location   d:/workspace/AMS_AUCDAT_PUB/Schemas/AMS_AUCDATA_V1.0.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://hcamerica.com/Schema/GenericTriggerProcess/FILE_TRGMSG_V1.0       file:/d:/workspace/AMS_AUCDAT_PUB/Schemas/FILE_TRGMSG_V1.0.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/Schema/GenericTriggerProcess/FILE_TRGMSG_V1.0   with location   d:/workspace/AMS_AUCDAT_PUB/Schemas/FILE_TRGMSG_V1.0.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/CLE/UtilityServices/ExceptionHandling/HandleException-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/CLE/UtilityServices/ExceptionHandling/HandleException-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/CLE/UtilityServices/ExceptionHandling/HandleException-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/CLE/UtilityServices/ExceptionHandling/HandleException-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-End-Output.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd       file:/d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd   with location   d:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE-Start-Input.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://ns.tibco.com/jms/appProp/ESB_JMSApplicationProperties       file:/d:/workspace/AMS_AUCDAT_PUB/Resources/Connections/EMS/ESB_JMSApplicationProperties.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://ns.tibco.com/jms/appProp/ESB_JMSApplicationProperties   with location   d:/workspace/AMS_AUCDAT_PUB/Resources/Connections/EMS/ESB_JMSApplicationProperties.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - http://www.tibco.com/xmlns/ae2xsd/2002/05       file:/d:/workspace/AMS_AUCDAT_PUB/Schemas/ae2xsd.xsd
+2023-04-21 09:42:26,032 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/xmlns/ae2xsd/2002/05   with location   d:/workspace/AMS_AUCDAT_PUB/Schemas/ae2xsd.xsd
+2023-04-21 09:42:26,040 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating Processes..
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Process Migration Order is => 
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - CLE/UtilityServices/Logging/LogMessage.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - CLE/UtilityServices/ExceptionHandling/HandleException.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Processes/Publisher/AMS_AUCDAT_PUB_CORE.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Processes/Starter/AMS_AUCDAT_PUB.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - Processes/Starter/Process Definition.process
+2023-04-21 09:42:26,042 [Worker-10] INFO  com.tibco.bw.migration.debug  - UtilityServices/SuspendEngineProcess/StarterProcesses/InitSuspendEngineErrors.process
+2023-04-21 09:42:28,756 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - CLE/UtilityServices/Logging/LogMessage.process
+2023-04-21 09:42:28,766 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "CLE.UtilityServices.Logging.LogMessage" migration started
+2023-04-21 09:42:29,136 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:29,305 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:29,305 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 1180486447
+2023-04-21 09:42:29,305 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:29,305 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:29,321 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Write to Log" migration tasks :
+2023-04-21 09:42:29,321 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:29,321 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: User
+2023-04-21 09:42:29,321 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Write to Log" has been migrated.
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Write-to-Log
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Write-to-Log	HASHCODE: 1856000954
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Mapper activity "Map Data" migration tasks :
+2023-04-21 09:42:29,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Mapper Activity
+2023-04-21 09:42:30,318 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Map Data" has been migrated.
+2023-04-21 09:42:30,328 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Map-Data
+2023-04-21 09:42:30,328 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Map-Data	HASHCODE: 583642996
+2023-04-21 09:42:30,328 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:30,328 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:30,328 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating JMS Send Activity activity with name Send to CLE
+2023-04-21 09:42:30,813 [Worker-10] ERROR com.tibco.bw.migration.debug  - java.net.MalformedURLException: unknown protocol: d
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: java.net.MalformedURLException: unknown protocol: d
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.XslMappingUtils.findElementDeclaration(XslMappingUtils.java:266)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.XslMappingUtils.findElementDeclaration(XslMappingUtils.java:190)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convertCopyOfBindingForRepeatingElemBinding(ActivityInputXslMappingConverter.java:1931)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convertBindingFormula(ActivityInputXslMappingConverter.java:1552)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convertBindingFormula(ActivityInputXslMappingConverter.java:1557)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convertBindingFormula(ActivityInputXslMappingConverter.java:1557)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convertBindingFormula(ActivityInputXslMappingConverter.java:1557)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convert(ActivityInputXslMappingConverter.java:234)
+	at com.tibco.bw.tools.migrator.v6.utils.Bw6ProcessBuilderUtils.migrateActivityInputXslMapping(Bw6ProcessBuilderUtils.java:645)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.migrateActivitySignatureAndMapping(Bw6ProcessBuilder.java:4173)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildActivity(Bw6ProcessBuilder.java:1153)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildActivity(Bw6ProcessBuilder.java:948)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildFlow(Bw6ProcessBuilder.java:913)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildProcess(Bw6ProcessBuilder.java:460)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.build(Bw6ProcessBuilder.java:337)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.buildProcess(Bw6ProcessGenerator.java:790)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.buildProcess(Bw6ProcessGenerator.java:769)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generate(Bw6ProcessGenerator.java:329)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generateProcesses(Bw6ProcessGenerator.java:272)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generateProcesses(Bw6ProcessGenerator.java:131)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generate(Bw6ProcessGenerator.java:113)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generateProcesses(CompositeApplicationGenerator.java:1521)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.writeCompositeAppProject(CompositeApplicationGenerator.java:585)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generateProject(CompositeApplicationGenerator.java:368)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generate(CompositeApplicationGenerator.java:221)
+	at com.tibco.bw.tools.migrator.v6.impl.Bw6MigratorV2.migrate(Bw6MigratorV2.java:159)
+	at com.tibco.bw.tools.migrator.v6.impl.Bw6MigratorV2.migrate(Bw6MigratorV2.java:100)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.migrateProject(ProjectMigrationJob.java:222)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.startMigration(ProjectMigrationJob.java:209)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.run(ProjectMigrationJob.java:178)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.MalformedURLException: unknown protocol: d
+	at java.net.URL.<init>(URL.java:600)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at org.eclipse.emf.ecore.resource.impl.URIHandlerImpl.createInputStream(URIHandlerImpl.java:199)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1269)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 32 more
+2023-04-21 09:42:31,015 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Send to CLE" has been migrated.
+2023-04-21 09:42:31,054 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Send-to-CLE
+2023-04-21 09:42:31,054 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Send-to-CLE	HASHCODE: 459812862
+2023-04-21 09:42:31,054 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:31,054 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:31,064 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:31,064 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:31,064 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1805072188
+2023-04-21 09:42:31,066 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:31,066 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:31,116 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Log Local Error" migration tasks :
+2023-04-21 09:42:31,116 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:31,116 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: User
+2023-04-21 09:42:31,116 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:31,364 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log Local Error" has been migrated.
+2023-04-21 09:42:31,379 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log-Local-Error
+2023-04-21 09:42:31,379 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log-Local-Error	HASHCODE: 1725567212
+2023-04-21 09:42:31,379 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:31,379 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:31,386 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:31,386 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:31,386 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1435433040
+2023-04-21 09:42:31,386 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:31,386 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:31,480 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,519 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,559 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,752 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,762 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,772 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:31,812 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "CLE.UtilityServices.Logging.LogMessage" migration done.
+2023-04-21 09:42:31,995 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/merging_more_to_one1   with location   D:/workspace/complex_mappings/Schemas/merging_more_to_one1.xsd
+2023-04-21 09:42:32,015 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/merging_more_to_one2   with location   D:/workspace/complex_mappings/Schemas/merging_more_to_one2.xsd
+2023-04-21 09:42:32,025 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/merging_two_list   with location   D:/workspace/complex_mappings/Schemas/merging_two_list.xsd
+2023-04-21 09:42:32,045 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/sample_new_schema   with location   D:/workspace/complex_mappings/Schemas/sample_new_schema.xsd
+2023-04-21 09:42:32,056 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/schema/1680607579038   with location   D:/workspace/ConversationalKeys/Schemas/ProcessSchema.xsd
+2023-04-21 09:42:32,074 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/csvcustomerorders   with location   D:/workspace/Test_poc/Schemas/csvcustomerorders.xsd
+2023-04-21 09:42:32,086 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/CustomerOrderSchema   with location   D:/workspace/Test_poc/Schemas/CustomerOrderSchema.xsd
+2023-04-21 09:42:32,106 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/CustOrders   with location   D:/workspace/Test_poc/Schemas/CustOrders.xsd
+2023-04-21 09:42:32,157 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://ns.tibco.com/bw/palette/dataformat/5d528d71-21d2-4fed-9157-2ca9981424dc   with location   D:/workspace/Test_poc/Schemas/DataFormatSchema.xsd
+2023-04-21 09:42:32,177 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://ns.tibco.com/bw/palette/dataformat/700f7250-4706-4f0a-aa3f-412a660f1572   with location   D:/workspace/Test_poc/Schemas/DataFormatSchema1.xsd
+2023-04-21 09:42:32,187 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://tns.tibco.com/bw/json/1681294733698   with location   D:/workspace/Test_poc/Schemas/JSONResource.xsd
+2023-04-21 09:42:32,205 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1681382412117   with location   D:/workspace/Test_poc/Schemas/MapperInputSchema.xsd
+2023-04-21 09:42:32,217 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1681970337421   with location   D:/workspace/Test_poc/Schemas/MapperInputSchema1.xsd
+2023-04-21 09:42:32,228 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/minimum   with location   D:/workspace/Test_poc/Schemas/minimum.xsd
+2023-04-21 09:42:32,248 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/renderxml   with location   D:/workspace/Test_poc/Schemas/renderxml.xsd
+2023-04-21 09:42:32,258 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://simple.schema/simple   with location   D:/workspace/Test_poc/Schemas/simple.xsd
+2023-04-21 09:42:32,268 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://simple.schema/simple1   with location   D:/workspace/Test_poc/Schemas/simple1.xsd
+2023-04-21 09:42:32,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://simple.schema/simple2   with location   D:/workspace/Test_poc/Schemas/simple2.xsd
+2023-04-21 09:42:32,296 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/token   with location   D:/workspace/Test_poc/Schemas/token.xsd
+2023-04-21 09:42:32,309 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://www.example.org/xsltinput   with location   D:/workspace/Test_poc/Schemas/xsltinput.xsd
+2023-04-21 09:42:33,041 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - CLE/UtilityServices/ExceptionHandling/HandleException.process
+2023-04-21 09:42:33,047 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "CLE.UtilityServices.ExceptionHandling.HandleException" migration started
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 1395057194
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Write to Log" migration tasks :
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: User
+2023-04-21 09:42:33,058 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:33,349 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Write to Log" has been migrated.
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Write-to-Log
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Write-to-Log	HASHCODE: 1823013220
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Mapper activity "Map Data" migration tasks :
+2023-04-21 09:42:33,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Mapper Activity
+2023-04-21 09:42:33,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Map Data" has been migrated.
+2023-04-21 09:42:33,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Map-Data
+2023-04-21 09:42:33,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Map-Data	HASHCODE: 750730215
+2023-04-21 09:42:33,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:33,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:33,724 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating JMS Send Activity activity with name JMS Queue Sender
+2023-04-21 09:42:34,220 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "JMS Queue Sender" has been migrated.
+2023-04-21 09:42:34,250 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity JMS-Queue-Sender
+2023-04-21 09:42:34,250 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: JMS-Queue-Sender	HASHCODE: 1607016431
+2023-04-21 09:42:34,250 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:34,250 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:34,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogMessage" has been migrated.
+2023-04-21 09:42:34,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogMessage
+2023-04-21 09:42:34,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogMessage	HASHCODE: 1694178550
+2023-04-21 09:42:34,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:34,716 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:34,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:34,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:34,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1623625175
+2023-04-21 09:42:34,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:34,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:34,736 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Log Local Error" migration tasks :
+2023-04-21 09:42:34,736 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:34,736 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: Error
+2023-04-21 09:42:34,736 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:34,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log Local Error" has been migrated.
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log-Local-Error
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log-Local-Error	HASHCODE: 468140253
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1704607820
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:34,979 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:34,989 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:34,997 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,182 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,192 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,222 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,230 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:35,263 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "CLE.UtilityServices.ExceptionHandling.HandleException" migration done.
+2023-04-21 09:42:35,757 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - Processes/Publisher/AMS_AUCDAT_ARCHIVE_PUB_CORE.process
+2023-04-21 09:42:35,767 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_ARCHIVE_PUB_CORE" migration started
+2023-04-21 09:42:35,799 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:35,807 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:35,807 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 1539428090
+2023-04-21 09:42:35,807 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:35,807 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:35,809 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.task.name.message!
+2023-04-21 09:42:35,809 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.createRenameFileActivity.message!
+2023-04-21 09:42:35,818 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.migrateCreateDestinationDirectories.message!
+2023-04-21 09:42:35,818 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.migrateOverwrite.message!
+2023-04-21 09:42:36,488 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ErroredArchive" has been migrated.
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ErroredArchive
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ErroredArchive	HASHCODE: 1557615068
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 332692637
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:36,508 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:36,516 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:36,549 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:36,559 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_ARCHIVE_PUB_CORE" migration done.
+2023-04-21 09:42:37,005 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - Processes/Publisher/AMS_AUCDAT_PUB_CORE.process
+2023-04-21 09:42:37,015 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_PUB_CORE" migration started
+2023-04-21 09:42:37,050 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:37,051 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:37,051 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 2106287649
+2023-04-21 09:42:37,051 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:37,051 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:37,053 [Worker-10] DEBUG com.tibco.bw.migration.debug  - BWAssign Activity "AssignRetryFlag" migration tasks :
+2023-04-21 09:42:37,055 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating BWAssign Activity
+2023-04-21 09:42:37,339 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "AssignRetryFlag" has been migrated.
+2023-04-21 09:42:37,339 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity AssignRetryFlag
+2023-04-21 09:42:37,339 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: AssignRetryFlag	HASHCODE: 458313434
+2023-04-21 09:42:37,339 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:37,339 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:37,542 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "start" has been migrated.
+2023-04-21 09:42:37,542 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity GroupStart
+2023-04-21 09:42:37,542 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: GroupStart	HASHCODE: 1172585245
+2023-04-21 09:42:37,542 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:37,542 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:37,793 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Null-1" has been migrated.
+2023-04-21 09:42:37,793 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Null-1
+2023-04-21 09:42:37,793 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Null-1	HASHCODE: 942159775
+2023-04-21 09:42:37,795 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:37,795 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:38,035 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "DisableStartLog" has been migrated.
+2023-04-21 09:42:38,035 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity DisableStartLog
+2023-04-21 09:42:38,035 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: DisableStartLog	HASHCODE: 1451298921
+2023-04-21 09:42:38,035 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:38,035 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:38,653 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogStart" has been migrated.
+2023-04-21 09:42:38,655 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogStart
+2023-04-21 09:42:38,655 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogStart	HASHCODE: 12245475
+2023-04-21 09:42:38,655 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:38,655 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:38,663 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Render XML activity
+2023-04-21 09:42:38,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RenderVehicleStatus" has been migrated.
+2023-04-21 09:42:38,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RenderVehicleStatus
+2023-04-21 09:42:38,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RenderVehicleStatus	HASHCODE: 1855737556
+2023-04-21 09:42:38,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:38,969 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "start" has been migrated.
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity GroupStart1
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: GroupStart1	HASHCODE: 1469572620
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:39,253 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating JMS Send Activity activity with name SendToCRM
+2023-04-21 09:42:39,798 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "SendToCRM" has been migrated.
+2023-04-21 09:42:39,810 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity SendToCRM
+2023-04-21 09:42:39,810 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: SendToCRM	HASHCODE: 129047662
+2023-04-21 09:42:39,810 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:39,810 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:39,820 [Worker-10] DEBUG com.tibco.bw.migration.debug  - BWAssign Activity "Assign" migration tasks :
+2023-04-21 09:42:39,820 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating BWAssign Activity
+2023-04-21 09:42:40,084 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Assign" has been migrated.
+2023-04-21 09:42:40,084 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Assign
+2023-04-21 09:42:40,084 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Assign	HASHCODE: 1041247782
+2023-04-21 09:42:40,084 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:40,084 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:40,914 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogRetryWarning" has been migrated.
+2023-04-21 09:42:40,923 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogRetryWarning
+2023-04-21 09:42:40,923 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogRetryWarning	HASHCODE: 238412826
+2023-04-21 09:42:40,923 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:40,923 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:40,925 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Sleep Activity "Wait for Retry" migration tasks :
+2023-04-21 09:42:40,925 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Sleep Activity
+2023-04-21 09:42:41,341 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Wait for Retry" has been migrated.
+2023-04-21 09:42:41,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Wait-for-Retry
+2023-04-21 09:42:41,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Wait-for-Retry	HASHCODE: 234320527
+2023-04-21 09:42:41,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:41,351 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:41,604 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RethrowOtherError" has been migrated.
+2023-04-21 09:42:41,604 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RethrowOtherError
+2023-04-21 09:42:41,604 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RethrowOtherError	HASHCODE: 1436383728
+2023-04-21 09:42:41,604 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:41,604 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:41,867 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RethrowRetryError" has been migrated.
+2023-04-21 09:42:41,867 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RethrowRetryError
+2023-04-21 09:42:41,867 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RethrowRetryError	HASHCODE: 1890189997
+2023-04-21 09:42:41,867 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:41,867 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:41,877 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,877 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,887 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,887 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,938 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:41,938 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Input_ADESA_CRM" has been migrated.
+2023-04-21 09:42:41,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Input_ADESA_CRM
+2023-04-21 09:42:41,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Input_ADESA_CRM	HASHCODE: 643388328
+2023-04-21 09:42:41,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:42,685 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log End" has been migrated.
+2023-04-21 09:42:42,695 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log-End
+2023-04-21 09:42:42,695 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log-End	HASHCODE: 2068938192
+2023-04-21 09:42:42,695 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:42,695 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "DisableEndLog" has been migrated.
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity DisableEndLog
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: DisableEndLog	HASHCODE: 972330936
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:42,946 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:42,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:42,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:42,977 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,138 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,138 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,138 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,146 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,148 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:43,148 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Repeat_Map_Group" has been migrated.
+2023-04-21 09:42:43,148 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Repeat_Map_Group
+2023-04-21 09:42:43,148 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Repeat_Map_Group	HASHCODE: 1207028706
+2023-04-21 09:42:43,148 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Null-2" has been migrated.
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Null-2
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Null-2	HASHCODE: 1859248225
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:43,401 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Render Data Activity
+2023-04-21 09:42:43,929 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RenderFailedData" has been migrated.
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RenderFailedData
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RenderFailedData	HASHCODE: 189692982
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 
+File write activity "Write_Errorrecords" migration tasks :
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating write file activity
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating write file append configuration property
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating write file write as configuration property
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating write file compress mode property
+2023-04-21 09:42:43,960 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating write file create missing directory property
+2023-04-21 09:42:45,299 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Write_Errorrecords" has been migrated.
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Write_Errorrecords
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Write_Errorrecords	HASHCODE: 396067168
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.task.name.message!
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.createRenameFileActivity.message!
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.migrateCreateDestinationDirectories.message!
+2023-04-21 09:42:45,320 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileRenameActivityMigrator.fileRenameActivity.migration.subtask.migrateOverwrite.message!
+2023-04-21 09:42:46,221 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Archive" has been migrated.
+2023-04-21 09:42:46,239 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Archive
+2023-04-21 09:42:46,239 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Archive	HASHCODE: 1580427222
+2023-04-21 09:42:46,239 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:46,239 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:46,282 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 469613536
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,292 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,312 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,343 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,353 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,361 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,373 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,391 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:46,393 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_PUB_CORE" migration done.
+2023-04-21 09:42:46,515 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/VehicleSaleDetailsdetails_to_CRM_Publish/DealerPurchaseOptions/RetryFlag   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_PUB_CORE-RetryFlag.xsd
+2023-04-21 09:42:46,998 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE.process
+2023-04-21 09:42:47,013 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_READ_PUB_CORE" migration started
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 1958049885
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - BWAssign Activity "AssignRetryFlag" migration tasks :
+2023-04-21 09:42:47,029 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating BWAssign Activity
+2023-04-21 09:42:47,321 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "AssignRetryFlag" has been migrated.
+2023-04-21 09:42:47,329 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity AssignRetryFlag
+2023-04-21 09:42:47,329 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: AssignRetryFlag	HASHCODE: 175604902
+2023-04-21 09:42:47,329 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:47,329 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "start" has been migrated.
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity GroupStart
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: GroupStart	HASHCODE: 747023402
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 
+File read activity "Read_VehicleStatusRecords" migration tasks :
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating read file activity
+2023-04-21 09:42:47,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating read file activity encoding property
+2023-04-21 09:42:47,837 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Read_VehicleStatusRecords" has been migrated.
+2023-04-21 09:42:47,847 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Read_VehicleStatusRecords
+2023-04-21 09:42:47,847 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Read_VehicleStatusRecords	HASHCODE: 150325673
+2023-04-21 09:42:47,847 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:47,847 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:47,857 [Worker-10] DEBUG com.tibco.bw.migration.debug  - BWAssign Activity "Assign" migration tasks :
+2023-04-21 09:42:47,857 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating BWAssign Activity
+2023-04-21 09:42:48,105 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Assign" has been migrated.
+2023-04-21 09:42:48,105 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Assign
+2023-04-21 09:42:48,105 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Assign	HASHCODE: 705482028
+2023-04-21 09:42:48,105 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:48,105 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:48,976 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogRetryWarning" has been migrated.
+2023-04-21 09:42:48,984 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogRetryWarning
+2023-04-21 09:42:48,984 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogRetryWarning	HASHCODE: 1900311780
+2023-04-21 09:42:48,984 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:48,984 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RethrowOtherError" has been migrated.
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RethrowOtherError
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RethrowOtherError	HASHCODE: 344358880
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Sleep Activity "WaitForRetry" migration tasks :
+2023-04-21 09:42:49,225 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Sleep Activity
+2023-04-21 09:42:49,563 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "WaitForRetry" has been migrated.
+2023-04-21 09:42:49,563 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity WaitForRetry
+2023-04-21 09:42:49,563 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: WaitForRetry	HASHCODE: 1527342820
+2023-04-21 09:42:49,563 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:49,563 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "RethrowRetryError" has been migrated.
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity RethrowRetryError
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: RethrowRetryError	HASHCODE: 1681763626
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,830 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,846 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,846 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,846 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,861 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:49,861 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Retry_Read" has been migrated.
+2023-04-21 09:42:49,861 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Retry_Read
+2023-04-21 09:42:49,861 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Retry_Read	HASHCODE: 1916811265
+2023-04-21 09:42:49,861 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:49,877 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating parse data activity
+2023-04-21 09:42:50,453 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Parse_VehiceStatusDetails" has been migrated.
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Parse_VehiceStatusDetails
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Parse_VehiceStatusDetails	HASHCODE: 423765416
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Mapper activity "Validation" migration tasks :
+2023-04-21 09:42:50,463 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Mapper Activity
+2023-04-21 09:42:51,112 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Validation" has been migrated.
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Validation
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Validation	HASHCODE: 72393772
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Mapper activity "SuccessandFailureRecords" migration tasks :
+2023-04-21 09:42:51,122 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Mapper Activity
+2023-04-21 09:42:51,860 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "SuccessandFailureRecords" has been migrated.
+2023-04-21 09:42:51,870 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity SuccessandFailureRecords
+2023-04-21 09:42:51,870 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: SuccessandFailureRecords	HASHCODE: 330691435
+2023-04-21 09:42:51,870 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:51,870 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:51,898 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:51,900 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:51,900 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1368221893
+2023-04-21 09:42:51,900 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:51,900 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:51,900 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,921 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,931 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,941 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,941 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,951 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:51,951 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Publisher.AMS_AUCDAT_READ_PUB_CORE" migration done.
+2023-04-21 09:42:52,062 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/AuctionVehiclestatusREAD_to_CRM/AuctionAutoIMS/RetryFlag   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-RetryFlag.xsd
+2023-04-21 09:42:52,062 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE.process/SuccessandFailureRecords   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-SuccessandFailureRecordsInline.xsd
+2023-04-21 09:42:52,071 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE.process/Validation   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Publisher/AMS_AUCDAT_READ_PUB_CORE-ValidationInline.xsd
+2023-04-21 09:42:52,436 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision.process
+2023-04-21 09:42:52,444 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "UtilityServices.SuspendEngineProcess.SubProcesses.SuspendDecision" migration started
+2023-04-21 09:42:52,444 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:42:52,444 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:42:52,444 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 621548214
+2023-04-21 09:42:52,444 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:52,444 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:52,454 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Get Shared Variable Activity "GetVariable" migration tasks :
+2023-04-21 09:42:52,454 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Get Shared Variable
+2023-04-21 09:42:52,454 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The Shared Resource {Resources/SharedVariables/SuspendEngineErrorList.sharedvariable} is mapped to property {Resources.SharedVariables.SuspendEngineErrorList}
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "GetVariable" has been migrated.
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity GetVariable
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: GetVariable	HASHCODE: 724564085
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Mapper activity "Map Data" migration tasks :
+2023-04-21 09:42:52,701 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Mapper Activity
+2023-04-21 09:42:53,009 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Map Data" has been migrated.
+2023-04-21 09:42:53,009 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Map-Data
+2023-04-21 09:42:53,009 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Map-Data	HASHCODE: 2108599339
+2023-04-21 09:42:53,009 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:53,009 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:53,017 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Log" migration tasks :
+2023-04-21 09:42:53,017 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:53,017 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: User
+2023-04-21 09:42:53,017 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:53,281 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log" has been migrated.
+2023-04-21 09:42:53,281 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log
+2023-04-21 09:42:53,281 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log	HASHCODE: 2140281623
+2023-04-21 09:42:53,281 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:53,281 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 310370164
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:53,297 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:53,319 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:53,319 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:53,319 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:53,335 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:53,335 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "UtilityServices.SuspendEngineProcess.SubProcesses.SuspendDecision" migration done.
+2023-04-21 09:42:53,419 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision.process/Map-Data   with location   D:/workspace/AMS_AUCDAT_PUB/UtilityServices/SuspendEngineProcess/SubProcesses/SuspendDecision-Map-DataInline.xsd
+2023-04-21 09:42:53,714 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - Processes/Starter/AMS_AUCDAT_PUB.process
+2023-04-21 09:42:53,714 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Starter.AMS_AUCDAT_PUB" migration started
+2023-04-21 09:42:53,720 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating JMS Queue Receiver Event Source activity with name Receive_Trigger
+2023-04-21 09:42:54,021 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Receive_Trigger" has been migrated.
+2023-04-21 09:42:54,037 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Receive_Trigger
+2023-04-21 09:42:54,037 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Receive_Trigger	HASHCODE: 213129901
+2023-04-21 09:42:54,037 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:54,037 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:54,037 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating parse XML activity
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Parse_TriggerMessage" has been migrated.
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Parse_TriggerMessage
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Parse_TriggerMessage	HASHCODE: 1632367934
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - BWAssign Activity "Assign" migration tasks :
+2023-04-21 09:42:54,384 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating BWAssign Activity
+2023-04-21 09:42:54,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Assign" has been migrated.
+2023-04-21 09:42:54,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Assign
+2023-04-21 09:42:54,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Assign	HASHCODE: 128505438
+2023-04-21 09:42:54,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:54,897 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:55,613 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogStart" has been migrated.
+2023-04-21 09:42:55,613 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogStart
+2023-04-21 09:42:55,613 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogStart	HASHCODE: 1278409093
+2023-04-21 09:42:55,613 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:55,613 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:55,905 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "AMS_AUCDAT_READ_PUB_CORE" has been migrated.
+2023-04-21 09:42:55,905 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity AMS_AUCDAT_READ_PUB_CORE
+2023-04-21 09:42:55,905 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: AMS_AUCDAT_READ_PUB_CORE	HASHCODE: 1781936303
+2023-04-21 09:42:55,905 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:55,905 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:56,190 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "AMS_AUCDAT_PUB_CORE" has been migrated.
+2023-04-21 09:42:56,190 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity AMS_AUCDAT_PUB_CORE
+2023-04-21 09:42:56,190 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: AMS_AUCDAT_PUB_CORE	HASHCODE: 677733548
+2023-04-21 09:42:56,190 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:56,190 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:56,206 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Confirm Activity "ConfirmOnSuccess" migration tasks :
+2023-04-21 09:42:56,206 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Confirm Activity
+2023-04-21 09:42:56,206 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Configuring Confirm Event to [Receive_Trigger]
+2023-04-21 09:42:56,442 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ConfirmOnSuccess" has been migrated.
+2023-04-21 09:42:56,442 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ConfirmOnSuccess
+2023-04-21 09:42:56,442 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ConfirmOnSuccess	HASHCODE: 988811195
+2023-04-21 09:42:56,442 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:56,442 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:57,468 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "LogEnd" has been migrated.
+2023-04-21 09:42:57,468 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity LogEnd
+2023-04-21 09:42:57,468 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: LogEnd	HASHCODE: 125583407
+2023-04-21 09:42:57,468 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:57,468 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:57,478 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:57,478 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:57,478 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 1447126539
+2023-04-21 09:42:57,478 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:57,478 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:57,872 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ExceptionHandling" has been migrated.
+2023-04-21 09:42:57,872 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ExceptionHandling
+2023-04-21 09:42:57,872 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ExceptionHandling	HASHCODE: 610031069
+2023-04-21 09:42:57,872 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:57,872 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:57,881 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Log" migration tasks :
+2023-04-21 09:42:57,881 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:42:57,881 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: Error
+2023-04-21 09:42:57,881 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log" has been migrated.
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log	HASHCODE: 1945277341
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Confirm Activity "ConfirmOnError" migration tasks :
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Confirm Activity
+2023-04-21 09:42:58,501 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Configuring Confirm Event to [Receive_Trigger]
+2023-04-21 09:42:58,761 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ConfirmOnError" has been migrated.
+2023-04-21 09:42:58,761 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ConfirmOnError
+2023-04-21 09:42:58,761 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ConfirmOnError	HASHCODE: 1694279479
+2023-04-21 09:42:58,761 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:58,761 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Call_AMS_AUCDAT_ARCHIVE_PUB_CORE" has been migrated.
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Call_AMS_AUCDAT_ARCHIVE_PUB_CORE
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Call_AMS_AUCDAT_ARCHIVE_PUB_CORE	HASHCODE: 2005137617
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 809113679
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:58,993 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:59,262 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Suspend Process" has been migrated.
+2023-04-21 09:42:59,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Suspend-Process
+2023-04-21 09:42:59,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Suspend-Process	HASHCODE: 820732562
+2023-04-21 09:42:59,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:59,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:59,278 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating EngineCommand activity
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Suspend Starter" has been migrated.
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Suspend-Starter
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Suspend-Starter	HASHCODE: 479715568
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,541 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,557 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,710 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,710 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,710 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,710 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,726 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,742 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,742 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,742 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,757 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,764 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,764 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,764 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,779 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,779 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:42:59,779 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Starter.AMS_AUCDAT_PUB" migration done.
+2023-04-21 09:43:00,027 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => http://hcamerica.com/AuctionVehiclestatus_to_CRM/AuctionAutoIMS/CLE_Variable   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Starter/AMS_AUCDAT_PUB-CLE_Variable.xsd
+2023-04-21 09:43:00,027 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Added Schema to ResourceSet => /Processes/Starter/AMS_AUCDAT_PUB.process/Parse_TriggerMessage   with location   D:/workspace/AMS_AUCDAT_PUB/Processes/Starter/AMS_AUCDAT_PUB-Parse_TriggerMessageInline.xsd
+2023-04-21 09:43:00,529 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - Processes/Starter/Process Definition.process
+2023-04-21 09:43:00,529 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Starter.Process-Definition" migration started
+2023-04-21 09:43:00,529 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Start" has been migrated.
+2023-04-21 09:43:00,529 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Start
+2023-04-21 09:43:00,529 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Start	HASHCODE: 1327286920
+2023-04-21 09:43:00,529 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:00,529 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:00,545 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating JMS Send Activity activity with name JMS Queue Sender
+2023-04-21 09:43:00,877 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "JMS Queue Sender" has been migrated.
+2023-04-21 09:43:00,893 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity JMS-Queue-Sender
+2023-04-21 09:43:00,893 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: JMS-Queue-Sender	HASHCODE: 486861307
+2023-04-21 09:43:00,893 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:00,893 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 423888238
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:00,901 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:00,922 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:00,922 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "Starter.Process-Definition" migration done.
+2023-04-21 09:43:01,376 [Worker-10] INFO  com.tibco.bw.migration.debug  - Migrating process - UtilityServices/SuspendEngineProcess/StarterProcesses/InitSuspendEngineErrors.process
+2023-04-21 09:43:01,376 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "UtilityServices.SuspendEngineProcess.StarterProcesses.InitSuspendEngineErrors" migration started
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 
+File event source activity "File Poller" migration tasks :
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating file poller Activity
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller create event property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - !FileEventSourceActivityMigrator.fileEventSourceActivity.migration.subtask.migrateMode.message!
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller encoding property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller encoding used property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller exclude content property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller include content property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller include sub directories property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller sort by property
+2023-04-21 09:43:01,392 [Worker-10] DEBUG com.tibco.bw.migration.debug  - migrating file poller sort order property
+2023-04-21 09:43:01,677 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "File Poller" has been migrated.
+2023-04-21 09:43:01,693 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity File-Poller
+2023-04-21 09:43:01,693 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: File-Poller	HASHCODE: 2047137714
+2023-04-21 09:43:01,693 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:01,693 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:01,693 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating parse XML activity
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ParseEngineSuspensionError" has been migrated.
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ParseEngineSuspensionError
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ParseEngineSuspensionError	HASHCODE: 704703169
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "Log" migration tasks :
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: User
+2023-04-21 09:43:01,962 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:43:02,216 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "Log" has been migrated.
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity Log
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: Log	HASHCODE: 555411790
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Set Shared Variable Activity "SetVariable" migration tasks :
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating Set Shared Variable
+2023-04-21 09:43:02,232 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The Shared Resource {Resources/SharedVariables/SuspendEngineErrorList.sharedvariable} is mapped to property {Resources.SharedVariables.SuspendEngineErrorList}
+2023-04-21 09:43:02,464 [Worker-10] ERROR com.tibco.bw.migration.debug  - A client of this class cannot invoke this method unless the activity exposes its input as a WSDL message
+java.lang.RuntimeException: A client of this class cannot invoke this method unless the activity exposes its input as a WSDL message
+	at com.tibco.bw.design.api.BWActivitySignature.getInputTypeAsWsdlMessage(BWActivitySignature.java:171)
+	at com.tibco.bw.tools.migrator.v6.impl.Bw6ActivityTypeSignature.getActivityInputAsMsg(Bw6ActivityTypeSignature.java:68)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.ActivityInputXslMappingConverter.convert(ActivityInputXslMappingConverter.java:284)
+	at com.tibco.bw.tools.migrator.v6.utils.Bw6ProcessBuilderUtils.migrateActivityInputXslMapping(Bw6ProcessBuilderUtils.java:645)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.migrateActivitySignatureAndMapping(Bw6ProcessBuilder.java:4193)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildActivity(Bw6ProcessBuilder.java:1153)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildFlow(Bw6ProcessBuilder.java:917)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.buildProcess(Bw6ProcessBuilder.java:460)
+	at com.tibco.bw.tools.migrator.v6.modelbuilders.process.impl.Bw6ProcessBuilder.build(Bw6ProcessBuilder.java:337)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.buildProcess(Bw6ProcessGenerator.java:790)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.buildProcess(Bw6ProcessGenerator.java:769)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generate(Bw6ProcessGenerator.java:329)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generateProcesses(Bw6ProcessGenerator.java:272)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generateProcesses(Bw6ProcessGenerator.java:131)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.Bw6ProcessGenerator.generate(Bw6ProcessGenerator.java:113)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generateProcesses(CompositeApplicationGenerator.java:1521)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.writeCompositeAppProject(CompositeApplicationGenerator.java:585)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generateProject(CompositeApplicationGenerator.java:368)
+	at com.tibco.bw.tools.migrator.v6.composite.application.generator.impl.CompositeApplicationGenerator.generate(CompositeApplicationGenerator.java:221)
+	at com.tibco.bw.tools.migrator.v6.impl.Bw6MigratorV2.migrate(Bw6MigratorV2.java:159)
+	at com.tibco.bw.tools.migrator.v6.impl.Bw6MigratorV2.migrate(Bw6MigratorV2.java:100)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.migrateProject(ProjectMigrationJob.java:222)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.startMigration(ProjectMigrationJob.java:209)
+	at com.tibco.bw.tools.migrator.v6.utils.ProjectMigrationJob$MigrationJob.run(ProjectMigrationJob.java:178)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "SetVariable" has been migrated.
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity SetVariable
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: SetVariable	HASHCODE: 1205892997
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 247790969
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:02,464 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:02,479 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Write to Log activity "ExceptionLog" migration tasks :
+2023-04-21 09:43:02,479 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Creating WriteToLog Activity
+2023-04-21 09:43:02,479 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog Role: Error
+2023-04-21 09:43:02,479 [Worker-10] DEBUG com.tibco.bw.migration.debug  - Migrating WriteToLog SuppressJobInfo: false
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "ExceptionLog" has been migrated.
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity ExceptionLog
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: ExceptionLog	HASHCODE: 204912422
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:02,718 [Worker-10] DEBUG com.tibco.bw.migration.debug  - The activity "End" has been migrated.
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	*** Updated Activity Report from HANDLER for Activity End
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		*** Activity: End	HASHCODE: 858089527
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 		 IsUpdated = true
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - 	***DONE
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:02,733 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:02,749 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:02,749 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:02,749 [Worker-10] DEBUG com.tibco.bw.migration.debug  - ############## ProcessReportImpl->addReport() not implemented for: class org.eclipse.bpel.model.impl.SourceImpl ####################
+2023-04-21 09:43:02,765 [Worker-10] INFO  com.tibco.bw.migration.debug  - The process "UtilityServices.SuspendEngineProcess.StarterProcesses.InitSuspendEngineErrors" migration done.

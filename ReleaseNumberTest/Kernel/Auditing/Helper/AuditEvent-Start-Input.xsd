@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/Kernel/Auditing/Helper/AuditEvent-Start-Input.xsd" xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:ns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:ns2="http://www.tibco.com/CommonLE2/namespace/Public/Common/RequestHeader.xsd" xmlns:ns3="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.tibco.com/pe/DeployedVarsType" xmlns:pfx2="http://www.tibco.com/CommonLE2/namespace/Public/Logging/LogRequest.xsd" xmlns:pfx3="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:pfx4="http://www.tibco.com/CommonLE2/namespace/Public/Exception/ExceptionRequest.xsd" xmlns:pfx5="http://www.tibco.com/ns/no_namespace_schema_location/Kernel/Logging/Helper/LogDetail.xsd" xmlns:pfx6="http://eai.telkom.co.za/auditing/20120101" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/Kernel/Auditing/Helper/AuditEvent-Start-Input.xsd">
+    <xsd:import namespace="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" schemaLocation="../../../SharedResources/XSD/EnterpriseMessage/EAI-EnterpriseMessage-20110801.xsd"/>
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="AuditCategory" type="xsd:string"/>
+                <xsd:element name="Callstack">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ProcessName" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LogStatement" type="xsd:string"/>
+                <xsd:element name="Payload">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element ref="pfx3:Header"/>
+                <xsd:element minOccurs="0" name="ErrorDetail">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OrchestrationData">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" ref="pfx3:Result">
+                    <xsd:annotation>
+                        <xsd:documentation>
+          This is the Telkom standard reply message that should be used when there's a need to indicate
+          success, fail or reject of a request message.
+        			</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:invchar="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:invfault="http://xmlns.oracle.com/communications/inventory/webservice/fault" xmlns:invnm="http://xmlns.oracle.com/communications/inventory/webservice/nm" xmlns:sfsct="http://eai.telkom.co.za/SFSCommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/nm">
+
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/common" schemaLocation="../referenceSchemas/InventoryCommon.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/fault" schemaLocation="../referenceSchemas/InventoryFaults.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" schemaLocation="Characteristic.xsd"/>
+    <import namespace="http://eai.telkom.co.za/SFSCommonTypes" schemaLocation="SFSCommons.xsd"/>
+
+    <!-- ==== Message Types ==== -->
+
+
+    <complexType name="reserveTelephoneNumberRequestType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryRequestType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element maxOccurs="1" minOccurs="1" name="reservationID" nillable="false" type="xsd:string">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="reservationType" nillable="true" type="invnm:ReservationTypeEnum">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element default="10" maxOccurs="1" minOccurs="0" name="quantity" nillable="true" type="xsd:string">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="telephoneNumberList" nillable="true" type="invnm:TelephoneNumberListType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="oldTelephoneNumberList" type="invnm:TelephoneNumberListType">
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="tnSearchCriteria" nillable="false" type="invnm:TelephoneNumberCriteriaType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="LCM_Override" nillable="true" type="xsd:string">
+                	</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="TelephoneNumberListType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="tnReservationDetails" nillable="true" type="invnm:TnReservationDetailsType">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+   
+   <complexType name="TnReservationDetailsType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="telephoneNumber" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="newReservationID" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+   
+    
+    <complexType name="reserveTelephoneNumberResponseType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element minOccurs="1" name="Result" nillable="false" type="sfsct:Result_type">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                	<element maxOccurs="1" minOccurs="1" name="reservationID" nillable="false" type="xsd:string">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="reservationType" nillable="false" type="invnm:ReservationTypeEnum">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="quantity" nillable="false" type="xsd:int">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="1" name="tnList" nillable="false" type="invnm:TelephoneNumberListType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="reserveTelephoneNumberFaultType">
+    	<xs:annotation>
+    		<xs:documentation>
+    			Fault that is specific to ReserveTelephoneNumber
+    			Inputs WS operation.
+    		</xs:documentation>
+    	</xs:annotation>
+    	<complexContent>
+    		<extension base="sfsct:SFSExceptionFaultType">
+    			<sequence>
+    				<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+    				</element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="unReserveTelephoneNumberRequestType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryRequestType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element maxOccurs="1" minOccurs="1" name="reservationID" nillable="false" type="xsd:string">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                	<element maxOccurs="1" minOccurs="1" name="tnList" nillable="false" type="invnm:tnListType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="unReserveTelephoneNumberResponseType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element minOccurs="1" name="Result" nillable="false" type="sfsct:Result_type">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="unReserveTelephoneNumberFaultType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="sfsct:SFSExceptionFaultType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element maxOccurs="1" minOccurs="0" name="tnStatusList" nillable="true" type="invnm:tnStatusListType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="validateTelephoneNumberRequestType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryRequestType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element maxOccurs="1" minOccurs="1" name="tnReservList" nillable="false" type="invnm:tnReserveList">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="validateTelephoneNumberResponseType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                	<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                	</element>
+                	<element minOccurs="1" name="Result" nillable="false" type="sfsct:Result_type">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                	<element maxOccurs="unbounded" minOccurs="1" name="tnlists" nillable="false" type="invnm:tnResponseValueType">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="validateTelephoneNumberFaultType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="sfsct:SFSExceptionFaultType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="reserveList" nillable="true" type="invnm:tnReserveList">
+                		<xs:annotation>
+                			<xs:documentation/>
+                		</xs:annotation>
+                	</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+	<!-- Complex elements added for validateTelephoneNumberRange : 10Nov2012-Saurabh -->
+	<complexType name="validateTelephoneNumberRangeRequestType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+				</element>
+			<element maxOccurs="1" minOccurs="0" name="primaryTN" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="serviceName" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="serviceType" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</element>
+			<element maxOccurs="unbounded" name="tnRange">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" name="reservationId" nillable="false" type="string"/>
+						<element minOccurs="1" name="fromRange" nillable="false" type="string"/>
+						<element minOccurs="1" name="toRange" nillable="false" type="string"/>
+						<element minOccurs="0" name="oldFromRange" type="string"/>
+						<element minOccurs="0" name="oldToRange" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="validateTelephoneNumberRangeResponseType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<complexContent>
+			<extension base="invcom:InventoryResponseType">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+					</element>
+					<element minOccurs="1" name="Result" nillable="false" type="sfsct:Result_type">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+					<element name="tnRange">
+						<complexType>
+							<sequence>
+								<element minOccurs="1" name="fromRange" type="string"/>
+								<element name="toRange" type="string"/>
+								<element name="reservationId" type="string"/>
+								<element name="errorStatus" type="string"/>
+								<element name="blockType" type="string"/>
+								<element name="errorCode" type="string"/>
+								<element name="errorMessage" type="string"/>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="validateTelephoneNumberRangeFaultType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<complexContent>
+            <extension base="sfsct:SFSExceptionFaultType">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+					</element>
+					<element name="tnRange">
+						<complexType>
+							<sequence>
+								<element minOccurs="1" name="fromRange" type="string"/>
+								<element name="toRange" type="string"/>
+								<element name="reservationId" type="string"/>
+								<element name="errorStatus" type="string"/>
+								<element name="errorMessage" type="string"/>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+        </complexContent>
+	</complexType>
+
+    <complexType name="tnListType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="telephoneNumber" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="newReservationID" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="tnStatusListType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="tnStatus" nillable="true" type="invnm:tnStatusType">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="tnStatusType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="telephoneNumber" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="releaseStatus" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <!-- Validation is optional -->
+    <!--
+    <complexType name="ValidationDataType">
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element name="validationMinimum" type="xsd:string" />
+                    <element name="validationUnique" type="xsd:string" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    -->
+
+
+    <complexType name="tnReserveList">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="1" name="tnResStatus" nillable="true" type="invnm:tnValueType">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="tnValueType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="telephoneNumber" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="1" name="reservationID" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="tnResponseValueType">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="telephoneNumber" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="1" name="reservationID" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="errorStatus" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="errorCode" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="errorMessage" nillable="true" type="string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <!-- ==== Entity Criteria Types ==== -->
+    <complexType name="TelephoneNumberCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to search Telephone Numbers.</xs:documentation>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+
+                    <element maxOccurs="1" minOccurs="0" name="serviceType" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="exchangeArea" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="prefix" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="mask" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="1" minOccurs="0" name="blockType" nillable="true" type="xsd:string">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element default="false" maxOccurs="1" minOccurs="0" name="vanity" nillable="true" type="xsd:boolean">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="characteristics" nillable="true" type="invchar:CharacteristicType">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+
+
+<!-- ==== Enumerations ==== 
+ <simpleType name="ServiceTypeEnum">
+        <xs:annotation>
+            <xs:documentation/>
+        </xs:annotation>
+        <restriction base="xsd:string">
+            <enumeration value="PSTN"/>
+            <enumeration value="VoIP"/>
+            <enumeration value="Share Call"/>
+            <enumeration value="Maxi Call"/>
+            <enumeration value="Mobile"/>
+            <enumeration value="Toll Free"/>
+            <enumeration value="Premium Rated Services"/>
+            <enumeration value="Messaging"/>
+            <enumeration value="Filter Network"/>
+            <enumeration value="Short Code"/>
+        </restriction>
+    </simpleType> 
+-->
+    
+    <simpleType name="ReservationTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Order Action</xs:documentation>
+        </xs:annotation>
+        <restriction base="xsd:string">
+            <enumeration value="SHORTTERM"/>
+            <enumeration value="LONGTERM"/>
+            <enumeration value=""/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TnBlockTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for TnBlock Type Descriptions</xs:documentation>
+        </xs:annotation>
+        <restriction base="xsd:string">
+            <enumeration value="GeoTNBlock_Ten"/>
+            <enumeration value="GeoTNBlock_Hundred"/>
+            <enumeration value="GeoTNBlock_Thousand"/>
+            <enumeration value="GeoTNBlock_10Thousand"/>
+            <enumeration value="InvalidBlock"/>
+            <enumeration value=""/>
+        </restriction>
+    </simpleType>
+
+
+    <!-- ==== Elements ==== -->
+    <element name="reserveTelephoneNumberRequest" type="invnm:reserveTelephoneNumberRequestType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="reserveTelephoneNumberResponse" type="invnm:reserveTelephoneNumberResponseType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="reserveTelephoneNumberFault" type="invnm:reserveTelephoneNumberFaultType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+
+    <element name="unReserveTelephoneNumberRequest" type="invnm:unReserveTelephoneNumberRequestType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="unReserveTelephoneNumberResponse" type="invnm:unReserveTelephoneNumberResponseType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="unReserveTelephoneNumberFault" type="invnm:unReserveTelephoneNumberFaultType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+
+    <element name="validateTelephoneNumberRequest" type="invnm:validateTelephoneNumberRequestType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="validateTelephoneNumberResponse" type="invnm:validateTelephoneNumberResponseType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="validateTelephoneNumberFault" type="invnm:validateTelephoneNumberFaultType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+
+
+    <!--= Elements for ValidateTNRange - 10Nov-Saurabh-->
+    <element name="validateTelephoneNumberRangeRequest" type="invnm:validateTelephoneNumberRangeRequestType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="validateTelephoneNumberRangeResponse" type="invnm:validateTelephoneNumberRangeResponseType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+    <element name="validateTelephoneNumberRangeFault" type="invnm:validateTelephoneNumberRangeFaultType">
+        <annotation>
+            <documentation>Need to add Documentation</documentation>
+        </annotation>
+    </element>
+
+    <element name="deleteTelephoneNumberRequest" type="invnm:deleteTelephoneNumberRequestType">
+    </element>
+    
+    <complexType name="deleteTelephoneNumberRequestType">
+    	<complexContent>
+    		<extension base="invcom:InventoryRequestType">
+    			<sequence>
+                    <element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType"/>
+                    <element name="telephoneNumber" type="invnm:telephoneNumberType">
+    				</element>
+    				<element maxOccurs="1" minOccurs="1" name="reservationID" type="xs:string">
+    				</element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <simpleType name="telephoneNumberType">
+    	<restriction base="xs:string">
+    		<length value="10"/>
+    	</restriction>
+    </simpleType>
+
+    <element name="deleteTelephoneNumberResponse" type="invnm:deleteTelephoneNumberResponseType">
+    </element>
+    
+    <complexType name="deleteTelephoneNumberResponseType">
+    	<complexContent>
+    		<extension base="invcom:InventoryResponseType">
+    			<sequence>
+    				<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+    				</element>
+    				<element minOccurs="1" name="Result" nillable="false" type="sfsct:Result_type">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <element name="deleteTelephoneNumberFault" type="invnm:deleteTelephoneNumberFaultType">
+    </element>
+
+    
+    <complexType name="deleteTelephoneNumberFaultType">
+    	<complexContent>
+    		<extension base="sfsct:SFSExceptionFaultType">
+    			<sequence>
+    				<element maxOccurs="1" minOccurs="1" name="reference" type="invnm:referenceType">
+    				</element>
+    			</sequence>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <simpleType name="referenceType">
+    	<restriction base="xs:string"/>
+    </simpleType>
+</schema>

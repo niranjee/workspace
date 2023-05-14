@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_RXBJsNQ3Ee2g08F00XiJog" targetNamespace="http://tns.tibco.com/bw/composite/Test_poc" name="Test_poc" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_SDyJENQ3Ee2g08F00XiJog" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEALgNQ3Ee2g08F00XiJog" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEJ8gNQ3Ee2g08F00XiJog" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEQqMNQ3Ee2g08F00XiJog" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEabMNQ3Ee2g08F00XiJog" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEhv8NQ3Ee2g08F00XiJog" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEodoNQ3Ee2g08F00XiJog" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SEyOoNQ3Ee2g08F00XiJog" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_SE5jYNQ3Ee2g08F00XiJog" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0Mk94NQ4Ee2g08F00XiJog" name="stylesheet" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WzvpwOMtEe25a6QD-Om_ag" name="resourcepath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_R0ODENQ3Ee2g08F00XiJog" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_R0ODEdQ3Ee2g08F00XiJog" processName="test_poc.xslt"/>
+  </sca:component>
+  <sca:component xmi:id="_cmoAMNdtEe2eMIuJETYOkg" name="Componentminvalues" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_cmoAMddtEe2eMIuJETYOkg" processName="test_poc.minvalues"/>
+  </sca:component>
+  <sca:component xmi:id="_UwTHoNqjEe2HZpxBLCcrKg" name="Componenttotal_order_per_person" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_UwTHodqjEe2HZpxBLCcrKg" processName="test_poc.total_order_per_person"/>
+  </sca:component>
+  <sca:component xmi:id="_A9p7UNuaEe2YudplixwtOA" name="Componentmail_sender" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_A9p7UduaEe2YudplixwtOA" processName="test_poc.mail_sender"/>
+  </sca:component>
+  <sca:component xmi:id="_7_JacN89Ee2NI68y0I3X1A" name="Componenttotal_order_price_csv" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7_Jacd89Ee2NI68y0I3X1A" processName="test_poc.total_order_price_csv"/>
+  </sca:component>
+</sca:composite>

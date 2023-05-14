@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/Kernel/Auditing/AuditTempExit-Start-Input.xsd" xmlns:ns="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns1="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:ns12="http://eai.telkom.co.za/auditing/20120101" xmlns:ns2="http://www.w3.org/2005/08/addressing" xmlns:ns3="http://eai.telkom.co.za/EnterpriseServiceMetaData/20110801" xmlns:ns4="http://www.tibco.com/ns/no_namespace_schema_location/SharedResources/GetPrepaidAccountInformation_20120413_SOAP11_JMS.wsdl" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/Kernel/Auditing/AuditTempExit-Start-Input.xsd">
+    <xsd:import namespace="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801"/>
+    <xsd:element name="AuditEvent">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="pfx:Header"/>
+                <xsd:element name="Payload">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Endpoint" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="EiEsbInvocation">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="SoapAction" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="EPR">
+                                <xsd:complexType>
+                                    <xsd:choice>
+                                        <xsd:element name="Async">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="CallbackURL" type="xsd:string"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="FireForget">
+                                            <xsd:complexType/>
+                                        </xsd:element>
+                                        <xsd:element name="Sync">
+                                            <xsd:complexType/>
+                                        </xsd:element>
+                                    </xsd:choice>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/minimum" xmlns:tns="http://www.example.org/minimum" elementFormDefault="qualified">
+
+    <complexType name="minimum_values">
+    	<sequence>
+    		<element name="mini" type="string" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="minimum" type="tns:minimum_values"></element>
+
+    <complexType name="minimum">
+    	<sequence>
+    		<element name="minimumv_values" type="tns:minimum_values" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

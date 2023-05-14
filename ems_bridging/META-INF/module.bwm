@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_0yPGgOWNEe2HbpbHQ7WmPg" targetNamespace="http://tns.tibco.com/bw/composite/ems_bridging" name="ems_bridging" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_1SKjwOWNEe2HbpbHQ7WmPg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1SWJ8OWNEe2HbpbHQ7WmPg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1SbpgOWNEe2HbpbHQ7WmPg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1Sf68OWNEe2HbpbHQ7WmPg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1SmBkOWNEe2HbpbHQ7WmPg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1SsIMOWNEe2HbpbHQ7WmPg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1SxnwOWNEe2HbpbHQ7WmPg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1S3HUOWNEe2HbpbHQ7WmPg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1S8m4OWNEe2HbpbHQ7WmPg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y9RdoOi1Ee2bB7gA-xKO1g" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:component xmi:id="_1DengOWNEe2HbpbHQ7WmPg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1DengeWNEe2HbpbHQ7WmPg" processName="ems_bridging.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_PeMmQOWjEe2HbpbHQ7WmPg" name="Componentsys_queues" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_PeMmQeWjEe2HbpbHQ7WmPg" processName="ems_bridging.sys_queues"/>
+  </sca:component>
+</sca:composite>

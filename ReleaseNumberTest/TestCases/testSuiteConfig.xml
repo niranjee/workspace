@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<TestCases xmlns = "http://eai.telkom.co.za/internal/TestSuite/20111014" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "http://eai.telkom.co.za/internal/TestSuite/20111014 ../Kernel/Testing/TestSuite/Schemas/TestSuite.xsd">
+	<!-- Test cases for ReleaseNumber-->
+	         
+	<processPath>/TestCases/ReleaseNumber/test001-ReleaseNumber-Success</processPath>
+	<processPath>/TestCases/ReleaseNumber/test002-ReleaseNumber-TimeoutError</processPath>
+	<processPath>/TestCases/ReleaseNumber/test003-ReleaseNumber-GeneralInternalError</processPath> 
+	<processPath>/TestCases/ReleaseNumber/test004-ReleaseNumber-ConnectivityError</processPath>
+</TestCases>

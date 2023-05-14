@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/csvcustomerorders" xmlns:tns="http://www.example.org/csvcustomerorders" elementFormDefault="qualified">
+
+    <complexType name="CustomerOrders">
+    	<sequence>
+    		<element name="customerid" type="int"></element>
+    		<element name="order_price" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="CustomerOrders" type="tns:CustomerOrders"></element>
+
+    <complexType name="Orders">
+    	<sequence>
+    		<element name="CustomerOrders" type="tns:CustomerOrders" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Orders" type="tns:Orders"></element>
+</schema>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:invchar="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:invfault="http://xmlns.oracle.com/communications/inventory/webservice/fault" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/characteristic">
+
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/common" schemaLocation="../referenceSchemas/InventoryCommon.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/fault" schemaLocation="../referenceSchemas/InventoryFaults.xsd"/>
+
+    <complexType name="CharacteristicType">
+		<xs:annotation>
+			<xs:documentation>CharacteristicType holds the characteristics information of an entity.</xs:documentation>
+		</xs:annotation>     
+        <complexContent>
+            <extension base="invcom:CharacteristicDataValueType">
+                <!-- this is supposed to be a restriction not an extension -->
+                <sequence>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CharacteristicDataType">
+    		<xs:annotation>
+			<xs:documentation>CharacteristicType holds the characteristics information of an entity.This type must be used only 
+			when the request is for add/modify/delete a characteristic.</xs:documentation>
+		</xs:annotation>
+        <complexContent>
+            <extension base="invchar:CharacteristicType">
+                <sequence>
+					<xs:annotation>
+						<xs:documentation>characteristicAction holds the characteristics Action which basically indicate whether a characteristic needs to be added/deleted/updated. Valid values for this element are defined by CharacteristicActionEnum.</xs:documentation>
+					</xs:annotation>                
+                    <element name="characteristicAction" type="invchar:CharacteristicActionEnum"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <simpleType name="CharacteristicActionEnum">
+		<xs:annotation>
+			<xs:documentation>CharacteristicActionEnum holds valid values for characteristicAction</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="add"/>
+            <enumeration value="update"/>
+            <enumeration value="delete"/>
+        </restriction>
+    </simpleType>
+    
+</schema>

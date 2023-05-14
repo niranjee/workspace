@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/merging_more_to_one2" elementFormDefault="qualified" targetNamespace="http://www.example.org/merging_more_to_one2">
+
+    <complexType name="food">
+    	<sequence>
+    		<element minOccurs="1" name="name" type="string"/>
+    		<element maxOccurs="unbounded" minOccurs="0" name="OtherData" type="tns:OtherData"/>
+    	</sequence>
+    </complexType>
+
+    <element name="food" type="tns:food"/>
+
+
+    <complexType name="OtherData">
+    	<sequence>
+    		<element name="price" type="string"/>
+    		<element name="description" type="string"/>
+    		<element name="calories" type="string"/>
+    	</sequence>
+    </complexType>
+
+    <element name="OtherData" type="tns:OtherData"/>
+
+    <complexType name="menu">
+    	<sequence>
+    		<element maxOccurs="unbounded" minOccurs="0" name="food" type="tns:food"/>
+    	</sequence>
+    </complexType>
+
+    <element name="menu" type="tns:menu"/>
+</schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/TestCases/Helpers/HTTPRequestReply-Start-Input.xsd" xmlns:ns="http://eai.telkom.co.za/RequestRechargeOrchestration/ManageRechargeSoap/Events/ManageRechargeIn" xmlns:ns1="http://xmlns.tibco.com/encodings/mime" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:ns3="http://eai.telkom.co.za/schemas/RequestRechargeOrchestration/20120401" xmlns:ns4="http://tibco.com/namespaces/tnt/plugins/soap" xmlns:ns5="http://www.tibco.com/pe/EngineTypes" xmlns:ns6="http://www.w3.org/2005/08/addressing" xmlns:ns7="http://eai.telkom.co.za/schemas/CancelRecharge/20120426/DataModel/Schema.xsd" xmlns:ns8="http://schemas.tibco.com/bw/plugins/http/5.0/cio" xmlns:ns9="http://schemas.tibco.com/bw/plugins/http/5.0/httpExceptions" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="www.tibco.com/be/ontology/RequestRechargeOrchestration" xmlns:pfx2="http://www.tibco.com/schemas/RechargeSE/Shared Resources/Schemas/Adapters/Schema.xsd" xmlns:pfx3="http://eai.telkom.co.za/RequestRechargeOrchestration/ManageRechargeSoap/Events/ManageRechargeOut" xmlns:pfx4="http://eai.telkom.co.za/services/RequestRechargeOrchestration/20120401" xmlns:pfx5="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pfx6="http://www.tibco.com/pe/SignalInActivitySchema" xmlns:pfx7="http://eai.telkom.co.za/services/CancelRecharge/20120426/" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/TestCases/Helpers/HTTPRequestReply-Start-Input.xsd">
+    <xsd:element name="group">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="SoapEnvelope">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Endpoint">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="protocol" type="xsd:string"/>
+                            <xsd:element name="host" type="xsd:string"/>
+                            <xsd:element name="port" type="xsd:string"/>
+                            <xsd:element name="endpointURI" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="SoapAction" type="xsd:string"/>
+                <xsd:element name="TimeoutSeconds" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

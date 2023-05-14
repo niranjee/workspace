@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_5d528d71-21d2-4fed-9157-2ca9981424dc="http://ns.tibco.com/bw/palette/dataformat/5d528d71-21d2-4fed-9157-2ca9981424dc" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_xB258NXbEe2w7M2A9WmBAw" name="test_poc.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_-XvV8NXbEe2w7M2A9WmBAw" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/5d528d71-21d2-4fed-9157-2ca9981424dc"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_xB59QNXbEe2w7M2A9WmBAw" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_5d528d71-21d2-4fed-9157-2ca9981424dc:root" fieldOffsetsStr="age(0,0)">
+    <fieldOffsets xmi:id="_9sf5QNn8Ee2BrpoEDFxtOQ" name="age"/>
+  </jndi:configuration>
+</jndi:namedResource>

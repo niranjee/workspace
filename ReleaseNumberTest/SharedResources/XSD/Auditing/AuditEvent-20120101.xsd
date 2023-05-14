@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Soteri Panagou (Telkom SA Limited) -->
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 xmlns:ns="http://eai.telkom.co.za/auditing/20120101"
+	 targetNamespace="http://eai.telkom.co.za/auditing/20120101"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xsd:element name="AuditEvent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Metadata" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:attribute name="Qualifier" type="xsd:string" use="required"/>
+						<xsd:attribute name="Key" type="xsd:string" use="required"/>
+						<xsd:attribute name="Value" type="xsd:string" use="required"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="AuditCategory" type="xsd:string"/>
+				<xsd:element name="Timestamp" type="xsd:dateTime"/>
+				<xsd:element name="ServiceName" type="xsd:string"/>
+				<xsd:element name="InternalMessageId" type="xsd:string"/>
+				<xsd:element name="MessageId" type="xsd:string"/>
+				<xsd:element name="RelatesTo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="GroupIdentifier" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="SenderId" type="xsd:string"/>
+				<xsd:element name="EndUserIdentity" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="SenderIdentity" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Component" type="xsd:string"/>
+				<xsd:element name="LogStatement" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ReplyTo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="FaultTo" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ResultCode" type="xsd:int" minOccurs="0"/>
+				<xsd:element name="ResultMsgCode" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Payload">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any namespace="##any" processContents="skip"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="StackTrace" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="OrchestrationData" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any namespace="##any" processContents="skip"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="GlobalVariables" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any namespace="##any" processContents="skip"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="ExecuteThread" type="xsd:string"/>
+				<xsd:element name="Hostname" type="xsd:string"/>
+				<xsd:element name="ProcessContext">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any namespace="##any" processContents="skip"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

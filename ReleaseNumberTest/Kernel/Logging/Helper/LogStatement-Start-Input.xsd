@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/Kernel/Logging/Helper/LogStatement-Start-Input.xsd" xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:ns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:ns2="http://www.tibco.com/CommonLE2/namespace/Public/Common/RequestHeader.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.tibco.com/pe/DeployedVarsType" xmlns:pfx2="http://www.tibco.com/CommonLE2/namespace/Public/Logging/LogRequest.xsd" xmlns:pfx3="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:pfx4="http://www.tibco.com/CommonLE2/namespace/Public/Exception/ExceptionRequest.xsd" xmlns:pfx5="http://www.tibco.com/ns/no_namespace_schema_location/Kernel/Logging/Helper/LogDetail.xsd" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/Kernel/Logging/Helper/LogStatement-Start-Input.xsd">
+    <xsd:import namespace="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" schemaLocation="../../../SharedResources/XSD/EnterpriseMessage/EAI-EnterpriseMessage-20110801.xsd"/>
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="LogLevel" type="xsd:string"/>
+                <xsd:element name="Callstack">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ProcessName" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LogStatement" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="Payload">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:any namespace="##any" processContents="skip"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element ref="pfx3:Header"/>
+                <xsd:element minOccurs="0" name="Exception">
+                    <xsd:complexType>
+                        <xsd:choice>
+                            <xsd:element name="ErrorDetail">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:any namespace="##any" processContents="skip"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="StackTrace" type="xsd:string"/>
+                        </xsd:choice>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

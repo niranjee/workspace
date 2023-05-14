@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<project default = "designer.launch" name = "ReserveNumberTest">   
+	<property environment = "env"/>    
+	<property name = "project.name" value = "${ant.project.name}"/>    
+	<property name = "project.dir" value = "."/>    
+	<import file = "${env.WORKSPACE_HOME}/scripts/environment/build.xml"/>                                       
+    
+	<property name = "ear.resources" value = "${ant.project.name}:/Deployment/${ant.project.name}"/>    
+	<property name = "ear.resources.test" value = "${ant.project.name}:/Deployment/${ant.project.name}_Test"/>   
+	<property name = "lib.resources" value = "${ant.project.name}:/Deployment/${ant.project.name}_Lib"/>                                
+    
+	<!-- property name="EAI-KernelLib-1.0.3.projlib" location="${libraries.home}/telkomeai/adapters/EAI-KernelLib-1.0.2.projlib"/ -->
+	<property location = "${libraries.home}/telkomeai/adapters/EAI-KernelServicesTest-1.0.3.projlib" name = "EAI-KernelServicesTest-1.0.3.projlib"/>
+	<!-- These correspond to the aliases used in the project -->
+	<propertyset id = "aliases.ref">
+		<!-- propertyref name="EAI-KernelLib-1.0.3.projlib"/ -->
+		<propertyref name = "EAI-KernelServicesTest-1.0.3.projlib"/>
+	</propertyset>
+</project>

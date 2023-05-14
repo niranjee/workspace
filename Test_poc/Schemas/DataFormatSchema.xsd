@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/5d528d71-21d2-4fed-9157-2ca9981424dc" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/5d528d71-21d2-4fed-9157-2ca9981424dc">
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="age" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

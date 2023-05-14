@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/Kernel/Logging/Helper/ExtractResult-End-Output.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/Kernel/Logging/Helper/ExtractResult-End-Output.xsd">
+    <xsd:element name="Result">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="resultCode" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="resultMsgCode" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="resultMsg" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

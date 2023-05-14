@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:invchar="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:invfault="http://xmlns.oracle.com/communications/inventory/webservice/fault" xmlns:invplace="http://xmlns.oracle.com/communications/inventory/webservice/place" xmlns:invrole="http://xmlns.oracle.com/communications/inventory/webservice/role" xmlns:invspec="http://xmlns.oracle.com/communications/inventory/webservice/specification" xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/webservice/service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/place">
+
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/common" schemaLocation="../referenceSchemas/InventoryCommon.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/fault" schemaLocation="../referenceSchemas/InventoryFaults.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/specification" schemaLocation="Specification.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/role" schemaLocation="Role.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" schemaLocation="Characteristic.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/service" schemaLocation="Service.xsd"/>
+
+
+    <complexType name="PlaceType">
+		<xs:annotation>
+			<xs:documentation>PlaceType holds the Place information, along with  Roles and Services that are associated with the Place</xs:documentation>
+		</xs:annotation>     
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="1" name="id" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>id is the unique key to identify a Place.</xs:documentation>
+						</xs:annotation>                     
+                    </element>
+                    <element minOccurs="0" name="name" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Name of the Place</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="description" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Description of a Place</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="1" name="specification" nillable="false" type="invspec:SpecificationType">
+						<xs:annotation>
+							<xs:documentation>Specification information of the Place.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="role" nillable="true" type="invrole:RoleType">
+						<xs:annotation>
+							<xs:documentation>Role information of the Place</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="unbounded" minOccurs="0" name="characteristics" nillable="true" type="invchar:CharacteristicType">
+						<xs:annotation>
+							<xs:documentation>Characteristics of a Place</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="unbounded" minOccurs="0" name="services" nillable="true" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service that are associated to the Place.</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="PlaceDataType">
+		<xs:annotation>
+			<xs:documentation>PlaceDataType holds the Place information, along with  Roles and Services that are associated with the Place.This 
+			type must be only used when performing add/update/delete operations on a Place.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invplace:PlaceType">
+                <sequence>
+                    <element name="placeAction" type="invplace:PlaceActionEnum">
+						<xs:annotation>
+							<xs:documentation>placeAction holds the action that needs to be taken on a Place. Valid values are defined in PlaceActionEnum</xs:documentation>
+						</xs:annotation>
+					</element>	                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <simpleType name="PlaceActionEnum">
+		<xs:annotation>
+			<xs:documentation>Holds valid values for placeAction.</xs:documentation>
+		</xs:annotation>    
+        <restriction base="xsd:string">
+            <enumeration value="none"/>
+            <enumeration value="add"/>
+            <enumeration value="update"/>
+            <enumeration value="delete"/>
+        </restriction>
+    </simpleType>
+
+</schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Soteri Panagou (Telkom SA Limited) --><xsd:schema xmlns:ns="http://eai.telkom.co.za/auditing/20120101" xmlns:ns1="http://www.w3.org/2005/08/addressing" xmlns:ns2="http://eai.telkom.co.za/EnterpriseServiceMetaData/20110801" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://eai.telkom.co.za/auditing/20120101">
+	<xsd:import namespace="http://www.w3.org/2005/08/addressing" schemaLocation="../SoapStandards/ws-addr-20110801.xsd"/>
+	<xsd:import namespace="http://eai.telkom.co.za/EnterpriseServiceMetaData/20110801" schemaLocation="../EnterpriseMessage/EAI-EnterpriseServiceMetadata-20110801.xsd"/>
+	<xsd:element name="ContextInput">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns1:MessageID"/>
+				<xsd:element ref="ns1:Action"/>
+				<xsd:element ref="ns1:From"/>
+				<xsd:element minOccurs="0" ref="ns1:To"/>
+				<xsd:element minOccurs="0" ref="ns1:ReplyTo"/>
+				<xsd:element minOccurs="0" ref="ns1:FaultTo"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ContextOutput">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns1:Action"/>
+				<xsd:element ref="ns1:MessageID"/>
+				<xsd:element ref="ns1:RelatesTo"/>
+				<xsd:element ref="ns2:SenderID"/>
+				<xsd:element minOccurs="0" ref="ns2:TransactionGroupID"/>
+				<xsd:element minOccurs="0" ref="ns2:Metadata"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

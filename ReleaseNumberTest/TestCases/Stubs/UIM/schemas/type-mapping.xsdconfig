@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config" xmlns:pol="http://openuri.org/easypoLocal">
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/common">
+        <xb:package>oracle.communications.inventory.webservice.framework.common</xb:package>
+  </xb:namespace>
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/fault">
+        <xb:package>oracle.communications.inventory.webservice.framework.fault</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/characteristic">
+        <xb:package>oracle.communications.inventory.webservice.characteristic</xb:package>
+  </xb:namespace> 
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/custnetworkaddress">
+        <xb:package>oracle.communications.inventory.webservice.custnetworkaddress</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/party">
+        <xb:package>oracle.communications.inventory.webservice.party</xb:package>
+  </xb:namespace> 
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/place">
+        <xb:package>oracle.communications.inventory.webservice.place</xb:package>
+  </xb:namespace> 
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/role">
+        <xb:package>oracle.communications.inventory.webservice.role</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/service">
+        <xb:package>oracle.communications.inventory.webservice.service</xb:package>
+  </xb:namespace> 
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/specification">
+        <xb:package>oracle.communications.inventory.webservice.specification</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/system">
+        <xb:package>oracle.communications.inventory.webservice.system</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/framework/webservice/fault/v1-0">
+        <xb:package>oracle.communications.inventory.webservice.framework.fault</xb:package>
+  </xb:namespace>
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/webservice/nm">
+        <xb:package>oracle.communications.inventory.webservice.framework.nm</xb:package>
+  </xb:namespace>  
+</xb:config>

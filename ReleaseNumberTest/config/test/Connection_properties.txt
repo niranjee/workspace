@@ -1,0 +1,12 @@
+tibco.clientVar.ES/ReleaseNumber/SoapAction http://eai.telkom.co.za/services/ReleaseNumber/20121214/Request
+tibco.clientVar.ES/ReleaseNumber/TimeoutSeconds 20
+tibco.clientVar.ES/ReleaseNumber/URL/host localhost
+tibco.clientVar.ES/ReleaseNumber/URL/port 6969
+tibco.clientVar.ES/ReleaseNumber/protocol http
+tibco.clientVar.ES/ReleaseNumber/uri  /services/ReleaseNumber/SOAP11_HTTP_EP
+
+tibco.clientVar.Stubs/id UIM
+tibco.clientVar.Stubs/URL/host localhost
+tibco.clientVar.Stubs/URL/port  7311
+tibco.clientVar.Stubs/URL/protocol http
+tibco.clientVar.Stubs/URL/uri  ReservationTelephoneNumberUim/ReservationTelephoneNumberUimHTTP

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Test_poc/Processes/test_poc/Process.bwp&apos; to &apos;xslt.bwp&apos;" description="Rename resource &apos;Process.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/test_poc/Process.bwp" name="xslt.bwp" stamp="1680756969924" updateReferences="true"/>
+</session>

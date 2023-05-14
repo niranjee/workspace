@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/ReleaseNumberTest/Kernel/Exceptions/GenerateError-Start-Input.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://eai.telkom.co.za/internal/Kernel/20110801" xmlns:pfx2="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/ReleaseNumberTest/Kernel/Exceptions/GenerateError-Start-Input.xsd">
+    <xsd:import namespace="http://eai.telkom.co.za/internal/Kernel/20110801" schemaLocation="../Schemas/KernelSchemas.xsd"/>
+    <xsd:element name="group">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resultCode" type="xsd:int"/>
+                <xsd:element name="resultMsgCode" type="xsd:string"/>
+                <xsd:element ref="pfx:ErrorMessage"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" factory="com.tibco.xml.cxf.user.http_tib.replace.function__" name="cxf.user.http_tib.replace.function__">
+   <implementation class="custom_xpath_function.CustomFunctions"/>
+</scr:component>

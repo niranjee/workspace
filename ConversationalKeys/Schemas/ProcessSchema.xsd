@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1680607579038" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1680607579038">
+  <element name="CreateOrderRequest">
+    <complexType>
+      <sequence>
+        <element name="ItemName" type="string"/>
+                <element name="Qty" type="string"/>
+                <element name="OrderDate" type="dateTime"/>
+            </sequence>
+    </complexType>
+  </element>
+  <element name="CreateOrderResponse">
+    <complexType>
+      <sequence>
+        <element name="CartStatus" type="string"/>
+                <element name="OrderName" type="string"/>
+            </sequence>
+    </complexType>
+  </element>
+    <element name="ConformOrderRequest">
+    <complexType>
+      <sequence>
+        <element name="CartStatus" type="string"/>
+                <element name="OrderName" type="string"/>
+            </sequence>
+    </complexType>
+  </element>
+    <element name="ConformOrderResponse">
+    <complexType>
+      <sequence>
+        <element name="OrderId" type="string"/>
+                <element name="OrderStatus" type="string"/>
+            </sequence>
+    </complexType>
+  </element>
+    <element name="CancelOrderRequest">
+    <complexType>
+      <sequence>
+        <element name="OrderName" type="string"/>
+                <element name="CancelStatus" type="string"/>
+            </sequence>
+    </complexType>
+  </element>
+</schema>

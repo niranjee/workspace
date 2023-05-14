@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;complex_mappings/Processes/complex_mappings/Process.bwp&apos; to &apos;merging_multiple_to_single.bwp&apos;" description="Rename resource &apos;Process.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/complex_mappings/Process.bwp" name="merging_multiple_to_single.bwp" stamp="1681813460318" updateReferences="true"/>
+</session>

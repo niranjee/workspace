@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ReleaseNumberTest
+Bundle-SymbolicName: ReleaseNumberTest
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: TIBCO Software Inc.
+Export-Package: Kernel.Auditing.Helper.AuditEvent,
+ Kernel.Logging.Helper.LogStatement,
+ Kernel.Testing.TestSuite.Util.SystemPropertiesSerializer,
+ Kernel.Testing.Util.ManageEMS,
+ Kernel.Testing.Util.UUIDGenerator,
+ Kernel.Util.GetProcessCallStack,
+ Kernel.Util.SystemPropertiesSerializer,
+ Kernel.Util.UUIDGenerator,
+ Kernel.Util.UrlParser,
+ com,
+ org.apache.log4j
+TIBCO-BW-Version: 2.6.1 V57 2021-02-13
+Import-Package: com.tibco.bw.palette.java.runtime,
+ com.tibco.bw.runtime,
+ org.apache.log4j
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-Edition: bwcf
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.file)",
+ com.tibco.bw.palette; filter:="(name=bw.java)",
+ com.tibco.bw.palette; filter:="(name=bw.xml)",
+ com.tibco.bw.palette; filter:="(name=bw.http)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.notifyconfiguration)"
+TIBCO-BW-ApplicationModule: META-INF/module.bwm

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Soteri Panagou (Telkom SA Limited) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801"
+	 targetNamespace="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>This is the default enterprise message. Messages published onto the ESB  includes this schema.
+			</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="EnterpriseMessageRequest">
+		<xs:sequence>
+			<xs:element ref="Header"/>
+			<xs:element ref="Request"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Request">
+		<xs:sequence>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Request" type="Request"/>
+	<xs:element name="Header" type="EnterpriseMessageHeader"/>
+	<xs:element name="exception" type="EnterpriseException"/>
+	<xs:element name="Metadata" type="Metadata"/>
+	<xs:element name="History">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="Entry">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="EnterpriseMessageHeader">
+								<xs:attribute name="Qualifier" type="xs:string">
+									<xs:annotation>
+										<xs:documentation>Allows controller to assign a unique qualifying identifier to each header to be able to reference specific history entities</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="ComponentName" type="xs:string" use="required">
+									<xs:annotation>
+										<xs:documentation>The name of the component that added this enterprise header to the history</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="ComponentInstanceID" type="xs:string" use="required">
+									<xs:annotation>
+										<xs:documentation>The unique instanceID of the component that added this enterprise header to the history</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="Param" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Qualifier" type="xs:string" use="required"/>
+					<xs:attribute name="Key" type="xs:string" use="required"/>
+					<xs:attribute name="Value" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseMessageResponse">
+		<xs:sequence>
+			<xs:element name="Exception" type="EnterpriseException" minOccurs="0"/>
+			<xs:element ref="Header"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseException">
+		<xs:sequence>
+			<xs:element name="Header">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ApplicationID" type="xs:string"/>
+						<xs:element name="ComponentName" type="xs:string" minOccurs="0"/>
+						<xs:element name="Hostname" type="xs:string" minOccurs="0"/>
+						<xs:element name="Timestamp" type="xs:string"/>
+						<xs:element name="TransactionDomain" type="xs:string" minOccurs="0"/>
+						<xs:element name="TransactionType" type="xs:string" minOccurs="0"/>
+						<xs:element name="TransactionID" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Context" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="exceptionType" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExceptionCode" type="xs:string"/>
+			<xs:element name="Message" type="xs:string" minOccurs="0"/>
+			<xs:element name="TransactionData" type="xs:string" minOccurs="0"/>
+			<xs:element name="DumpAnalysis" type="xs:string" minOccurs="0"/>
+			<xs:element name="DataEncoding" type="xs:string" minOccurs="0"/>
+			<xs:element name="CorrelationID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Custom" type="xs:string" minOccurs="0"/>
+			<xs:element name="Timeout" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReplyDestination" type="xs:string" minOccurs="0"/>
+			<xs:element name="NotificationChannel" type="xs:string" minOccurs="0"/>
+			<xs:element name="RenderID" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseMessageHeader">
+		<xs:sequence>
+			<xs:element name="Timestamp">
+				<xs:annotation>
+					<xs:documentation>When the message was received by the service</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MessageID">
+				<xs:annotation>
+					<xs:documentation>This is the unique messageID that is set by the client for a specific message interaction. For a given client (SystemID), the messageID must be unique. It MUST be unique for every message that is sent by a client. WILL be used internally for tracking a given transaction, end to end.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="RelatesTo" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Inidicates that this message (identiified by MessageID) is related to another message (identified by the RelatesTo  field).  Used for message correlation between two systems. Applicable for transactions which involve asynchronous callbacks</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SenderID">
+				<xs:annotation>
+					<xs:documentation>This represents the logical name of  the system that initiated the transaction. The name is owned by EAI and assigned to a system as per the agreement with that system. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="SenderIdentity" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Represents the identity (email address) associated with the system user associated with the SenderID</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="EnduserIdentity" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Represents the unique identity of the user that initiated the transaction on the SenderAppID</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GroupIdentifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Used to group messages together which make business sense - effectively used for Business Correlation.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReplyTo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specifies how this message should be processed:
+- If not specified, the call will be treated as SYNCHRONOUS BLOCKING. The receiver will functionally process the request and return a reply as part of the same. The client will initiate and block waitinf for the response to the call. 
+- If the WS-Addressing ANONYMOUS endpoint is specified, the call will be treated as SYNCHRONOUS BLOCKING.  
+- If the WS-Addressing NONE endpoint is specified, the call is treated as a ONE-WAY NOTIFICATION - the client is not  interested in any form of reply from the service
+- If the WS-Addressing NONE endpoint is specified, the call is treated as a one-way notification - the client indicates that it is not  interested in any form of reply 
+- If a valid callback endpoint is specifried, the call is treated as INITIATE-WITH-CALLBACK. The receiver will explicitly inidcate to the client that it has either accepted or rejected the message. If it accepts the message, it will process the message and only once it is done will it  either accept or reject the message </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anyURI">
+							<xs:attribute name="FaultTo" type="xs:anyURI">
+								<xs:annotation>
+									<xs:documentation>Applicable only to INITIATE-WITH-CALLBACK transactions. If specifiedit means the interaction is asynchronous with callback, and indicates that the client wishes the error to be returned to a different component. </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="Metadata" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This section is used to carry metadata.  Every metadata element is represented as a key/value pair and is bound by a qualifier. It could be used to carry unique business identifiers. The most important business-critical information is carried here. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="History" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This represents the message header history. It is a recursive/list structure in that one can simply look at the header to understand which messages are related to this message. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Result">
+		<xs:annotation>
+			<xs:documentation>
+          This is the Telkom standard reply message that should be used when there's a need to indicate
+          success, fail or reject of a request message.
+        			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ResultCode" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>
+              Every result message needs to have a result code to indicate success, fail or reject.
+              Success means that the request message was successful.
+              Fail means that there is some failure of technical nature and it is possible the message
+              might be successful if resent.
+              Reject means that the message will be rejected again if resent. This is typically business
+              related and might require manual intervention.
+              For fail and reject, result message code and result message will give a more detail
+              description of the error.
+					            </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ResultMsgCode" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+              If the result code is of type fail or reject an additional result message code should be specified.
+              This message code should indicate what type of problem was experienced with the request message.
+              The recommended way of using this field is to have two parts: system identifier + number
+              Example: RIM02001, CBS0999
+					        	</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="64"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ResultMsg" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+              This is a more detail description, human readable and interpretable, of the result message code.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="EnterpriseMessage">
+		<xs:sequence>
+			<xs:element ref="Header"/>
+
+			<!--Added By Arindam Das-->
+			<xs:element ref="Request" minOccurs="0"/>
+
+			<!--End-->
+			<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsv:DocumentRoot xmlns:jsv="http://tns.tibco.com/bw/model/core/jobSV">
+  <jobSharedVariables>
+    <jobSharedVariable name="SharedResources-Context-ContextInput" type="{http://eai.telkom.co.za/auditing/20120101}ContextInput" initialValueMode="none"/>
+    <jobSharedVariable name="SharedResources-Context-ContextOutput" type="{http://eai.telkom.co.za/auditing/20120101}ContextOutput" initialValueMode="none"/>
+  </jobSharedVariables>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://eai.telkom.co.za/auditing/20120101" location="../SharedResources/XSD/Context/Context-20130101.xsd"/>
+</jsv:DocumentRoot>

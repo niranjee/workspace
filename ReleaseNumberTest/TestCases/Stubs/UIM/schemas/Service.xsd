@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:invchar="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:invfault="http://xmlns.oracle.com/communications/inventory/webservice/fault" xmlns:invparty="http://xmlns.oracle.com/communications/inventory/webservice/party" xmlns:invplace="http://xmlns.oracle.com/communications/inventory/webservice/place" xmlns:invrole="http://xmlns.oracle.com/communications/inventory/webservice/role" xmlns:invspec="http://xmlns.oracle.com/communications/inventory/webservice/specification" xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/webservice/service" xmlns:invsys="http://xmlns.oracle.com/communications/inventory/webservice/system" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/service">
+     <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/common" schemaLocation="../referenceSchemas/InventoryCommon.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/fault" schemaLocation="../referenceSchemas/InventoryFaults.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/system" schemaLocation="System.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/specification" schemaLocation="Specification.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/characteristic" schemaLocation="Characteristic.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/place" schemaLocation="Place.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/party" schemaLocation="Party.xsd"/>
+    <import namespace="http://xmlns.oracle.com/communications/inventory/webservice/role" schemaLocation="Role.xsd"/>
+
+
+    <!-- ==== Message Types ==== -->
+
+    <complexType name="ServiceFulfillmentRequestType">
+		<xs:annotation>
+			<xs:documentation>ServiceFulfillmentRequestType defines the base type for Requests that will be used for Service Fulfillment. All the 
+			attributes that are defined at the Service Fulfillemnt request level are defined here.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invcom:InventoryRequestType">
+                <sequence>
+                    <element default="true" minOccurs="1" name="expandedResponse" nillable="false" type="xsd:boolean">
+						<xs:annotation>
+							<xs:documentation>expandedResponse determines of the ServiceType in the response should contain Configuration Items (along with child 
+							configuration items). If true, the whole Service tree is returned. If false, Configuration Items are omitted. Default is false.</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CaptureServiceConfigurationInputsRequestType">
+		<xs:annotation>
+			<xs:documentation>CaptureServiceConfigurationInputsRequestType holds the information to create/update a Service based on some inputs. The request 
+			holds the Order, Service, Party, Role and Place information.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    <element minOccurs="1" name="orderData" nillable="false" type="invsvc:OrderDataType">
+						<xs:annotation>
+							<xs:documentation>Order data holds the order information.</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CaptureServiceConfigurationInputsResponseType">
+		<xs:annotation>
+			<xs:documentation>CaptureServiceConfigurationInputsResponseType holds the response of the CaptureServiceConfigurationInputs Web Service 
+			operation. This return the created/updated Service tree.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="0" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CaptureServiceConfigurationInputsFaultType">
+	    <xs:annotation>
+			<xs:documentation>Fault that is specific to Capture Service Configuration Inputs WS operation.</xs:documentation>
+		</xs:annotation>  
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="AutomateServiceConfigurationRequestType">
+		<xs:annotation>
+			<xs:documentation>AutomateServiceConfigurationRequestType holds the information to process Service configuration Automation. It contains the 
+			criteria to identify Service and Service Configuration.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    <element minOccurs="1" name="serviceCriteria" nillable="false" type="invsvc:ServiceCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                    <element minOccurs="1" name="serviceConfigurationCriteria" nillable="false" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service Configuration</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="AutomateServiceConfigurationResponseType">
+		<xs:annotation>
+			<xs:documentation>AutomateServiceConfigurationResponseType holds the response of the CaptureServiceConfigurationInputs Web Service 
+			operation. This return the created/updated Service tree.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="0" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                      
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="AutomateServiceConfigurationFaultType">
+		<xs:annotation>
+			<xs:documentation>Fault type to return any business faults within Automate Service Configuration Web Service.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="UpdateServiceConfigurationRequestType">
+		<xs:annotation>
+			<xs:documentation>UpdateServiceConfigurationRequestType holds the request for Update Service Configuration Web Service operation. It contains 
+			information for allocation/de-allocation of Service Configuration Items as well as characteristics of Service Configuration and Service 
+			Configuration Items. </xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    <element minOccurs="1" name="orderData" nillable="false" type="invsvc:OrderDataType">
+						<xs:annotation>
+							<xs:documentation>orderData contains the Order Information.</xs:documentation>
+						</xs:annotation>  
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="UpdateServiceConfigurationResponseType">
+		<xs:annotation>
+			<xs:documentation>UpdateServiceConfigurationResponseType holds the response of the CaptureServiceConfigurationInputs Web Service 
+			operation. This return the created/updated Service tree.</xs:documentation>
+		</xs:annotation>      
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="0" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="UpdateServiceConfigurationFaultType">
+		<xs:annotation>
+			<xs:documentation>Fault type to return any business faults within Update Service Configuration Web Service.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="CalculateConfigurationDifferencesRequestType">
+		<xs:annotation>
+			<xs:documentation>CalculateConfigurationDifferencesRequestType holds the request information for Calculate Configuration Differences 
+			Web Service operation. It contains the information to identify the two Service Configurations(source and target) that have to be compared.
+			</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    <element minOccurs="1" name="serviceCriteria" nillable="false" type="invsvc:ServiceCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="1" name="sourceServiceConfigurationCriteria" nillable="false" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Source Service Configuration version.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="1" name="targetServiceConfigurationCriteria" nillable="false" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Target Service Configuration version.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CalculateConfigurationDifferencesResponseType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="1" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CalculateConfigurationDifferencesFaultType">
+		<xs:annotation>
+			<xs:documentation>Fault type to return any business faults within Calculate Configuration Differences Web Service.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="ChangeServiceConfigurationStateRequestType">
+		<xs:annotation>
+			<xs:documentation>ChangeServiceConfigurationStateRequestType holds the request for Change Service Configuration State Web Service 
+			operation</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    
+                   <element minOccurs="0" name="serviceCriteria" nillable="true" type="invsvc:ServiceCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+						</xs:annotation>                   
+                   </element>
+                    <element minOccurs="0" name="serviceConfigurationCriteria" nillable="true" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service Configuration version.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="configurationAction" nillable="true" type="invsvc:ServiceConfigurationActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be taken on the configuration.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="serviceAction" nillable="true" type="invsvc:ServiceActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be taken on the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element name="stateChangePolicy" type="invsvc:StateChangePolicyEnum">
+						<xs:annotation>
+							<xs:documentation>State change policy for the Service Configuration Items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ChangeServiceConfigurationStateResponseType">
+		<xs:annotation>
+			<xs:documentation>ChangeServiceConfigurationStateResponseType holds the response of the ChangeServiceConfigurationState Web Service 
+			operation. This return the created/updated Service tree.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="0" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ChangeServiceConfigurationStateFaultType">
+		<xs:annotation>
+			<xs:documentation>Fault type to return any business faults within Change Service Configuration State Web Service.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="GetServiceConfigurationRequestType">
+		<xs:annotation>
+			<xs:documentation>GetServiceConfigurationRequestType holds the request information containing the Service and Service Configuration 
+			criteria.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceFulfillmentRequestType">
+                <sequence>
+                    <element minOccurs="1" name="serviceCriteria" nillable="false" type="invsvc:ServiceCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="serviceConfigurationCriteria" nillable="false" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service Configuration version.</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="GetServiceConfigurationResponseType">
+		<xs:annotation>
+			<xs:documentation>GetServiceConfigurationResponseType holds the response of the GetServiceConfiguration Web Service 
+			operation. This return the created/updated Service tree.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:InventoryResponseType">
+                <sequence>
+                    <element minOccurs="1" name="service" nillable="false" type="invsvc:ServiceType">
+						<xs:annotation>
+							<xs:documentation>Service information with/without configuration items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="GetServiceConfigurationFaultType">
+		<xs:annotation>
+			<xs:documentation>Fault type to return any business faults within Get Service Configuration Web Service.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invfault:InventoryFaultType"/>
+        </complexContent>
+    </complexType>
+
+
+
+
+    <!-- ==== Entity Value Types ==== -->
+    <complexType name="ServiceType">
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                <!-- 9887580 -->
+                    <element minOccurs="0" name="id" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Id of the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="name" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Name of the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="description" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Description of the Service</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    <element minOccurs="0" name="state" nillable="true" type="invsvc:ServiceStateEnum">
+						<xs:annotation>
+							<xs:documentation>Current State  of the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="startDate" nillable="true" type="xsd:dateTime">
+						<xs:annotation>
+							<xs:documentation>Start Date  of the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="1" name="specification" nillable="false" type="invspec:SpecificationType">
+						<xs:annotation>
+							<xs:documentation>Specification information of the Service</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="characteristics" nillable="true" type="invchar:CharacteristicType">
+						<xs:annotation>
+							<xs:documentation>Service Characteristics</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="places" nillable="true" type="invplace:PlaceType">
+						<xs:annotation>
+							<xs:documentation>Places that are associated with the Service.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="parties" nillable="true" type="invparty:PartyType">
+						<xs:annotation>
+							<xs:documentation>Parties that are associated with the Service.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="configurations" nillable="true" type="invsvc:ServiceConfigurationType">
+						<xs:annotation>
+							<xs:documentation>Configuration Verions of a Service.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceConfigurationType">
+		<xs:annotation>
+			<xs:documentation>ServiceConfigurationType holds the Service Configuration Version.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element default="0" minOccurs="1" name="version" nillable="false" type="xsd:int">
+						<xs:annotation>
+							<xs:documentation>Version number(integer)</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="previousVersion" nillable="true" type="xsd:int">
+						<xs:annotation>
+							<xs:documentation>Previous Service Configuration version number</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="id" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Service Configuration Id</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="name" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Name of the Service Configuration</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="description" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Description  of the Service Configuration</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element minOccurs="0" name="state" nillable="true" type="invsvc:ServiceConfigurationStateEnum">
+						<xs:annotation>
+							<xs:documentation>Current state  of the Service Configuration</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="startDate" nillable="true" type="xsd:dateTime">
+						<xs:annotation>
+							<xs:documentation>Start Date  of the Service Configuration</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    <element minOccurs="0" name="endDate" nillable="true" type="xsd:dateTime">
+						<xs:annotation>
+							<xs:documentation>End Date  of the Service Configuration</xs:documentation>
+						</xs:annotation>                    
+					</element>                    
+                    <element minOccurs="1" name="configSpec" nillable="false" type="invspec:SpecificationType">
+						<xs:annotation>
+							<xs:documentation>Specification information of Service Configuration.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="unbounded" minOccurs="0" name="configurationItems" nillable="true" type="invsvc:ServiceConfigurationItemType">
+						<xs:annotation>
+							<xs:documentation>Configuration Items within a Service Configuration Version.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="characteristics" nillable="true" type="invchar:CharacteristicType">
+						<xs:annotation>
+							<xs:documentation>Service Configuration Version Characteristics(Characteristics of the ROOT configuration item).</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceConfigurationItemType">
+		<xs:annotation>
+			<xs:documentation>Holds Service Configuration Item information.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="0" name="name" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Name of the Service Configuration Item.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="1" minOccurs="0" name="parentConfigurationItem" nillable="true" type="invsvc:ServiceConfigurationItemType">
+						<xs:annotation>
+							<xs:documentation>Parent Configuration Item information.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="unbounded" minOccurs="0" name="configurationItems" nillable="true" type="invsvc:ServiceConfigurationItemType">
+						<xs:annotation>
+							<xs:documentation>Child configuration items, if any.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <element maxOccurs="unbounded" minOccurs="0" name="resourceAssignment" nillable="true" type="invsvc:ResourceAssignmentType">
+						<xs:annotation>
+							<xs:documentation>Resource Assignment information, if any.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="resourceReference" nillable="true" type="invsvc:ResourceReferenceType">
+						<xs:annotation>
+							<xs:documentation>Resource Reference, if any.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element maxOccurs="unbounded" minOccurs="0" name="characteristics" nillable="true" type="invchar:CharacteristicType">
+						<xs:annotation>
+							<xs:documentation>Service Configuration Item characteristics.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceAssignmentType">
+		<xs:annotation>
+			<xs:documentation>ResourceAssignmentType that holds resource assignment information.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="0" name="state" nillable="false" type="invsvc:AssignmentStateEnum">
+						<xs:annotation>
+							<xs:documentation>Assignment state.</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    <element maxOccurs="1" minOccurs="1" name="resource" nillable="false" type="invsvc:ResourceType">
+						<xs:annotation>
+							<xs:documentation>Resource information that is used to uniquely identify a resource.</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceReferenceType">
+		<xs:annotation>
+			<xs:documentation>Resource Reference information that is used to uniquely identify a resource reference.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="resource" nillable="false" type="invsvc:ResourceType">
+						<xs:annotation>
+							<xs:documentation>Resource information that is used to uniquely identify a resource.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceType">
+		<xs:annotation>
+			<xs:documentation>Resource information that is used to uniquely identify a resource.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="1" name="id" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Resource Id</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="name" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Resource Name</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    <element minOccurs="0" name="description" nillable="true" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Resource Description</xs:documentation>
+						</xs:annotation>                    
+					</element>
+                    <element minOccurs="1" name="type" nillable="false" type="invsvc:ResourceTypeEnum">
+						<xs:annotation>
+							<xs:documentation>Type of resource. Like (EQUIPMENT, PIPE)</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="1" name="specification" nillable="false" type="invspec:SpecificationType">
+						<xs:annotation>
+							<xs:documentation>Resource specification information.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <!-- ==== Data Types ==== -->
+    <complexType name="OrderDataType">
+		<xs:annotation>
+			<xs:documentation>OrderDataType holds Order information</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="1" name="orderHeaderData" nillable="false" type="invsvc:OrderHeaderDataType">
+						<xs:annotation>
+							<xs:documentation>Order Header information.</xs:documentation>
+						</xs:annotation> 
+					</element>                   
+                    <element minOccurs="1" name="orderDetailData" nillable="false" type="invsvc:OrderDetailDataType">
+						<xs:annotation>
+							<xs:documentation>Order Detail information.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderHeaderDataType">
+		<xs:annotation>
+			<xs:documentation>Order Header information</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="1" name="orderId" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Order Id</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="1" name="orderDate" nillable="false" type="xsd:dateTime">
+						<xs:annotation>
+							<xs:documentation>Order Date</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="1" name="orderType" nillable="false" type="invsvc:OrderTypeEnum">
+						<xs:annotation>
+							<xs:documentation>Order type</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OrderDetailDataType">
+		<xs:annotation>
+			<xs:documentation>Order Detail information.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="1" name="orderAction" nillable="false" type="invsvc:OrderActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be performed for the order.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="1" name="party" nillable="false" type="invparty:PartyDataType">
+						<xs:annotation>
+							<xs:documentation>Party that is associated with the Order.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceDataType">
+		<xs:annotation>
+			<xs:documentation>ServiceDataType holds the Service information. This type must only be used for operation that change the Service using 
+			the Service Action and Business Rules.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceType">
+                <sequence>
+                    <element minOccurs="1" name="serviceAction" nillable="false" type="invsvc:ServiceActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be performed on Service.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="businessRules" nillable="true" type="invsys:RulesetType">
+						<xs:annotation>
+							<xs:documentation>Business rules that have to be executed for updating the Service.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceConfigurationDataType">
+		<xs:annotation>
+			<xs:documentation>ServiceConfigurationDataType holds the Service Configuration information. This type must only be used for the operations 
+			that modify a configuration using ConfigurationAction and Business Rules.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceConfigurationType">
+                <sequence>
+                    <element minOccurs="0" name="configurationAction" nillable="true" type="invsvc:ServiceConfigurationActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be performed on a Service Configuration.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="businessRules" nillable="true" type="invsys:RulesetType">
+						<xs:annotation>
+							<xs:documentation>Business rules that have to be executed for updating the Service Configuration.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceConfigurationItemDataType">
+		<xs:annotation>
+			<xs:documentation>ServiceConfigurationItemDataType holds the Service Configuration Item information. This type must be only used for passing 
+			the configuration item information for performing allocation/-deallocation.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceConfigurationItemType">
+                <sequence>
+                    <element name="path" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Path of the configuration item, using which it can be uniquely identified in a configuration item tree. 
+				            Use index only if there are duplicate configuration item names. Index start from 0. E.g ITEM[0] indicates first occurance of a 
+				            configuration item with name ITEM and ITEM[1] indicates the second occurance of ITEM in the configuration tree.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceAssignmentDataType">
+		<xs:annotation>
+			<xs:documentation>ResourceAssignmentDataType holds Resource Assignment information. This type must only be used when requesting for 
+			allocation/de-allocation of a resource.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ResourceAssignmentType">
+                <sequence>
+                    <element name="assignmentAction" type="invsvc:AssignmentActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be performed on the configuration item.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceDataType">
+		<xs:annotation>
+			<xs:documentation>ResourceDataType holds the resource information.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ResourceType">
+                <sequence>
+                    <element name="quantity" type="xsd:int">
+						<xs:annotation>
+							<xs:documentation>Quantity of resources</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element name="criteria" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Search criteria String</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                    <!--
+                    <element name="validations" type="invsvc:ValidationDataType" />
+                    -->
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <!-- Validation is optional -->
+    <!--
+    <complexType name="ValidationDataType">
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element name="validationMinimum" type="xsd:string" />
+                    <element name="validationUnique" type="xsd:string" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    -->
+
+    <complexType name="ServiceConfigurationItemDifferenceDataType">
+		<xs:annotation>
+			<xs:documentation>ServiceConfigurationItemDifferenceDataType holds the Service Configuration Item information. This type must only be used 
+			when returning a response for calculation difference for a Configuration item in two given versions. </xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ServiceConfigurationItemType">
+                <sequence>
+                    <element minOccurs="1" name="operation" nillable="false" type="invsvc:OperationEnum">
+						<xs:annotation>
+							<xs:documentation>Operation that has been performed on the source Configuration Item.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ResourceAssignmentDifferenceDataType">
+		<xs:annotation>
+			<xs:documentation>ResourceAssignmentDifferenceDataType holds the Resource assignment information. This type must only be used 
+			when returning a response for calculation difference for a Configuration item in two given versions.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invsvc:ResourceAssignmentType">
+                <sequence>
+                    <element minOccurs="1" name="operation" nillable="false" type="invsvc:OperationEnum">
+						<xs:annotation>
+							<xs:documentation>Operation that has been performed on the Assignment.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="CharacteristicDifferenceDataType">
+		<xs:annotation>
+			<xs:documentation>CharacteristicDifferenceDataType holds the Characteristic information. This type must only be used 
+			when returning a response for calculation difference for a Configuration item in two given versions.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invchar:CharacteristicType">
+                <sequence>
+                    <element minOccurs="1" name="operation" nillable="false" type="invsvc:OperationEnum">
+						<xs:annotation>
+							<xs:documentation>Operation that has been performed on the Characteristic.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+
+    <!-- ==== Entity Criteria Types ==== -->
+    <complexType name="ServiceCriteriaType">
+		<xs:annotation>
+			<xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                <!-- 9887580 -->
+                    <element minOccurs="0" name="serviceId" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Service Id</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="serviceState" nillable="false" type="invsvc:ServiceStateEnum">
+						<xs:annotation>
+							<xs:documentation>Current Service State</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ServiceConfigurationCriteriaType">
+		<xs:annotation>
+			<xs:documentation>Criteria to uniquely identify a Service Configuration version.</xs:documentation>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="0" name="serviceConfigurationVersionNumber" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Service Configuration Version Number</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="0" name="serviceConfigurationId" nillable="false" type="xsd:string">
+						<xs:annotation>
+							<xs:documentation>Service Configuration Id</xs:documentation>
+						</xs:annotation>
+					</element>                   
+                    <element minOccurs="0" name="serviceConfigurationState" nillable="false" type="invsvc:ServiceConfigurationStateEnum">
+						<xs:annotation>
+							<xs:documentation>Current state of the Service Configuration Version.</xs:documentation>
+						</xs:annotation>
+					</element>                   
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="ChangeStateCriteriaType">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>    
+        <complexContent>
+            <extension base="invcom:EntityValueType">
+                <sequence>
+                    <element minOccurs="0" name="serviceCriteria" nillable="false" type="invsvc:ServiceCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element minOccurs="1" name="serviceConfigurationCriteria" nillable="false" type="invsvc:ServiceConfigurationCriteriaType">
+						<xs:annotation>
+							<xs:documentation>Criteria to uniquely identify a Service Configuration version.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element name="configurationAction" type="invsvc:ServiceConfigurationActionEnum">
+						<xs:annotation>
+							<xs:documentation>Action that needs to be performed on the Service Configuration.</xs:documentation>
+						</xs:annotation>
+					</element>                    
+                    <element name="stateChangePolicy" type="invsvc:StateChangePolicyEnum">
+						<xs:annotation>
+							<xs:documentation>State change policy for the child configuration items.</xs:documentation>
+						</xs:annotation>                    
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <!-- ==== Enumerations ==== -->
+    <simpleType name="OrderTypeEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Order Type</xs:documentation>
+		</xs:annotation>    
+        <restriction base="xsd:string">
+            <enumeration value="new"/>
+            <enumeration value="amend"/>
+            <enumeration value="cancel"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="OrderActionEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Order Action</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="add"/>
+            <enumeration value="change"/>
+            <enumeration value="disconnect"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="ServiceActionEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for  Service Action</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="none"/>
+            <enumeration value="update"/>
+            <enumeration value="cancel"/>
+            <enumeration value="complete"/>
+            <enumeration value="disconnect"/>
+            <enumeration value="suspend"/>
+            <enumeration value="resume"/>
+            <enumeration value="cancel not issue"/>  
+        </restriction>
+    </simpleType>
+    <simpleType name="ServiceConfigurationActionEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Service Configuration Action.</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="none"/>
+            <enumeration value="update"/>
+            <enumeration value="approve"/>
+            <enumeration value="issue"/>
+            <enumeration value="cancel"/>
+            <enumeration value="complete"/> 
+            <enumeration value="add"/>
+            <enumeration value="change"/>
+            <enumeration value="disconnect"/>                      
+        </restriction>
+    </simpleType>
+    <simpleType name="AssignmentActionEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Assignment Action</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="assign"/>
+            <enumeration value="unassign"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="ResourceActionEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Resource Action</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="activate"/>
+            <enumeration value="deactivate"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="ServiceStateEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Service State</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="pending"/>
+            <enumeration value="in service"/>
+            <enumeration value="pending cancel"/>
+            <enumeration value="cancelled"/>
+            <enumeration value="pending disconnect"/>
+            <enumeration value="disconnected"/>
+            <enumeration value="cancel pending disconnect"/>
+            <enumeration value="suspended"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="ServiceConfigurationStateEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for State of ServiceCofigurationState</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="in progress"/>
+            <enumeration value="designed"/>
+            <enumeration value="issued"/>
+            <enumeration value="completed"/>
+            <enumeration value="pending cancel"/>
+            <enumeration value="cancelled"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="AssignmentStateEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for AssignmentState</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="pending assign"/>
+            <enumeration value="assigned"/>
+            <enumeration value="pending unassign"/>
+            <enumeration value="unassigned"/>            
+            <enumeration value="disconnected"/>
+            <enumeration value="pending available"/>
+            <enumeration value="pending unavailable"/>
+            <enumeration value="ported"/>
+            <enumeration value="unavailable"/>
+            <enumeration value="transitional"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="ResourceTypeEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for ResourceType</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="TELEPHONE-NUMBER"/>
+            <enumeration value="LOGICAL_DEVICE"/>
+            <enumeration value="DEVICE_INTERFACE"/>
+            <enumeration value="PHYSICAL_DEVICE"/>
+            <enumeration value="CUSTOM_NETWORKADDRESS"/>
+            <enumeration value="CUSTOM_OBJECT"/>
+            <enumeration value="EQUIPMENT"/>
+            <enumeration value="EQUIPMENT-HOLDER"/>
+            <enumeration value="GEOADDRESS"/>
+            <enumeration value="GEOADDRESSRANGE"/>
+            <enumeration value="GEOLOCATION"/>
+            <enumeration value="GEOSITE"/>
+            <enumeration value="LD-ACCOUNT"/>
+            <enumeration value="NETWORK"/>
+            <enumeration value="PHYSICAL_CONNECTOR"/>
+            <enumeration value="PHYSICAL_PORT"/>
+            <enumeration value="PIPE"/>
+            <enumeration value="SERVICE"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="OperationEnum"> 
+		<xs:annotation>
+			<xs:documentation>Defines valid values for Operation</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <enumeration value="added"/>
+            <enumeration value="deleted"/>
+            <enumeration value="modified"/>
+            <enumeration value="none"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="StateChangePolicyEnum">
+		<xs:annotation>
+			<xs:documentation>Defines valid values for StateChangePolicy</xs:documentation>
+		</xs:annotation>     
+        <restriction base="xsd:string">
+            <!-- <enumeration value="TransitionAllRelated" /> -->
+            <enumeration value="TransitionThisServiceOnly"/>
+        </restriction>
+    </simpleType>
+
+    <!-- ==== Elements ==== -->
+    <element name="captureServiceConfigurationInputsRequest" type="invsvc:CaptureServiceConfigurationInputsRequestType"/>
+    <element name="captureServiceConfigurationInputsResponse" type="invsvc:CaptureServiceConfigurationInputsResponseType"/>
+    <element name="captureServiceConfigurationInputsFault" type="invsvc:CaptureServiceConfigurationInputsFaultType"/>
+
+    <element name="automateServiceConfigurationRequest" type="invsvc:AutomateServiceConfigurationRequestType"/>
+    <element name="automateServiceConfigurationResponse" type="invsvc:AutomateServiceConfigurationResponseType"/>
+    <element name="automateServiceConfigurationFault" type="invsvc:AutomateServiceConfigurationFaultType"/>
+
+    <element name="updateServiceConfigurationRequest" type="invsvc:UpdateServiceConfigurationRequestType"/>
+    <element name="updateServiceConfigurationResponse" type="invsvc:UpdateServiceConfigurationResponseType"/>
+    <element name="updateServiceConfigurationFault" type="invsvc:UpdateServiceConfigurationFaultType"/>
+
+    <element name="calculateConfigurationDifferencesRequest" type="invsvc:CalculateConfigurationDifferencesRequestType"/>
+    <element name="calculateConfigurationDifferencesResponse" type="invsvc:CalculateConfigurationDifferencesResponseType"/>
+    <element name="calculateConfigurationDifferencesFault" type="invsvc:CalculateConfigurationDifferencesFaultType"/>
+
+    <element name="getServiceConfigurationRequest" type="invsvc:GetServiceConfigurationRequestType">
+        <annotation>
+            <documentation>
+                The element for input for locating the specific service configuration entity.
+            </documentation>
+        </annotation>
+    </element>
+    <element name="getServiceConfigurationResponse" type="invsvc:GetServiceConfigurationResponseType">
+        <annotation>
+            <documentation>
+                The element to represent the information returned for locating the specific service
+                configuration entity.
+            </documentation>
+        </annotation>
+    </element>
+    <element name="getServiceConfigurationFault" type="invsvc:GetServiceConfigurationFaultType">
+        <annotation>
+            <documentation>
+                The element to represent the information returned as a fault if for locating the specific service configuration entity has errors.
+            </documentation>
+        </annotation>
+    </element>
+
+    <element name="changeServiceConfigurationStateRequest" type="invsvc:ChangeServiceConfigurationStateRequestType">
+        <annotation>
+            <documentation>
+                The element is used for inputs for changeServiceConfigurationState operation.
+            </documentation>
+        </annotation>
+    </element>
+    <element name="changeServiceConfigurationStateResponse" type="invsvc:ChangeServiceConfigurationStateResponseType">
+        <annotation>
+            <documentation>
+                The element represents the information returned for
+                changeServiceConfigurationState operation.
+            </documentation>
+        </annotation>
+    </element>
+    <element name="changeServiceConfigurationStateFault" type="invsvc:ChangeServiceConfigurationStateFaultType">
+        <annotation>
+            <documentation>
+                The element represents the information of errors returned for changeServiceConfigurationState operation failure.
+            </documentation>
+        </annotation>
+    </element>
+
+</schema>

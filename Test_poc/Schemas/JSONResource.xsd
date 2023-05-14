@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1681294733698" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1681294733698">
+  <complexType name="JSONElementType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="Details">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="BranchCategory" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="BranchCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Branchhead" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="BranchName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Department" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Division" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="EmployeeCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="EmployeeName" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ErrorCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ErrorMessage" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="HttpStatus" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="IsOffice" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="LockedOut" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Rank" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="RES_DATE" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="RES_TIME" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ReservedField1" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Status" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Type" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="Source" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="Status" type="string"/>
+    </sequence>
+  </complexType>
+  <element name="JSONElement" type="tns:JSONElementType"/>
+</schema>

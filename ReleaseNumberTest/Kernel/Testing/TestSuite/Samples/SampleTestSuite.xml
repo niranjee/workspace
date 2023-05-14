@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<TestCases xmlns = "http://eai.telkom.co.za/internal/TestSuite/20111014" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "http://eai.telkom.co.za/internal/TestSuite/20111014 ../Schemas/TestSuite.xsd http://www.tibco.com/schemas/TestSuite/Testing/TestSuite/Schema.xsd testSuite.xsd">
+	<!-- 
+	This file contains the list of test cases that are deemed to be part of the test suite for a given application. 
+	NOTE: All processPath entries in this file represent the full path to the resource from the root, and exclude the .process extension
+-->
+	 
+	<!-- The setupProcessPath is optional. Only specify if there is common setup functionality that must be executed with every test case-->
+	 
+	<setUpProcessPath>/TestCase/nameOfSetupProcessWithoutExtension</setUpProcessPath>
+	<!-- The setupProcessPath is optional. Only specify if there is common setup functionality that must be executed with every test case-->
+	 
+	<tearDownProcessPath>/TestCase/nameOfSetupProcessWithoutExtension</tearDownProcessPath>
+	<!-- All test cases to be executed go here -->
+	 
+	<processPath>/TestCase/test001-ReplaceMeWithValidTestCase</processPath>
+	<processPath>/TestCase/test002-ReplaceMeWithValidTestCase</processPath>
+	<processPath>/TestCase/test003-ReplaceMeWithValidTestCase</processPath>
+</TestCases>

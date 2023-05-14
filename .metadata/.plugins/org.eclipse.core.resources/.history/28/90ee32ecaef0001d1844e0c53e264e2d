@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_563MsPCPEe2Z8Y2r3an0Ew" targetNamespace="http://tns.tibco.com/bw/composite/neglect_header_rows" name="neglect_header_rows" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_6N1zEPCPEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6N1zEfCPEe2Z8Y2r3an0Ew" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6N_kEPCPEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6ODOcPCPEe2Z8Y2r3an0Ew" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6ODOcfCPEe2Z8Y2r3an0Ew" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6ODOcvCPEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6OM_cPCPEe2Z8Y2r3an0Ew" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6OM_cfCPEe2Z8Y2r3an0Ew" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6OM_cvCPEe2Z8Y2r3an0Ew" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_UrCDkPCQEe2Z8Y2r3an0Ew" name="Readfile" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_U2AkgPCQEe2Z8Y2r3an0Ew" name="parsedata" type="dataformat:DataFormat" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_6A0DsPCPEe2Z8Y2r3an0Ew" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_6A0DsfCPEe2Z8Y2r3an0Ew" processName="neglect_header_rows.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_cvSZoPCrEe2Z8Y2r3an0Ew" name="ComponentProcess1" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_cvSZofCrEe2Z8Y2r3an0Ew" processName="neglect_header_rows.Process1"/>
+  </sca:component>
+</sca:composite>

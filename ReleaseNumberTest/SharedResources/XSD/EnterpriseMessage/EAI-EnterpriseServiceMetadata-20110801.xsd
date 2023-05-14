@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Soteri Panagou (Telkom SA Limited) -->
+<xsd:schema xmlns:tsmd="http://eai.telkom.co.za/EnterpriseServiceMetaData/20110801"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 targetNamespace="http://eai.telkom.co.za/EnterpriseServiceMetaData/20110801"
+	 version="1.0"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xsd:simpleType name="MetadataTypeStringType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="MetadataType">
+		<xsd:sequence>
+			<xsd:element name="Param" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:attribute name="Qualifier" type="tsmd:MetadataTypeStringType" use="required">
+						<xsd:annotation>
+							<xsd:documentation>Classification of the metadata</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="Key" type="tsmd:MetadataTypeStringType" use="required"/>
+					<xsd:attribute name="Value" type="tsmd:MetadataTypeStringType" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Metadata">
+		<xsd:annotation>
+			<xsd:documentation>Metadata that can be specified by a client.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="tsmd:MetadataType">
+					<xsd:anyAttribute namespace="##other" processContents="lax"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="TransactionGroupIDTypeStringType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="TransactionGroupIDType">
+		<xsd:simpleContent>
+			<xsd:extension base="tsmd:TransactionGroupIDTypeStringType">
+				<xsd:anyAttribute namespace="##other" processContents="lax"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="TransactionGroupID" type="tsmd:TransactionGroupIDType">
+		<xsd:annotation>
+			<xsd:documentation>This is an optional identifier to be used by a system when several technical transactions are representing one business transaction. Example: Business transaction impplemented via a request and call-back transaction. The call-back will have a new MessageId as it is a new message but might have the same CorrelationId. The definition of the values is owned by the system sending the message.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="CreationTimestampDateTimeType">
+		<xsd:restriction base="xsd:dateTime" />
+	</xsd:simpleType>
+	<xsd:complexType name="CreationTimestampType">
+		<xsd:simpleContent>
+			<xsd:extension base="tsmd:CreationTimestampDateTimeType">
+				<xsd:anyAttribute namespace="##other" processContents="lax"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="CreationTimestamp" type="tsmd:CreationTimestampType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates when the creator of this message actually created the message. The timestamp is of type xsd:dateTime, and therefore conforms to the rules surrounding the formatting there-of.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="SenderIDStringType" final="restriction">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="64"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="SenderIDType">
+		<xsd:simpleContent>
+			<xsd:extension base="tsmd:SenderIDStringType">
+				<xsd:attribute name="EndUserIdentity" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Represents the unique identity of the user that initiated the transaction on the SenderAppID</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:anyAttribute namespace="##other" processContents="lax"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="SenderID" type="tsmd:SenderIDType">
+		<xsd:annotation>
+			<xsd:documentation>This is the identifier of the sending system</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+       
+    version history
+    ===============
+    version; date; person; description
+ 
+     1.00; 26/09/2013; Wayne Engebrecht; Created
+     
+    
+-->
+<xs:schema targetNamespace="http://eai.telkom.co.za/SFSCommonTypes" xmlns:sfsct="http://eai.telkom.co.za/SFSCommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- Result Type section -->
+	<xs:complexType name="Result_type">
+		<xs:annotation>
+			<xs:documentation>The Result Reporting Message Structure</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ResultCode">
+				<xs:annotation>
+					<xs:documentation> Container type for the mandatory result code. Three different statuses: success, fail and reject. 
+                 - Success is indicated with the value 0. 
+                 - Failure(indicated that a resend could possible be successful) is represented by negative values 
+                 - Rejection(indicated that a resend would be refected again) by positive values.
+                        </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ResultMsgCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+          Container type for the optional result message code. The recommended way is to concatenate the
+          system identifier with the specific error code number.This is only recommended and not enforced in the validation.
+        </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="64"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ResultMsg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+          Container type for the optional detail description of the result message code.
+        </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SFSExceptionFaultType">
+		<xs:sequence>
+			<xs:element name="ResultCode" type="xs:string" nillable="false"/>
+			<xs:element name="ResultMsgCode" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ResultMsg" type="xs:string" nillable="true" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

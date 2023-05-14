@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
+  <moduleSharedVariables>
+    <moduleSharedVariable name="Kernel.Testing.StubManager.StubSharedVariable" type="{http://tns.tibco.com/bw/model/core/moduleSV/c5bc4af5-23a5-465a-8417-16c190e9eb87}root" initialValueMode="none"/>
+  </moduleSharedVariables>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/model/core/moduleSV/c5bc4af5-23a5-465a-8417-16c190e9eb87" location="../Kernel/Testing/StubManager/StubSharedVariable.xsd"/>
+</msv:DocumentRoot>

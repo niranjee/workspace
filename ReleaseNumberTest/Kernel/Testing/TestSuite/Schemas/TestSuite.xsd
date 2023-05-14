@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://eai.telkom.co.za/internal/TestSuite/20111014" targetNamespace="http://eai.telkom.co.za/internal/TestSuite/20111014" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TestCases">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="setUpProcessPath" type="xs:string" minOccurs="0"/>
+				<xs:element name="tearDownProcessPath" type="xs:string" minOccurs="0"/>
+				<xs:element ref="processPath" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="processPath" type="xs:string"/>
+</xs:schema>

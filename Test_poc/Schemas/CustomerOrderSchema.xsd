@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CustomerOrderSchema" xmlns:tns="http://www.example.org/CustomerOrderSchema" elementFormDefault="qualified">
+
+    <element name="Customers" type="tns:CustomersType"></element>
+
+    <complexType name="CustomersType">
+    	<sequence>
+            <element ref="tns:Customer" maxOccurs="unbounded"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <element name="Orders" type="tns:OrdersType"></element>
+
+    <complexType name="OrdersType">
+    	<sequence>
+    		<element ref="tns:Order" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Customer" type="tns:CustomerType"></element>
+
+    <complexType name="CustomerType">
+    	<sequence>
+            <element name="CustID" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element ref="tns:Orders" maxOccurs="1" minOccurs="1">
+    		</element>
+        </sequence>
+    </complexType>
+    
+    <element name="Order" type="tns:OrderType"></element>
+
+    <complexType name="OrderType">
+    	<sequence>
+    		<element name="OrderID" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="OrderItem" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="OrderAmount" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

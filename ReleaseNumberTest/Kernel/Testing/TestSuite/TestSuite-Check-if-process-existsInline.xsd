@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:BW="java://com.tibco.pe.core.JavaCustomXPATHFunctions" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/file/v2" xmlns:ns0="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:ns3="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns4="http://www.tibco.com/pe/GenerateErrorActivity/InputSchema" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.tibco.com/schemas/TestSuite/Testing/TestSuite/Schema.xsd" xmlns:pfx2="http://eai.telkom.co.za/internal/TestSuite/20111014" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Kernel/Testing/TestSuite/Schemas/JUnit.xsd" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:tns="/Kernel/Testing/TestSuite/TestSuite.process/Check-if-process-exists" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/Kernel/Testing/TestSuite/TestSuite.process/Check-if-process-exists">
+    <xsd:import schemaLocation="Schemas/JUnit.xsd"/>
+    <xsd:element name="group">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="processContents" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

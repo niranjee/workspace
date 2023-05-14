@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/null_rest/Service Descriptors/null_rest.Resource-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1683798226396"
+}]}

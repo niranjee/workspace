@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Soteri Panagou (Telkom SA Limited) --><xs:schema xmlns="http://eai.telkom.co.za/internal/adapters/WSAddressingAdapter/20110801" xmlns:ns0="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://eai.telkom.co.za/internal/adapters/WSAddressingAdapter/20110801">
+	<xs:import namespace="http://eai.telkom.co.za/internal/EnterpriseMessage/20110801"/>
+	<xs:complexType name="ResponseType">
+		<xs:sequence>
+			<xs:element name="Result">
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation>The Result Reporting Message Structure</xs:documentation>
+					</xs:annotation>
+					<xs:sequence>
+						<xs:element name="ResultCode">
+							<xs:annotation>
+								<xs:documentation> Container type for the mandatory result code. Three different statuses: success, fail and reject. 
+								 - Success is indicated with the value 0. 
+								 - Failure(indicated that a resend could possible be successful) is represented by negative values 
+								 - Rejection(indicated that a resend would be refected again) by positive values.
+										</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:integer"/>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="ResultMsgCode">
+							<xs:annotation>
+								<xs:documentation>
+						  Container type for the optional result message code. The recommended way is to concatenate the
+						  system identifier with the specific error code number.This is only recommended and not enforced in the validation.
+						</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="64"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="ResultMsg">
+							<xs:annotation>
+								<xs:documentation>
+						  Container type for the optional detail description of the result message code.
+						</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="255"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Payload">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EchoString" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Reference Number as supplied by Customer</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RequestType">
+		<xs:sequence>
+			<xs:element name="EchoIn" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Echo String</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AdapterMessage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Header"/>
+				<xs:element name="Payload">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" ref="ns0:Result"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Data">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Request"/>
+				<xs:element minOccurs="0" ref="Response"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Request" type="RequestType"/>
+	<xs:element name="Response" type="ResponseType"/>
+	<xs:complexType name="actionrequest">
+		<xs:complexContent>
+			<xs:restriction base="ns0:EnterpriseMessage">
+				<xs:sequence>
+					<xs:element ref="ns0:Header"/>
+					<xs:element ref="Request"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="actionresponse">
+		<xs:complexContent>
+			<xs:restriction base="ns0:EnterpriseMessageResponse">
+				<xs:sequence>
+					<xs:element ref="ns0:Header"/>
+					<xs:element ref="Response"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ActionRequest" type="actionrequest"/>
+	<xs:element name="ActionResponse" type="actionresponse"/>
+
+</xs:schema>

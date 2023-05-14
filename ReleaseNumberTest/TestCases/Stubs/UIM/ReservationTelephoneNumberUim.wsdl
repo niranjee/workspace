@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><wsdl:definitions xmlns="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:invfault="http://xmlns.oracle.com/communications/inventory/webservice/fault" xmlns:invnm="http://xmlns.oracle.com/communications/inventory/webservice/nm" xmlns:invws="http://xmlns.oracle.com/communications/inventory/webservice/reservationtelephonenumberuim" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReservationTelephoneNumberUim" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/reservationtelephonenumberuim">
+    <wsdl:types>
+        <xsd:schema>
+            <!-- ============= Schema Imports ==================== -->
+            <xsd:import namespace="http://xmlns.oracle.com/communications/inventory/webservice/common" schemaLocation="./referenceSchemas/InventoryCommon.xsd"/>
+            <xsd:import namespace="http://xmlns.oracle.com/communications/inventory/webservice/fault" schemaLocation="./referenceSchemas/InventoryFaults.xsd"/>
+            
+            <xsd:import namespace="http://xmlns.oracle.com/communications/inventory/webservice/nm" schemaLocation="./schemas/NumberManagement.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <!--  *************************************************************  -->
+    <!--  Web Service Messages Definition  -->
+    <!--  *************************************************************  -->
+    <!--  ************** Inventory Common *****************************  -->
+    <wsdl:message name="InventoryFault">
+        <wsdl:part element="invfault:inventoryFault" name="inventoryFault">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ValidationFault">
+        <wsdl:part element="invfault:validationFault" name="validationFault">
+        </wsdl:part>
+    </wsdl:message>
+
+
+    <!--  *************************************************************  -->
+    <!--  Start of messages used for Telephone Number Management  -->
+    <!--  *************************************************************  -->
+    <!--  ************** Reserve Telephone Number *****************************  -->
+    <wsdl:message name="reserveTelephoneNumberRequest">
+        <wsdl:part element="invnm:reserveTelephoneNumberRequest" name="reserveTelephoneNumberRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="reserveTelephoneNumberResponse">
+        <wsdl:part element="invnm:reserveTelephoneNumberResponse" name="reserveTelephoneNumberResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="reserveTelephoneNumberFault">
+        <wsdl:part element="invnm:reserveTelephoneNumberFault" name="reserveTelephoneNumberFault">
+        </wsdl:part>
+    </wsdl:message>
+    <!--  **************************************************************************  -->
+
+    <!--  ************** Un Reserve Telephone Number *****************************  -->
+    <wsdl:message name="unReserveTelephoneNumberRequest">
+        <wsdl:part element="invnm:unReserveTelephoneNumberRequest" name="unReserveTelephoneNumberRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="unReserveTelephoneNumberResponse">
+        <wsdl:part element="invnm:unReserveTelephoneNumberResponse" name="unReserveTelephoneNumberResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="unReserveTelephoneNumberFault">
+        <wsdl:part element="invnm:unReserveTelephoneNumberFault" name="unReserveTelephoneNumberFault">
+        </wsdl:part>
+    </wsdl:message>
+    <!--  *************************************************************************  -->
+    
+    <!--  ************** validate Telephone Number *****************************  -->
+    <wsdl:message name="validateTelephoneNumberRequest">
+        <wsdl:part element="invnm:validateTelephoneNumberRequest" name="validateTelephoneNumberRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="validateTelephoneNumberResponse">
+        <wsdl:part element="invnm:validateTelephoneNumberResponse" name="validateTelephoneNumberResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="validateTelephoneNumberFault">
+        <wsdl:part element="invnm:validateTelephoneNumberFault" name="validateTelephoneNumberFault">
+        </wsdl:part>
+    </wsdl:message>
+    <!--  *************************************************************************  -->
+    
+    <!--  ************** Delete Telephone Number *****************************  -->
+    <wsdl:message name="deleteTelephoneNumberRequest">
+        <wsdl:part element="invnm:deleteTelephoneNumberRequest" name="deleteTelephoneNumberRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteTelephoneNumberResponse">
+        <wsdl:part element="invnm:deleteTelephoneNumberResponse" name="deleteTelephoneNumberResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="deleteTelephoneNumberFault">
+        <wsdl:part element="invnm:deleteTelephoneNumberFault" name="deleteTelephoneNumberFault">
+        </wsdl:part>
+    </wsdl:message>
+    
+    
+    
+    <!--  *************************************************************************  -->
+    <!--  ************** validate Telephone Number Range - Added on 10Nov-Saurabh *****************************  -->
+    <wsdl:message name="validateTelephoneNumberRangeRequest">
+        <wsdl:part element="invnm:validateTelephoneNumberRangeRequest" name="validateTelephoneNumberRangeRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="validateTelephoneNumberRangeResponse">
+        <wsdl:part element="invnm:validateTelephoneNumberRangeResponse" name="validateTelephoneNumberRangeResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="validateTelephoneNumberRangeFault">
+        <wsdl:part element="invnm:validateTelephoneNumberRangeFault" name="validateTelephoneNumberRangeFault">
+        </wsdl:part>
+    </wsdl:message>
+    <!--  *************************************************************************  -->   
+
+
+    
+    <!--  Web Service Port Definition -->
+    <!--  *************************************************************  -->
+    <wsdl:portType name="ReservationTelephoneNumberUimPort">
+
+        <wsdl:operation name="reserveTelephoneNumber">
+            <wsdl:documentation>Need to add documentation</wsdl:documentation>
+            <wsdl:input message="invws:reserveTelephoneNumberRequest"/>
+            <wsdl:output message="invws:reserveTelephoneNumberResponse"/>
+            <wsdl:fault message="invws:reserveTelephoneNumberFault" name="reserveTelephoneNumberFault"/>
+            <wsdl:fault message="invws:InventoryFault" name="InventoryFault"/>
+            <wsdl:fault message="invws:ValidationFault" name="ValidationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="unReserveTelephoneNumber">
+            <wsdl:documentation>Need to add documentation</wsdl:documentation>
+            <wsdl:input message="invws:unReserveTelephoneNumberRequest"/>
+            <wsdl:output message="invws:unReserveTelephoneNumberResponse"/>
+            <wsdl:fault message="invws:unReserveTelephoneNumberFault" name="unReserveTelephoneNumberFault"/>
+            <wsdl:fault message="invws:InventoryFault" name="InventoryFault"/>
+            <wsdl:fault message="invws:ValidationFault" name="ValidationFault"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="validateTelephoneNumber">
+            <wsdl:documentation>Need to add documentation</wsdl:documentation>
+            <wsdl:input message="invws:validateTelephoneNumberRequest"/>
+            <wsdl:output message="invws:validateTelephoneNumberResponse"/>
+            <wsdl:fault message="invws:validateTelephoneNumberFault" name="validateTelephoneNumberFault"/>
+            <wsdl:fault message="invws:InventoryFault" name="InventoryFault"/>
+            <wsdl:fault message="invws:ValidationFault" name="ValidationFault"/>
+        </wsdl:operation>
+        
+         <wsdl:operation name="deleteTelephoneNumber">
+            <wsdl:documentation>Need to add documentation</wsdl:documentation>
+            <wsdl:input message="invws:deleteTelephoneNumberRequest"/>
+            <wsdl:output message="invws:deleteTelephoneNumberResponse"/>
+            <wsdl:fault message="invws:deleteTelephoneNumberFault" name="deleteTelephoneNumberFault"/>
+            <wsdl:fault message="invws:InventoryFault" name="InventoryFault"/>
+            <wsdl:fault message="invws:ValidationFault" name="ValidationFault"/>
+        </wsdl:operation>
+
+        <!--operation validateTelephoneNumberRange added - 10Nov2012-Saurabh-->
+        <wsdl:operation name="validateTelephoneNumberRange">
+            <wsdl:documentation>Need to add documentation</wsdl:documentation>
+            <wsdl:input message="invws:validateTelephoneNumberRangeRequest"/>
+            <wsdl:output message="invws:validateTelephoneNumberRangeResponse"/>
+            <wsdl:fault message="invws:validateTelephoneNumberRangeFault" name="validateTelephoneNumberRangeFault"/>
+            <wsdl:fault message="invws:InventoryFault" name="InventoryFault"/>
+            <wsdl:fault message="invws:ValidationFault" name="ValidationFault"/>
+        </wsdl:operation>      
+
+    </wsdl:portType>
+
+    <!--  *************************************************************  -->
+    <!--  Web Service HTTP Binding Definition -->
+    <!--  *************************************************************  -->
+    <wsdl:binding name="ReservationTelephoneNumberUimHTTPSoapBinding" type="invws:ReservationTelephoneNumberUimPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <wsdl:operation name="reserveTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/reserveTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="reserveTelephoneNumberFault">
+                <soap:fault name="reserveTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+      <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="unReserveTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/unReserveTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="unReserveTelephoneNumberFault">
+                <soap:fault name="unReserveTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+
+        <wsdl:operation name="validateTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/validateTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="validateTelephoneNumberFault">
+                <soap:fault name="validateTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+		<wsdl:operation name="deleteTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/deleteTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="deleteTelephoneNumberFault">
+                <soap:fault name="deleteTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+        <wsdl:operation name="validateTelephoneNumberRange">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/validateTelephoneNumberRange"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="validateTelephoneNumberRangeFault">
+                <soap:fault name="validateTelephoneNumberRangeFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+ 
+    </wsdl:binding>
+
+    <!--  *************************************************************  -->
+    <!--  Web Service JMS Binding Definition -->
+    <!--  *************************************************************  -->
+    <wsdl:binding name="ReservationTelephoneNumberUimJMSSoapBinding" type="invws:ReservationTelephoneNumberUimPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/jms"/>
+        <wsdl:operation name="reserveTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/reserveTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="reserveTelephoneNumberFault">
+                <soap:fault name="reserveTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+      <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+
+        <wsdl:operation name="unReserveTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/unReserveTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="unReserveTelephoneNumberFault">
+                <soap:fault name="unReserveTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+
+ 		<wsdl:operation name="validateTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/validateTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="validateTelephoneNumberFault">
+                <soap:fault name="validateTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+		<wsdl:operation name="deleteTelephoneNumber">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/deleteTelephoneNumber"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="deleteTelephoneNumberFault">
+                <soap:fault name="deleteTelephoneNumberFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        
+        
+        <wsdl:operation name="validateTelephoneNumberRange">
+            <soap:operation soapAction="http://xmlns.oracle.com/communications/inventory/webservice/validateTelephoneNumberRange"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="validateTelephoneNumberRangeFault">
+                <soap:fault name="validateTelephoneNumberRangeFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="InventoryFault">
+                <soap:fault name="InventoryFault" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="ValidationFault">
+                <soap:fault name="ValidationFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+
+    </wsdl:binding>
+
+    <!--  *************************************************************  -->
+    <!--  Web Service Port Binding Definition -->
+    <!--  *************************************************************  -->
+    <wsdl:service name="NumberManagementUim">
+        <wsdl:port binding="invws:ReservationTelephoneNumberUimHTTPSoapBinding" name="ReservationTelephoneNumberUimHTTPPort">
+            <soap:address location="http://localhost:7001/NumberManagementUim/ReservationTelephoneNumberUimHTTP"/>
+        </wsdl:port>
+        <wsdl:port binding="invws:ReservationTelephoneNumberUimJMSSoapBinding" name="ReservationTelephoneNumberUimJMSPort">
+            <soap:address location="jms://localhost:7001/NumberManagementUim/ReservationTelephoneNumberUimJMS?URI=inventoryWSQueue"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

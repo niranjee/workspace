@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/xsltinput" elementFormDefault="qualified" targetNamespace="http://www.example.org/xsltinput">
+
+
+    <complexType name="row">
+    	<sequence>
+    		<element maxOccurs="1" name="s.no" type="string">
+
+    		</element>
+            <element name="name" type="string"/>
+            <element name="age" type="integer"/>
+            <element name="id" type="string"/>
+        </sequence>
+    </complexType>
+
+    <element name="row" type="tns:row"/>
+
+    <complexType name="root">
+    	<sequence>
+    		<element maxOccurs="unbounded" minOccurs="0" name="row" type="tns:row"/>
+    	</sequence>
+    </complexType>
+
+    <element name="root" type="tns:root"/>
+</schema>

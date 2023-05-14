@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tns.tibco.com/bw/model/core/moduleSV/c5bc4af5-23a5-465a-8417-16c190e9eb87">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="perfTestMode" type="xsd:boolean" minOccurs="0"/>
+                <xsd:element name="Stub" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="testconfig" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="assertions" minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="failure">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:any processContents="skip"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                    <xsd:element name="assertion" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="success">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:any processContents="skip"/>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="generateException" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="delayMilliseconds" type="xsd:int" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="xsd:string" use="required"/>
+                        <xsd:attribute name="invocationCount" type="xsd:int"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

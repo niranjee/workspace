@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:mapper="http://www.example.org/mapper" xmi:id="_vfWNEfCwEe2Z8Y2r3an0Ew" name="neglect_header_rows.DataFormatResource1" type="dataformat:DataFormat">
+  <imports xmi:id="_yW7eMPCwEe2Z8Y2r3an0Ew" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/mapper"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_vfW0IPCwEe2Z8Y2r3an0Ew" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="mapper:mapper" fieldOffsetsStr="root(0,0)">
+    <fieldOffsets xmi:id="_yYchIPCwEe2Z8Y2r3an0Ew" name="root"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+--><xs:schema xmlns="http://xmlns.oracle.com/communications/inventory/webservice" xmlns:appfault="http://xmlns.oracle.com/communications/framework/webservice/fault/v1-0" xmlns:invcom="http://xmlns.oracle.com/communications/inventory/webservice/common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/inventory/webservice/common">
+	<xs:import namespace="http://xmlns.oracle.com/communications/framework/webservice/fault/v1-0" schemaLocation="./FaultRoot.xsd"/>
+	<!-- ================= Parent Classes ======================= -->
+	<xs:complexType name="InventoryRequestType">
+		<xs:annotation>
+			<xs:documentation>Defines base type for all Requests for UIM Web Services. All common attributes of UIM requests will be part 
+			of this type.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="header" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation>Stores Header information that is optional.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InventoryResponseType">
+		<xs:annotation>
+			<xs:documentation>Base type for Response used for all the Web Services Operations in UIM.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="warnings" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation>Warnings, if any.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="errors" nillable="true" type="appfault:ApplicationFaultType">
+				<xs:annotation>
+					<xs:documentation>Errors, if Any.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="messages" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation>Debug Messages, if Any and the messageConfirmation is not set.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CharacteristicDataValueType">
+		<xs:annotation>
+			<xs:documentation>Characteristic information</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="invcom:EntityValueType">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="name" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Characteristic Name</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="value" nillable="true" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Characteristic value</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="MessageConfirmation">
+		<xs:annotation>
+			<xs:documentation>Message Confirmation</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xsd:string">
+			<xs:enumeration value="ignore"/>
+			<xs:enumeration value="required"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="EntityKeyType">
+		<xs:annotation>
+			<xs:documentation>
+				An id of an entity within the instance of the
+				Provisioning application.Could be comination of Ids
+			</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="EntityValueType">
+		<xs:annotation>
+			<xs:documentation>
+				An id of an entity within the instance of the
+				Provisioning application.Could be combination of Ids
+			</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="RequestContext">
+		<xs:annotation>
+			<xs:documentation>
+				An businessInteraction id for the Provisioning of the application.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="businessInteractionId" nillable="true" type="xsd:string">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="messageConfirmation" nillable="true" type="invcom:MessageConfirmation">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CommonStubs">
+		<xs:annotation>
+			<xs:documentation>
+				Defined Mainly For using the earlier complex definitions for  wsdl generation
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="stub1" nillable="true" type="invcom:EntityValueType"/>
+			<xs:element name="stub2" nillable="true" type="invcom:InventoryRequestType"/>
+			<xs:element name="stub3" nillable="true" type="invcom:InventoryResponseType"/>
+			<xs:element name="stub4" nillable="true" type="invcom:MessageConfirmation"/>
+			<xs:element name="stub5" nillable="true" type="invcom:EntityKeyType"/>
+			<xs:element name="stub6" nillable="true" type="invcom:RequestContext"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

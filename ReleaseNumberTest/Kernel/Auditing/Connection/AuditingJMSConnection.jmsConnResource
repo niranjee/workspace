@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_5M0IkIgQEe25aMAHXXpZZQ" name="Kernel.Auditing.Connection.AuditingJMSConnection" type="jms:JMSConnectionFactory">
+  <jndi:configuration xsi:type="jms:DirectConnectionFactory" xmi:id="_5M0IkYgQEe25aMAHXXpZZQ" factoryType="Queue/Topic" providerURL="%%ES/Auditing/ConnectionDetails/tcpUrl%%">
+    <substitutionBindings xmi:id="_5NgFEIgQEe25aMAHXXpZZQ" template="providerURL" propName="ES/Auditing/ConnectionDetails/tcpUrl"/>
+    <userCredentials xmi:id="_5M0IkogQEe25aMAHXXpZZQ" username="%%ES/Auditing/ConnectionDetails/tcpUsername%%" password="%%ES/Auditing/ConnectionDetails/tcpPassword%%">
+      <substitutionBindings xmi:id="_5NgFEYgQEe25aMAHXXpZZQ" template="username" propName="ES/Auditing/ConnectionDetails/tcpUsername"/>
+      <substitutionBindings xmi:id="_5NgFEogQEe25aMAHXXpZZQ" template="password" propName="ES/Auditing/ConnectionDetails/tcpPassword"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

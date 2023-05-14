@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1680607579038" xmlns:tns="http://www.example.org/wsdl/1680607578919" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Process" targetNamespace="http://www.example.org/wsdl/1680607578919">
+  <wsdl:import namespace="http://www.example.org/schema/1680607579038"/>
+  <wsdl:message name="CreateOrderRequest">
+    <wsdl:part element="extns:CreateOrderRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateOrderResponse">
+    <wsdl:part element="extns:CreateOrderResponse" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="ConformOrderRequest">
+    <wsdl:part element="extns:ConformOrderRequest" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="ConformOrderResponse">
+    <wsdl:part element="extns:ConformOrderResponse" name="parameters"/>
+  </wsdl:message>
+    <wsdl:message name="CancelOrderRequest">
+    <wsdl:part element="extns:CancelOrderRequest" name="parameters"/>
+  </wsdl:message>
+    <wsdl:portType name="Process">
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input message="tns:CreateOrderRequest" name="operationInput"/>
+      <wsdl:output message="tns:CreateOrderResponse" name="operationOutput"/>
+    </wsdl:operation>
+        <wsdl:operation name="ConformOrder">
+      <wsdl:input message="tns:ConformOrderRequest" name="operation1Input"/>
+      <wsdl:output message="tns:ConformOrderResponse" name="operation1Output"/>
+    </wsdl:operation>
+        <wsdl:operation name="CancelOrder">
+      <wsdl:input message="tns:CancelOrderRequest" name="operationInput0"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

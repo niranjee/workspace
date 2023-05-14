@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://eai.telkom.co.za/internal/Kernel/20120124"
+	 targetNamespace="http://eai.telkom.co.za/internal/Kernel/20120124"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ErrorType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Connectivity"/>
+				<xs:enumeration value="Mapping"/>
+				<xs:enumeration value="Persistence"/>
+				<xs:enumeration value="Routing"/>
+				<xs:enumeration value="Timeout"/>
+				<xs:enumeration value="Internal"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

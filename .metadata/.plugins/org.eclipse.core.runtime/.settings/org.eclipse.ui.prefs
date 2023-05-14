@@ -1,0 +1,4 @@
+SHOW_TEXT_ON_PERSPECTIVE_BAR=false
+com.tibco.xpd.resources.menu.specialfolderpresentation=1
+eclipse.preferences.version=1
+showIntro=false

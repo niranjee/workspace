@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/merging_two_list" xmlns:tns="http://www.example.org/merging_two_list" elementFormDefault="qualified">
+
+    <complexType name="food">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="food" type="tns:food"></element>
+
+    <complexType name="menu">
+    	<sequence>
+    		<element name="food" type="tns:food" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="menu" type="tns:menu"></element>
+
+    <complexType name="OtherData">
+    	<sequence>
+    		<element name="price" type="string"></element>
+    		<element name="description" type="string"></element>
+    		<element name="calories" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="OtherData" type="tns:OtherData"></element>
+
+    <complexType name="breakfastmenu">
+    	<sequence>
+    		<element name="OtherData" type="tns:OtherData" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="breakfastmenu" type="tns:breakfastmenu"></element>
+</schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_44-mkIgQEe25aMAHXXpZZQ" targetNamespace="http://tns.tibco.com/bw/composite/ReleaseNumberTest" name="ReleaseNumberTest" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_44-mkYgQEe25aMAHXXpZZQ" name="BW.APPNODE.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-mkogQEe25aMAHXXpZZQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-mk4gQEe25aMAHXXpZZQ" name="BW.HOST.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-mlIgQEe25aMAHXXpZZQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-mlYgQEe25aMAHXXpZZQ" name="BW.MODULE.VERSION" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-mlogQEe25aMAHXXpZZQ" name="BW.CLOUD.PORT" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_44-ml4gQEe25aMAHXXpZZQ" name="BW.MODULE.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5KfNUIgQEe25aMAHXXpZZQ" name="ES/Auditing/ConnectionDetails/tcpUrl" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5KfNUYgQEe25aMAHXXpZZQ" name="ES/Auditing/ConnectionDetails/tcpUsername" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5KfNUogQEe25aMAHXXpZZQ" name="ES/Auditing/ConnectionDetails/tcpPassword" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5Z4UMIgQEe25aMAHXXpZZQ" name="stubs/URL/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5Z4UMYgQEe25aMAHXXpZZQ" name="stubs/URL/port" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5cfjU4gQEe25aMAHXXpZZQ" name="stubs/URL/port0" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8JNBMIgQEe25aMAHXXpZZQ" name="Kernel/Constants/Metadata/Keys/CallStack" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8JqUMIgQEe25aMAHXXpZZQ" name="Kernel/Constants/Metadata/Qualifiers/EaiCore" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8nNy4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/Metadata/Keys/InternalMsgId" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_92XGkIgQEe25aMAHXXpZZQ" name="Kernel/Constants/WSAddressing/EPR_ANONYMOUS" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_93M0EIgQEe25aMAHXXpZZQ" name="Kernel/Constants/WSAddressing/EPR_NONE" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-HCm4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/ResultTypes/ConnectivityError" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-HMX4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/ConnectivityError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-OItYIgQEe25aMAHXXpZZQ" name="Kernel/Constants/ResultTypes/RetryableError" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-OXW4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/GeneralProviderError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-VDNsIgQEe25aMAHXXpZZQ" name="Kernel/Constants/ResultTypes/NonRetryableError" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-VWvsIgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/GeneralInternalError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-btPUIgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/MappingError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-h5W4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/PersistenceError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-prZ4IgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/RoutingError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-v3hcIgQEe25aMAHXXpZZQ" name="Kernel/Constants/ResultTypes/TimeoutError" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-wLDcIgQEe25aMAHXXpZZQ" name="Kernel/Constants/MsgCodes/TimeoutError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-5_t0IgQEe25aMAHXXpZZQ" name="ES/Auditing/Metadata" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__GAwkIgQEe25aMAHXXpZZQ" name="ES/ServiceName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_C5DkYIgREe25aMAHXXpZZQ" name="TestSuite/testResultsFileLocation" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Dout0IgREe25aMAHXXpZZQ" name="stubs/id" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_D3pTkIgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/TimeoutSeconds" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FO1wA4gREe25aMAHXXpZZQ" name="HTTPRequestReply-Send-HTTP-Request-HttpClientResource" type="http:HttpClientConfiguration" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Fp0b0IgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/URL/protocol" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FqH90IgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/URL/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FqWnUIgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/URL/port" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FqqJUIgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/URL/uri" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Fq4y0IgREe25aMAHXXpZZQ" name="ES/ReleaseNumber/SoapAction" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FvK14IgREe25aMAHXXpZZQ" name="TestCasesStubsUIMHTTP-Connection" type="httpconnector:HttpConnectorConfiguration" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_EfmrcIgREe25aMAHXXpZZQ" name="Kernel.Testing.TestSuite.UnitTestingStarterComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_EfmrcYgREe25aMAHXXpZZQ" processName="Kernel.Testing.TestSuite.UnitTestingStarter"/>
+  </sca:component>
+  <sca:component xmi:id="_GHNicIgREe25aMAHXXpZZQ" name="TestCases.Stubs.UIM.Soap11HTTPReceiverComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_GHNicYgREe25aMAHXXpZZQ" processName="TestCases.Stubs.UIM.Soap11HTTPReceiver"/>
+  </sca:component>
+</sca:composite>
