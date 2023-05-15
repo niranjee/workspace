@@ -8920,3 +8920,6 @@ org.eclipse.core.runtime.AssertionFailedException: null argument:Issue with id '
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.bpel.validator 1 0 2023-05-15 10:35:04.950
+!MESSAGE Validator Startup 402ms
