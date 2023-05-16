@@ -11,6 +11,8 @@
   <sca:property xmi:id="_Iv-koPCBEe2Z8Y2r3an0Ew" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_alXcYPCCEe2Z8Y2r3an0Ew" name="jms_queue_name" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_eLJQQPCCEe2Z8Y2r3an0Ew" name="jms_connection" type="jms:JMSConnectionFactory" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Mu0zMPPLEe2EV5LJccXWlw" name="retrtattempts" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Mwj4kPPLEe2EV5LJccXWlw" name="sleep" type="XMLSchema:int" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_IgZQgPCBEe2Z8Y2r3an0Ew" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_IgZQgfCBEe2Z8Y2r3an0Ew" processName="retrymechanism.Process"/>
   </sca:component>

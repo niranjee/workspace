@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;connection_factories/Processes/connection_factories/Process.bwp&apos; to &apos;generic.bwp&apos;" description="Rename resource &apos;Process.bwp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Processes/connection_factories/Process.bwp" name="generic.bwp" stamp="1684214308126" updateReferences="true"/>
+</session>

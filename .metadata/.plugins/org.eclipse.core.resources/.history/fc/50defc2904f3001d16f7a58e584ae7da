@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/coerse_test" xmlns:tns="http://www.example.org/coerse_test" elementFormDefault="qualified">
+
+
+    <complexType name="credit">
+    	<sequence>
+    		<element name="creditname" type="string"></element>
+    		<element name="creditno" type="string"></element>
+    		<element name="creditsal" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="debit">
+    	<sequence>
+    		<element name="debitname" type="string"></element>
+    		<element name="debitno" type="string"></element>
+    		<element name="debitsal" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="cordient" type="string"></element>
+
+    <complexType name="cordient">
+    	<choice>
+            <element name="credit" type="tns:credit" maxOccurs="unbounded" minOccurs="0"></element>
+            <element name="debit" type="tns:debit" maxOccurs="unbounded" minOccurs="0"></element>
+    	</choice>
+    </complexType>
+</schema>

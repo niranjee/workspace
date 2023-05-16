@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Remove Process Property &apos;sleep_time&apos;" description="Remove Process Property &apos;sleep_time&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.remove.processproperty" stamp="1684229360043"/>
+</session>

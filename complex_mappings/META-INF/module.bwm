@@ -19,7 +19,7 @@
   <sca:component xmi:id="_RJWGoN3mEe2XuKZv3TTpmQ" name="Componentmerging_two_list" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_RJWGod3mEe2XuKZv3TTpmQ" processName="complex_mappings.merging_two_list"/>
   </sca:component>
-  <sca:component xmi:id="_FebGoN6hEe2gBvCSKgWfAw" name="Componentmerging_data" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FebGod6hEe2gBvCSKgWfAw" processName="complex.merging_data"/>
+  <sca:component xmi:id="_VqrU8PL8Ee2Fc_fExzpAbA" name="Componentcoersion" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_VqrU8fL8Ee2Fc_fExzpAbA" processName="complex.coersion"/>
   </sca:component>
 </sca:composite>

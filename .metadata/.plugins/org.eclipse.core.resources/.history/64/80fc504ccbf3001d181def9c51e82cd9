@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_IJ5cEPCBEe2Z8Y2r3an0Ew" targetNamespace="http://tns.tibco.com/bw/composite/RetryMechanism" name="RetryMechanism" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_IvIQEPCBEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IvRaAPCBEe2Z8Y2r3an0Ew" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IvXgoPCBEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Ive1YPCBEe2Z8Y2r3an0Ew" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Ivk8APCBEe2Z8Y2r3an0Ew" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IvrCoPCBEe2Z8Y2r3an0Ew" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Ivv7IPCBEe2Z8Y2r3an0Ew" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Iv3P4PCBEe2Z8Y2r3an0Ew" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Iv-koPCBEe2Z8Y2r3an0Ew" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_alXcYPCCEe2Z8Y2r3an0Ew" name="jms_queue_name" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_eLJQQPCCEe2Z8Y2r3an0Ew" name="jms_connection" type="jms:JMSConnectionFactory" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_IgZQgPCBEe2Z8Y2r3an0Ew" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_IgZQgfCBEe2Z8Y2r3an0Ew" processName="retrymechanism.Process"/>
+  </sca:component>
+</sca:composite>

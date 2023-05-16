@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1684142407469" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1684142407469">
+  <complexType name="saplleElementType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="element">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="complexType">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="choice">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="element" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="middleName">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="initial" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="saplleElement" type="tns:saplleElementType"/>
+</schema>
