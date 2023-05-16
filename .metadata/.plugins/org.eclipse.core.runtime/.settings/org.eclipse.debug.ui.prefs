@@ -1,8 +1,8 @@
-com.tibco.bw.core.design.debug.ui.launch.existingApplications=neglect_header_rows.application/
-com.tibco.bw.core.design.debug.ui.launch.processesArg=neglect_header_rows.application\=neglect_header_rows.with_grouping/
-com.tibco.bw.core.design.debug.ui.launch.selectedApplications=neglect_header_rows.application/
-com.tibco.bw.core.design.debug.ui.launch.selectedModules=neglect_header_rows/
-com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=neglect_header_rows\=neglect_header_rows.with_grouping/
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=parsing_csv_with_dotsANDcommas.application/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=parsing_csv_with_dotsANDcommas.application\=parsing_csv_with_dotsandcommas.Process/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=parsing_csv_with_dotsANDcommas.application/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=parsing_csv_with_dotsANDcommas/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=parsing_csv_with_dotsANDcommas\=parsing_csv_with_dotsandcommas.Process/
 com.tibco.bw.core.design.debug.ui.view.BWProcessInstanceView+com.tibco.bw.core.design.debug.ui.actions.BWShowInstanceSatckByTempleteAction=true
 eclipse.preferences.version=1
 org.eclipse.debug.ui.DebugView+com.tibco.bw.core.design.debug.ui.actions.BWShowStackByTempleteAction=true

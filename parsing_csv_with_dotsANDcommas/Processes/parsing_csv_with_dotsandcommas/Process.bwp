@@ -12,6 +12,7 @@
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.read"
     xmlns:ns4="http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+input"
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.parse.parsedata"
+    xmlns:ns6="http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+output"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -631,6 +632,25 @@
                 </choice>
             </complexType>
         </schema>
+        <schema
+            targetNamespace="http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+output"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://ns.tibco.com/bw/palette/dataformat/b989919b-c41a-4c21-9ed2-640876c08d5c" xmlns:tns="http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+output">
+            <import namespace="http://ns.tibco.com/bw/palette/dataformat/b989919b-c41a-4c21-9ed2-640876c08d5c"/>
+            <import namespace="http://ns.tibco.com/bw/palette/dataformat/b989919b-c41a-4c21-9ed2-640876c08d5c"/>
+            <complexType name="Output">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1" name="Rows" type="tns:Rows"/>
+                    <element maxOccurs="1" minOccurs="1" name="done" type="boolean"/>
+                </sequence>
+            </complexType>
+            <element name="Output" type="tns:Output"/>
+            <complexType name="Rows">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" ref="Q1:root"/>
+                </sequence>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="NiranjanBatana"
         createdOn="Mon May 15 10:34:49 IST 2023" description=""
@@ -883,6 +903,10 @@
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+input" prefix="tns"/>
+    </tibex:NamespaceRegistry>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -897,11 +921,15 @@
         <bpws:variable name="dataFormatResource"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
-            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dataformat}DataFormat" type="xsd:string"/>
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/dataformat}DataFormat"
+            tibex:propertySource="parse_data" type="xsd:string"/>
         <bpws:variable element="ns4:Input" name="ParseData-input" sca-bpel:internal="true"/>
-        <bpws:variable name="ParseData" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:Output" name="ParseData" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:ActivityErrorData"
             name="_error_ParseData" sca-bpel:internal="true"/>
+        <bpws:variable name="readfile" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="readfile" type="xsd:string"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -960,13 +988,16 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;> &lt;tns:ReadActivityInputClass/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/file/v2&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;ReadFile-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ReadActivityInputClass/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.file.read"
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:file="http://ns.tibco.com/bw/palette/file" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="fileName" processProperty="readfile"/>
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/file#//ReadFile"/>
@@ -989,7 +1020,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+input&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;ParseData-input&quot; match=&quot;/&quot;> &lt;tns:Input/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/activity/parse/xsd/+61e05751-309c-4b5a-852a-e559dffd6dfb+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ReadFile&quot;/>&lt;xsl:template name=&quot;ParseData-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;text>&lt;xsl:value-of select=&quot;$ReadFile/fileContent/textContent&quot;/>&lt;/text>&lt;noOfRecords>&lt;xsl:value-of select=&quot;-1&quot;/>&lt;/noOfRecords>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity

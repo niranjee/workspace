@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b989919b-c41a-4c21-9ed2-640876c08d5c="http://ns.tibco.com/bw/palette/dataformat/b989919b-c41a-4c21-9ed2-640876c08d5c" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_6OGbIfLnEe2zm-gNH59yLQ" name="parsing_csv_with_dotsandcommas.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_TqHigPLoEe2zm-gNH59yLQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/b989919b-c41a-4c21-9ed2-640876c08d5c"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_6OHCMPLnEe2zm-gNH59yLQ" formatType="Delimiter separated" colSeparator=",." colSeparatorParseRule="Treat each character entered as a potential column separator" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="b989919b-c41a-4c21-9ed2-640876c08d5c:root" fieldOffsetsStr="name(0,0)&#xA;id(0,0)&#xA;sal(0,0)&#xA;number(0,0)">
+    <fieldOffsets xmi:id="_TrmJMPLoEe2zm-gNH59yLQ" name="name"/>
+    <fieldOffsets xmi:id="_TrmJMfLoEe2zm-gNH59yLQ" name="id"/>
+    <fieldOffsets xmi:id="_TrmJMvLoEe2zm-gNH59yLQ" name="sal"/>
+    <fieldOffsets xmi:id="_TrmJM_LoEe2zm-gNH59yLQ" name="number"/>
+  </jndi:configuration>
+</jndi:namedResource>

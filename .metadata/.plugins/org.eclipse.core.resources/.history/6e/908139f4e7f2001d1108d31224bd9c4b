@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_AzMEUPLeEe2zm-gNH59yLQ" targetNamespace="http://tns.tibco.com/bw/composite/parsing_csv_with_dotsANDcommas" name="parsing_csv_with_dotsANDcommas" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_B1jgQPLeEe2zm-gNH59yLQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B1vtgPLeEe2zm-gNH59yLQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B110IPLeEe2zm-gNH59yLQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B18h0PLeEe2zm-gNH59yLQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B2CocPLeEe2zm-gNH59yLQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B2NnkPLeEe2zm-gNH59yLQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B2TuMPLeEe2zm-gNH59yLQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B2Z00PLeEe2zm-gNH59yLQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B2hJkPLeEe2zm-gNH59yLQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_yR_gMPLnEe2zm-gNH59yLQ" name="readfile" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_BMmC0PLeEe2zm-gNH59yLQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BMmC0fLeEe2zm-gNH59yLQ" processName="parsing_csv_with_dotsandcommas.Process"/>
+  </sca:component>
+</sca:composite>
