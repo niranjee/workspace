@@ -1,0 +1,65 @@
+package packages;
+
+import com.tibco.bw.runtime.ProcessContext;
+import com.tibco.bw.runtime.annotation.OnStart;
+import com.tibco.bw.runtime.event.EventDispatcher;
+import com.tibco.bw.runtime.event.TibcoEvents;
+import com.tibco.neo.localized.LocalizedMessage;
+import com.tibco.plugin.jdbc.JDBCPluginResources;
+import com.tibco.plugin.jdbc.JDBCUtil;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class PostgreSQLProcessorStarter {
+  private static final Logger logger = LoggerFactory.getLogger(PostgreSQLProcessorStarter.class);
+
+  private String jdbcUrl = "jdbc:postgresql://localhost:5432/mydatabase";
+  private String jdbcUsername = "postgres";
+  private String jdbcPassword = "mypassword";
+  private String tableName = "mytable";
+  private int pollingInterval = 5000; // 5 seconds
+  private boolean running = true;
+
+  @OnStart
+  public void onStart(ProcessContext context) {
+    logger.info("Starting PostgreSQL processor starter...");
+
+    Properties props = new Properties();
+    props.setProperty("user", jdbcUsername);
+    props.setProperty("password", jdbcPassword);
+
+    try {
+      Connection conn = DriverManager.getConnection(jdbcUrl, props);
+
+      String query = "SELECT count(*) FROM " + tableName;
+      Statement stmt = conn.createStatement();
+
+      int previousCount = -1;
+      while (running) {
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        int currentCount = rs.getInt(1);
+        rs.close();
+
+        if (currentCount > previousCount) {
+          logger.info("Table " + tableName + " has been updated!");
+          EventDispatcher.getInstance().dispatch(TibcoEvents.newEvent("myEvent", null));
+        }
+
+        previousCount = currentCount;
+
+        Thread.sleep(pollingInterval);
+      }
+
+      stmt.close();
+      conn.close();
+    } catch (Exception e) {
+      logger.error("Error occurred while polling PostgreSQL database: " + e.getMessage());
+    }
+  }
+}

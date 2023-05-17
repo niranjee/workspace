@@ -1,0 +1,7 @@
+package packages;
+
+import com.tibco.bw.palette.shared.java.JavaProcessStarter;
+
+public class Start extends JavaProcessStarter {
+
+}
