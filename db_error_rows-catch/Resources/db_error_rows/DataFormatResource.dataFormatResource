@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_2bbeb255-47d4-4101-a696-c3913b5a1250="http://ns.tibco.com/bw/palette/dataformat/2bbeb255-47d4-4101-a696-c3913b5a1250" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_AvtI8fVDEe2HrNOcP1OM2w" name="db_error_rows.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_ZS2HkPVDEe2HrNOcP1OM2w" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/2bbeb255-47d4-4101-a696-c3913b5a1250"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_AvtI8vVDEe2HrNOcP1OM2w" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_2bbeb255-47d4-4101-a696-c3913b5a1250:root" fieldOffsetsStr="s.no(0,0)&#xA;name(0,0)&#xA;age(0,0)&#xA;id(0,0)">
+    <fieldOffsets xmi:id="_ZWvwIPVDEe2HrNOcP1OM2w" name="s.no"/>
+    <fieldOffsets xmi:id="_ZWvwIfVDEe2HrNOcP1OM2w" name="name"/>
+    <fieldOffsets xmi:id="_ZWvwIvVDEe2HrNOcP1OM2w" name="age"/>
+    <fieldOffsets xmi:id="_ZWvwI_VDEe2HrNOcP1OM2w" name="id"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,8 +1,8 @@
-com.tibco.bw.core.design.debug.ui.launch.existingApplications=RetryMechanism.application/
-com.tibco.bw.core.design.debug.ui.launch.processesArg=RetryMechanism.application\=retrymechanism.Process/
-com.tibco.bw.core.design.debug.ui.launch.selectedApplications=RetryMechanism.application/
-com.tibco.bw.core.design.debug.ui.launch.selectedModules=RetryMechanism/
-com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=RetryMechanism\=retrymechanism.Process/
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=exceptionhandling_db.application/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=exceptionhandling_db.application\=exceptionhandling_db.Process/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=exceptionhandling_db.application/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=exceptionhandling_db/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=exceptionhandling_db\=exceptionhandling_db.Process/
 com.tibco.bw.core.design.debug.ui.view.BWProcessInstanceView+com.tibco.bw.core.design.debug.ui.actions.BWShowInstanceSatckByTempleteAction=true
 eclipse.preferences.version=1
 org.eclipse.debug.ui.DebugView+com.tibco.bw.core.design.debug.ui.actions.BWShowStackByTempleteAction=true

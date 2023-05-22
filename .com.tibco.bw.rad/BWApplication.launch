@@ -3,21 +3,21 @@
 <booleanAttribute key="AllProcesses" value="true"/>
 <stringAttribute key="EnginePort" value="9090"/>
 <listAttribute key="ExistedApplications">
-<listEntry value="RetryMechanism.application"/>
+<listEntry value="exceptionhandling_db.application"/>
 </listAttribute>
 <booleanAttribute key="Initialized" value="true"/>
 <mapAttribute key="ProcessesArg">
-<mapEntry key="RetryMechanism.application" value="retrymechanism.Process"/>
+<mapEntry key="exceptionhandling_db.application" value="exceptionhandling_db.Process"/>
 </mapAttribute>
 <listAttribute key="SelectedApplications">
-<listEntry value="RetryMechanism.application"/>
+<listEntry value="exceptionhandling_db.application"/>
 </listAttribute>
 <listAttribute key="SelectedModules">
-<listEntry value="RetryMechanism"/>
+<listEntry value="exceptionhandling_db"/>
 </listAttribute>
 <listAttribute key="SelectedPlugins"/>
 <mapAttribute key="SelectedProcesses">
-<mapEntry key="RetryMechanism" value="retrymechanism.Process"/>
+<mapEntry key="exceptionhandling_db" value="exceptionhandling_db.Process"/>
 </mapAttribute>
 <booleanAttribute key="UseGovernance" value="true"/>
 <booleanAttribute key="append.args" value="true"/>
@@ -47,5 +47,5 @@
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<stringAttribute key="workspace_bundles" value="RetryMechanism.application@default:default,RetryMechanism@default:false"/>
+<stringAttribute key="workspace_bundles" value="exceptionhandling_db.application@default:default,exceptionhandling_db@default:false"/>
 </launchConfiguration>

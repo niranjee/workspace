@@ -1,5 +1,0 @@
-package com.tibco.bw.runtime.event;
-
-public class TibcoEvents {
-
-}

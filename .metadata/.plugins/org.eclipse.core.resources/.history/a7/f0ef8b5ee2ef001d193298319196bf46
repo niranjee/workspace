@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_aNUQYe_gEe24QMSRKZrmOA" name="null_rest.Resource" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_aNYh0O_gEe24QMSRKZrmOA">
-    <substitutionBindings xmi:id="_aNYh0e_gEe24QMSRKZrmOA" template="host" propName="host"/>
-    <substitutionBindings xmi:id="_rmdGcO_gEe24QMSRKZrmOA" template="port" propName="port"/>
-  </jndi:configuration>
-</jndi:namedResource>
