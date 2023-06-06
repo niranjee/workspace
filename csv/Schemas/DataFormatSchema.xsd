@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84">
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="No" type="xsd:string"/>
+        <xsd:element name="District" type="xsd:string"/>
+        <xsd:element name="Mandal" type="xsd:string"/>
+        <xsd:element name="Latitude1" type="xsd:string"/>
+        <xsd:element name="Longitude1" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

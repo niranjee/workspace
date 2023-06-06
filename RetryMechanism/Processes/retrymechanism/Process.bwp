@@ -517,7 +517,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
 
-                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activities.2"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
                                     x="19"
@@ -535,7 +535,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity"/>
 
                                     <layoutConstraint
                                     height="108"
@@ -594,7 +594,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activities.0"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@activities.0"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <children type="4002">
@@ -633,7 +633,7 @@
                                     backgroundColor="16777215"
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activities.1"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -724,7 +724,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@links/@children.0"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -735,7 +735,7 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@links/@children.1"/>
+            <element href="//0/@process/@activity/@activity/@activities.2/@activity/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
@@ -825,8 +825,7 @@
                     <bpws:target linkName="RepeatOnErrorToExit"/>
                 </bpws:targets>
             </bpws:exit>
-            <bpws:scope name="RepeatOnError" tibex:group="repeatUntil"
-                tibex:indexOriginalName="index1"
+            <bpws:scope name="RepeatOnError" tibex:group="repeatOnError"
                 tibex:indexToGlobal="false" tibex:xpdlId="30619ff8-5c7c-46d3-9b9b-552abccb5c56">
                 <bpws:targets>
                     <bpws:target linkName="TimerToRepeatOnError"/>
@@ -845,52 +844,83 @@
                         sca-bpel:internal="true" type="xsd:string"/>
                     <bpws:variable element="ns:FaultDetail"
                         name="FaultDetails1" sca-bpel:internal="true"/>
+                    <bpws:variable name="repeatOnError_success_flag1"
+                        sca-bpel:internal="true" type="xsd:boolean"/>
+                    <bpws:variable name="FaultName2"
+                        sca-bpel:internal="true" type="xsd:string"/>
+                    <bpws:variable element="ns:FaultDetail"
+                        name="FaultDetails2" sca-bpel:internal="true"/>
                 </bpws:variables>
-                <bpws:repeatUntil name="repeatUntil1" tibex:counterName="index1">
+                <bpws:repeatUntil name="repeatUntil" tibex:counterName="index1">
                     <tibex:DesignExpression>
-                        <tibex:expression expression="$index1 = 4" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                        <tibex:expression
+                            expression="boolean($repeatOnError_success_flag1)" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                     </tibex:DesignExpression>
-                    <bpws:flow name="flow1">
-                        <bpws:links>
-                            <bpws:link name="GroupStartToJDBCQuery" tibex:linkType="SUCCESS"/>
-                            <bpws:link name="JDBCQueryToGroupEnd" tibex:linkType="SUCCESS"/>
-                        </bpws:links>
-                        <bpws:empty name="GroupStart"
-                            tibex:group="groupStart" tibex:xpdlId="a44e9535-870e-46c9-9baf-381403dede3a">
-                            <bpws:sources>
-                                <bpws:source linkName="GroupStartToJDBCQuery"/>
-                            </bpws:sources>
-                        </bpws:empty>
-                        <bpws:empty name="GroupEnd"
-                            tibex:group="groupEnd" tibex:xpdlId="7f3e8bfb-9949-4c99-8897-7a9492d30221">
-                            <bpws:targets>
-                                <bpws:target linkName="JDBCQueryToGroupEnd"/>
-                            </bpws:targets>
-                        </bpws:empty>
-                        <bpws:extensionActivity>
-                            <tibex:activityExtension
-                                inputVariable="JDBCQuery-input"
-                                name="JDBCQuery"
-                                outputVariable="JDBCQuery"
-                                tibex:xpdlId="c7dc5112-68cf-4d93-9892-4da073c12aa9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                <bpws:targets>
-                                    <bpws:target linkName="GroupStartToJDBCQuery"/>
-                                </bpws:targets>
+                    <bpws:scope name="innerScope">
+                        <bpws:faultHandlers>
+                            <bpws:catchAll
+                                tibex:faultDetailsVar="FaultDetails2" tibex:faultNameVar="FaultName2">
+                                <bpws:if name="if">
+                                    <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index1=2]]></bpws:condition>
+                                    <bpws:rethrow name="Rethrow"/>
+                                    <bpws:else>
+                                    <bpws:assign name="Assign" validate="no">
+                                    <bpws:copy>
+                                    <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[false()]]></bpws:from>
+                                    <bpws:to variable="repeatOnError_success_flag1"/>
+                                    </bpws:copy>
+                                    </bpws:assign>
+                                    </bpws:else>
+                                </bpws:if>
+                            </bpws:catchAll>
+                        </bpws:faultHandlers>
+                        <bpws:flow name="flow1">
+                            <bpws:links>
+                                <bpws:link name="GroupStartToJDBCQuery" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="JDBCQueryToGroupEnd" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
+                            <bpws:empty name="GroupStart"
+                                tibex:group="groupStart" tibex:xpdlId="a44e9535-870e-46c9-9baf-381403dede3a">
                                 <bpws:sources>
-                                    <bpws:source linkName="JDBCQueryToGroupEnd"/>
+                                    <bpws:source linkName="GroupStartToJDBCQuery"/>
                                 </bpws:sources>
-                                <tibex:inputBindings>
+                            </bpws:empty>
+                            <bpws:assign name="GroupEnd"
+                                tibex:group="groupEnd"
+                                tibex:xpdlId="99b95b78-ab6d-4ae6-bdd0-a0879cdf1d45" validate="no">
+                                <bpws:targets>
+                                    <bpws:target linkName="JDBCQueryToGroupEnd"/>
+                                </bpws:targets>
+                                <bpws:copy>
+                                    <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[true()]]></bpws:from>
+                                    <bpws:to variable="repeatOnError_success_flag1"/>
+                                </bpws:copy>
+                            </bpws:assign>
+                            <bpws:extensionActivity>
+                                <tibex:activityExtension
+                                    inputVariable="JDBCQuery-input"
+                                    name="JDBCQuery"
+                                    outputVariable="JDBCQuery"
+                                    tibex:xpdlId="c7dc5112-68cf-4d93-9892-4da073c12aa9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartToJDBCQuery"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="JDBCQueryToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
                                     <tibex:inputBinding
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+c7dc5112-68cf-4d93-9892-4da073c12aa9+input&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;> &lt;tns:jdbcQueryActivityInput/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                </tibex:inputBindings>
-                                <tibex:config>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
                                     <bwext:BWActivity
                                     activityTypeID="bw.jdbc.JDBCQuery"
                                     xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                                     xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                                     xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                     <activityConfig>
-                                    <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
@@ -906,11 +936,12 @@
                                     </properties>
                                     </activityConfig>
                                     </bwext:BWActivity>
-                                </tibex:config>
-                            </tibex:activityExtension>
-                        </bpws:extensionActivity>
-                    </bpws:flow>
-                    <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index1 = 4]]></bpws:condition>
+                                    </tibex:config>
+                                </tibex:activityExtension>
+                            </bpws:extensionActivity>
+                        </bpws:flow>
+                    </bpws:scope>
+                    <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[boolean($repeatOnError_success_flag1)]]></bpws:condition>
                 </bpws:repeatUntil>
             </bpws:scope>
         </bpws:flow>

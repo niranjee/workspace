@@ -1,3 +1,4 @@
+description.buildorder=neglect_header_rows/neglect_header_rows.application
 description.defaultbuildorder=false
 eclipse.preferences.version=1
 version=1

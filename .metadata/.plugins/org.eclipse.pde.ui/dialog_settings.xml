@@ -7,6 +7,10 @@
 	<item value="false" key="rcpPlugin"/>
 	<item value="false" key="osgiProject"/>
 	<section name="PDEFormActionManager">
+		<list key="RecentLaunches">
+			<item value="com.tibco.bw.core.design.project.debugBWApplicationLaunchShortcut"/>
+			<item value="com.tibco.bw.core.design.project.runBWApplicationLaunchShortcut"/>
+		</list>
 	</section>
 	<section name="PluginExportWizard">
 		<item value="" key="keypass"/>

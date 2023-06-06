@@ -1,0 +1,5 @@
+1684837683772	Delete resource 'tibco.bw.sample.policy.basicauthentication.HttpReceiver/Resources/tibco/bw/sample/policy/basicauthentication/httpreceiver/IdentityProvider.userIdResource'
+1685010795964	Delete resource 'db_error_rows-catch/Resources/db_error_rows-catch'
+1685078373300	Delete resource 'con_factories/Resources/con_factories/EMSDefaultJNDIConfiguration.jndiConfigResource'
+1685078378261	Delete resource 'con_factories/Resources/con_factories/JNDIConfiguration.jndiConfigResource'
+1685106563065	Delete resource 'rest_cumilative/Schemas/parse.xsd'

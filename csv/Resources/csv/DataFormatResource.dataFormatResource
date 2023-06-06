@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:_52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84="http://ns.tibco.com/bw/palette/dataformat/52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_cP6AAQBDEe6ROPqQTPOsWA" name="csv.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_6hE4cABDEe6ROPqQTPOsWA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_cP6nEABDEe6ROPqQTPOsWA" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="_52a4c71b-ef17-4c4b-a6f3-f71dc6d1fb84:root" fieldOffsetsStr="No(0,0)&#xA;District(0,0)&#xA;Mandal(0,0)&#xA;Latitude1(0,0)&#xA;Longitude1(0,0)">
+    <fieldOffsets xmi:id="_6k0wAABDEe6ROPqQTPOsWA" name="No"/>
+    <fieldOffsets xmi:id="_6k0wAQBDEe6ROPqQTPOsWA" name="District"/>
+    <fieldOffsets xmi:id="_6k0wAgBDEe6ROPqQTPOsWA" name="Mandal"/>
+    <fieldOffsets xmi:id="_6k0wAwBDEe6ROPqQTPOsWA" name="Latitude1"/>
+    <fieldOffsets xmi:id="_6k0wBABDEe6ROPqQTPOsWA" name="Longitude1"/>
+  </jndi:configuration>
+</jndi:namedResource>

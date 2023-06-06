@@ -967,6 +967,7 @@
                                     <value
                                     connectionReference="jmsConnection"
                                     destinationName="sk1"
+                                    messagingStyle="Topic"
                                     priority="4" xsi:type="jms:JMSSenderActivityConfiguration"/>
                                 </properties>
                             </activityConfig>
