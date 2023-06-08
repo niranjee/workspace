@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_qkASMATtEe6pN7sOK05WKg" targetNamespace="http://tns.tibco.com/bw/composite/deleting_rows_service" name="deleting_rows_service" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_XJj7oQUBEe6Jnoy5My7ghg" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_XJkisgUBEe6Jnoy5My7ghg" interface="http://xmlns.example.com/20230607123310PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/deleting_rows_service/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_XJm-8AUBEe6Jnoy5My7ghg" name="RestService" path="/resource" docBasePath="http://localhost:7777/deleting_rows_service" docResourcePath="Resource" basePath="/" connector="deleting_rows_service.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/deleting_rows_service.Resource-Resource.json">
+      <operation xmi:id="_XJoNEAUBEe6Jnoy5My7ghg" operationName="delete" nickname="delete-resource" httpMethod="DELETE" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_XJqCQAUBEe6Jnoy5My7ghg"/>
+      <advancedConfig xmi:id="_XJm-8QUBEe6Jnoy5My7ghg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_XJoNEQUBEe6Jnoy5My7ghg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_rQ-F4ATtEe6pN7sOK05WKg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRJsEATtEe6pN7sOK05WKg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRQZwATtEe6pN7sOK05WKg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRXugATtEe6pN7sOK05WKg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRecMATtEe6pN7sOK05WKg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRj7wATtEe6pN7sOK05WKg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRqCYATtEe6pN7sOK05WKg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rRwJAATtEe6pN7sOK05WKg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rR7vMATtEe6pN7sOK05WKg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_y-W_oAT-Ee6Jnoy5My7ghg" name="Componentservice_provider" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_y-W_oQT-Ee6Jnoy5My7ghg" processName="deleting_rows_service.service_provider"/>
+  </sca:component>
+  <sca:component xmi:id="_XJjUkAUBEe6Jnoy5My7ghg" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XJjUkQUBEe6Jnoy5My7ghg" processName="deleting_rows_service.Resource"/>
+    <sca:service xmi:id="_XJjUkgUBEe6Jnoy5My7ghg" name="resource">
+      <sca:interface.wsdl xmi:id="_XJj7oAUBEe6Jnoy5My7ghg" interface="http://xmlns.example.com/20230607123310PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/deleting_rows_service/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

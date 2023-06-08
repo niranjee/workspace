@@ -1,0 +1,79 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource" : {
+      "delete" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "delete-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a covid to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/covid"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "covid" : {
+      "type" : "object",
+      "properties" : {
+        "element" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/element",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "element" : {
+      "type" : "object",
+      "required" : [ "StateUnionTerritory", "ConfirmedIndianNational", "Sno", "ConfirmedForeignNational", "Cured", "Deaths", "Time", "Confirmed", "Date" ],
+      "properties" : {
+        "Sno" : {
+          "type" : "integer"
+        },
+        "Date" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "Time" : {
+          "type" : "string"
+        },
+        "StateUnionTerritory" : {
+          "type" : "string"
+        },
+        "ConfirmedIndianNational" : {
+          "type" : "integer"
+        },
+        "ConfirmedForeignNational" : {
+          "type" : "integer"
+        },
+        "Cured" : {
+          "type" : "integer"
+        },
+        "Deaths" : {
+          "type" : "integer"
+        },
+        "Confirmed" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

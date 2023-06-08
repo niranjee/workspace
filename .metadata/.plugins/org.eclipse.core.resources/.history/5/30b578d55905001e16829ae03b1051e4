@@ -1,0 +1,96 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8086",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource" : {
+      "put" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "put-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/covid"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Element to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Element"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "covid" : {
+      "type" : "object",
+      "properties" : {
+        "element" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/element",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "Element" : {
+      "type" : "object",
+      "required" : [ "no_of_deleted_rows" ],
+      "properties" : {
+        "no_of_deleted_rows" : {
+          "type" : "string"
+        }
+      }
+    },
+    "element" : {
+      "type" : "object",
+      "required" : [ "StateUnionTerritory", "ConfirmedIndianNational", "Sno", "ConfirmedForeignNational", "Cured", "Deaths", "Time", "Confirmed", "Date" ],
+      "properties" : {
+        "Sno" : {
+          "type" : "integer"
+        },
+        "Date" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "Time" : {
+          "type" : "string"
+        },
+        "StateUnionTerritory" : {
+          "type" : "string"
+        },
+        "ConfirmedIndianNational" : {
+          "type" : "integer"
+        },
+        "ConfirmedForeignNational" : {
+          "type" : "integer"
+        },
+        "Cured" : {
+          "type" : "integer"
+        },
+        "Deaths" : {
+          "type" : "integer"
+        },
+        "Confirmed" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

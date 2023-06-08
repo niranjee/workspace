@@ -1,8 +1,8 @@
-com.tibco.bw.core.design.debug.ui.launch.existingApplications=csv.application/
-com.tibco.bw.core.design.debug.ui.launch.processesArg=csv.application\=csv.Process/
-com.tibco.bw.core.design.debug.ui.launch.selectedApplications=csv.application/
-com.tibco.bw.core.design.debug.ui.launch.selectedModules=csv/
-com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=csv\=csv.Process/
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=deleting_rows_service.application/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=deleting_rows_service.application\=deleting_rows_service.Resource,deleting_rows_service.SubProcess,deleting_rows_service.service_provider/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=deleting_rows_service.application/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=deleting_rows_service/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=deleting_rows_service\=deleting_rows_service.Resource,deleting_rows_service.SubProcess,deleting_rows_service.service_provider/
 com.tibco.bw.core.design.debug.ui.view.BWProcessInstanceView+com.tibco.bw.core.design.debug.ui.actions.BWShowInstanceSatckByTempleteAction=true
 eclipse.preferences.version=1
 org.eclipse.debug.ui.DebugView+com.tibco.bw.core.design.debug.ui.actions.BWShowStackByTempleteAction=true

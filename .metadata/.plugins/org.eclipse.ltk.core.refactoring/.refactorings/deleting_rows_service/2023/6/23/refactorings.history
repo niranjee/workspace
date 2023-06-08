@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change XSD Element name from &apos;primitive&apos; to &apos;Confirmed&apos;" description="Change XSD Element name from &apos;primitive&apos; to &apos;Confirmed&apos;" flags="6" id="com.tibco.zion.refactoring.renameXSDElementDescriptor" stamp="1686116077390"/>
+</session>
