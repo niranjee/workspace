@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/crm/Processes/Business/PassengerProfile/Synchronize/SendMail-Start-Input.xsd" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/jms" xmlns:ns1="http://www.tibco.com/pe/DeployedVarsType" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:pfx2="http://www.tibco.com/namespaces/tnt/plugins/mail" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/Processes/Business/PassengerProfile/Synchronize/SendMail-Start-Input.xsd">
+    <xsd:import namespace="http://www.tibco.com/namespaces/tnt/plugins/as" schemaLocation="../../../../Resources/Schema/SynchronizeProfile.xsd"/>
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="JMSCorrelationID" type="xsd:string"/>
+                <xsd:element ref="pfx:ActivityInput"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

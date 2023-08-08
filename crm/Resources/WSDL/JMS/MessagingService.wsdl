@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by TIBCO WSDL--><wsdl:definitions xmlns:ns0="http://www.hp.com/schemas/jms/errorhandling" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.hp.com/services/jms/errorhandling" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Untitled" targetNamespace="http://www.hp.com/services/jms/errorhandling">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.hp.com/schemas/jms/errorhandling" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.hp.com/schemas/jms/errorhandling">
+            <xs:complexType name="delete-request">
+                <xs:sequence>
+                    <xs:element name="message-id" type="ns0:message-id"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="delete-response"/>
+            <xs:complexType name="get-destinations-request"/>
+            <xs:complexType name="get-destinations-response">
+                <xs:sequence>
+                    <xs:element name="destination-list" type="ns0:destination-list"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="get-messages-by-destination-request">
+                <xs:sequence>
+                    <xs:element name="destination" type="ns0:destination"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="get-messages-by-destination-response">
+                <xs:sequence>
+                    <xs:element name="list" type="ns0:message-list"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="resend-request">
+                <xs:sequence>
+                    <xs:element name="message-id" type="ns0:message-id"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="resend-response"/>
+            <xs:element name="delete-request" type="ns0:delete-request"/>
+            <xs:element name="delete-response" type="ns0:delete-response"/>
+            <xs:element name="get-destinations-request" type="ns0:get-destinations-request"/>
+            <xs:element name="get-destinations-response" type="ns0:get-destinations-response"/>
+            <xs:element name="get-messages-by-destination-request" type="ns0:get-messages-by-destination-request"/>
+            <xs:element name="get-messages-by-destination-response" type="ns0:get-messages-by-destination-response"/>
+            <xs:element name="resend-request" type="ns0:resend-request"/>
+            <xs:element name="resend-response" type="ns0:resend-response"/>
+            <xs:complexType name="destination">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="destination-list">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="list" type="ns0:destination"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="map">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="destination" type="xs:string"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="message-id">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="message-list">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="list" type="ns0:undelivered-message"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="undelivered-message">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:long"/>
+                    <xs:element minOccurs="0" name="destination" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" type="xs:string"/>
+                    <xs:element minOccurs="0" name="error-date" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="error-message" type="xs:string"/>
+                    <xs:element minOccurs="0" name="message" type="xs:string"/>
+                    <xs:element minOccurs="0" name="message-id" type="xs:string"/>
+                    <xs:element minOccurs="0" name="consumer-id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="destination" type="ns0:destination"/>
+            <xs:element name="destination-list" type="ns0:destination-list"/>
+            <xs:element name="map" type="ns0:map"/>
+            <xs:element name="message-id" type="ns0:message-id"/>
+            <xs:element name="message-list" type="ns0:message-list"/>
+            <xs:element name="undelivered-message" type="ns0:undelivered-message"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="Messaging-service0">
+        <wsdl:port binding="tns:MessagingEndpoint0Binding" name="MessagingEndpoint0">
+            <soap:address location="http://localhost:9001/Services/Application/WS/Messaging/Implementation/Messaging-service0.serviceagent/MessagingEndpoint0"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="Messaging">
+        <wsdl:operation name="GetDestinations">
+            <wsdl:input message="tns:GetDestinationsRequest"/>
+            <wsdl:output message="tns:GetDestinationsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Resend">
+            <wsdl:input message="tns:ResendRequest"/>
+            <wsdl:output message="tns:ResendResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetMessagesByDestination">
+            <wsdl:input message="tns:GetMessagesByDestinationRequest"/>
+            <wsdl:output message="tns:GetMessagesByDestinationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="Delete">
+            <wsdl:input message="tns:DeleteRequest"/>
+            <wsdl:output message="tns:DeleteResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MessagingEndpoint0Binding" type="tns:Messaging">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetDestinations">
+            <soap:operation soapAction="/Services/Application/WS/Messaging/Implementation/Messaging-service0.serviceagent/MessagingEndpoint0/GetDestinations" style="document"/>
+            <wsdl:input>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Resend">
+            <soap:operation soapAction="/Services/Application/WS/Messaging/Implementation/Messaging-service0.serviceagent/MessagingEndpoint0/Resend" style="document"/>
+            <wsdl:input>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetMessagesByDestination">
+            <soap:operation soapAction="/Services/Application/WS/Messaging/Implementation/Messaging-service0.serviceagent/MessagingEndpoint0/GetMessagesByDestination" style="document"/>
+            <wsdl:input>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Delete">
+            <soap:operation soapAction="/Services/Application/WS/Messaging/Implementation/Messaging-service0.serviceagent/MessagingEndpoint0/Delete" style="document"/>
+            <wsdl:input>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="parameters" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="GetDestinationsRequest">
+        <wsdl:part element="ns0:get-destinations-request" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="GetDestinationsResponse">
+        <wsdl:part element="ns0:get-destinations-response" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ResendRequest">
+        <wsdl:part element="ns0:resend-request" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ResendResponse">
+        <wsdl:part element="ns0:resend-response" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="GetMessagesByDestinationRequest">
+        <wsdl:part element="ns0:get-messages-by-destination-request" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="GetMessagesByDestinationResponse">
+        <wsdl:part element="ns0:get-messages-by-destination-response" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteRequest">
+        <wsdl:part element="ns0:delete-request" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteResponse">
+        <wsdl:part element="ns0:delete-response" name="parameters"/>
+    </wsdl:message>
+</wsdl:definitions>

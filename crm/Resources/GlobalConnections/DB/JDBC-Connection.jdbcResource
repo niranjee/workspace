@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_LcbMoCSeEe6RLdqQXA7E6w" name="Resources.GlobalConnections.DB.JDBC-Connection" type="jdbc:JdbcDataSource">
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_LcbMoSSeEe6RLdqQXA7E6w" username="%%PassengerProfile/Environment/FFPDB/UserName%%" password="%%PassengerProfile/Environment/FFPDB/Password%%">
+    <substitutionBindings xmi:id="_LcbMoiSeEe6RLdqQXA7E6w" template="maxConnections" propName="PassengerProfile/Environment/FFPDB/MaxConnections"/>
+    <substitutionBindings xmi:id="_LcbMoySeEe6RLdqQXA7E6w" template="maxConnections" propName="Conn"/>
+    <substitutionBindings xmi:id="_LcdB0iSeEe6RLdqQXA7E6w" template="username" propName="PassengerProfile/Environment/FFPDB/UserName"/>
+    <substitutionBindings xmi:id="_LcdB0ySeEe6RLdqQXA7E6w" template="password" propName="PassengerProfile/Environment/FFPDB/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_LcbMpCSeEe6RLdqQXA7E6w" jdbcDriver="%%PassengerProfile/Environment/FFPDB/Driver%%" dbURL="%%PassengerProfile/Environment/FFPDB/URL%%">
+      <substitutionBindings xmi:id="_LcbMpSSeEe6RLdqQXA7E6w" template="loginTimeout" propName="PassengerProfile/Environment/FFPDB/LoginTimeout"/>
+      <substitutionBindings xmi:id="_LcbMpiSeEe6RLdqQXA7E6w" template="loginTimeout" propName="Timeout"/>
+      <substitutionBindings xmi:id="_LcdB0CSeEe6RLdqQXA7E6w" template="jdbcDriver" propName="PassengerProfile/Environment/FFPDB/Driver"/>
+      <substitutionBindings xmi:id="_LcdB0SSeEe6RLdqQXA7E6w" template="dbURL" propName="PassengerProfile/Environment/FFPDB/URL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

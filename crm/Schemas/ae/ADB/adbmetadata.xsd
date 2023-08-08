@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ae="http://www.tibco.com/xmlns/ae2xsd/2002/05" xmlns:ns0="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/adbmetadata" xmlns:ns1="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/scalar" targetNamespace="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/adbmetadata" elementFormDefault="qualified" attributeFormDefault="qualified">
+    <import namespace="http://www.tibco.com/xmlns/ae2xsd/2002/05" schemaLocation="../../ae2xsd.xsd"/>
+    <import namespace="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/scalar" schemaLocation="scalar.xsd"/>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_PREREGLISTENER" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_PREREGLISTENER" ae:type="class" name="ADB__PREREGLISTENER">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="LISTENER" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_PUBINFO" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_PUBINFO" ae:type="class" name="ADB__PUBINFO">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SOURCE__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PUBLISHING__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="QUALITY__OF__SERVICE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__FORMAT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__SOURCE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="STORAGE__MODE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="USER__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PASSWORD" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATABASE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_RELINFO" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_RELINFO" ae:type="class" name="ADB__RELINFO">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RELATIONSHIP__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PARENT__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PARENT__KEYS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CHILD__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="IS__PUB" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_REQREPINFO" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_REQREPINFO" ae:type="class" name="ADB__REQREPINFO">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="REQUEST__SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="REPLY__SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="QUEUE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="QUALITY__OF__SERVICE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__FORMAT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__SOURCE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="USER__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PASSWORD" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATABASE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_SUBINFO" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_SUBINFO" ae:type="class" name="ADB__SUBINFO">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DESTINATION__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="QUALITY__OF__SERVICE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__FORMAT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__SOURCE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="USER__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PASSWORD" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATABASE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="EXCEPTION__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_SUBSCRIBER_STATUS" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_SUBSCRIBER_STATUS" ae:type="class" name="ADB__SUBSCRIBER__STATUS">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURN__CODE" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ADB__TEXT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CALLOUT__TEXT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ADB_TABLEMAPPING" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ADB_TABLEMAPPING" ae:type="class" name="ADB__TABLEMAPPING">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PUB__CHILD__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUB__CHILD__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/COMMIT_TRANSACTION" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.COMMIT_TRANSACTION" ae:type="class" name="COMMIT__TRANSACTION"/>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/CONFIRM_MESSAGE" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.CONFIRM_MESSAGE" ae:type="class" name="CONFIRM__MESSAGE"/>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/CUSTOM_OP_OUTPUT_OPTION" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.CUSTOM_OP_OUTPUT_OPTION" ae:type="class" name="CUSTOM__OP__OUTPUT__OPTION">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ERROR__DESC" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SQL" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/ExplicitNull" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.ExplicitNull" ae:type="class" name="ExplicitNull">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="explicitNullAttribute" form="unqualified" nillable="true" type="ae:boolean" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/MULTIROW_MESSAGE" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.MULTIROW_MESSAGE" ae:type="class" name="MULTIROW__MESSAGE">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="MULTIROW__STMT" form="unqualified" nillable="true" type="ns1:sequence_lsqb_any_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/NEW_PUBLICATION" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.NEW_PUBLICATION" ae:type="class" name="NEW__PUBLICATION">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/NEW_SUBSCRIPTION" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.NEW_SUBSCRIPTION" ae:type="class" name="NEW__SUBSCRIPTION">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SUBJECT" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/POLL_COMMAND" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.POLL_COMMAND" ae:type="class" name="POLL__COMMAND">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ID" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PUBLISHING__TABLE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURN__CLASS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURN__QUEUE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__SOURCE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="USER__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PASSWORD" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATABASE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SPLIT_MESSAGE" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SPLIT_MESSAGE" ae:type="class" name="SPLIT__MESSAGE">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ID" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLASSNAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CHUNK__NUM" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CHUNK__SIZE" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="MESSAGE__SIZE" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CHUNK__BUFFER" form="unqualified" nillable="true" type="ae:binary" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_BATCHRETURN" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_BATCHRETURN" ae:type="class" name="SQL__BATCHRETURN">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="STATUS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SQL" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ERROR__DESC" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLOSURE" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURNVALUES" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__RETURNVALUE_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_BIND" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_BIND" ae:type="class" name="SQL__BIND">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="POSITION" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" ae:default="IN" name="PARAMTYPE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_COMMAND" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_COMMAND" ae:type="class" name="SQL__COMMAND">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ID" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="COMMAND" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURN__CLASS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURN__QUEUE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATA__SOURCE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="USER__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="PASSWORD" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="DATABASE__NAME" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_OPS" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_OPS" ae:type="class" name="SQL__OPS"/>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_REQUEST" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_REQUEST" ae:type="class" name="SQL__REQUEST">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="STATEMENTS" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__STATEMENT_rsqb_" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLOSURE" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_RESULTSET" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_RESULTSET" ae:type="class" name="SQL__RESULTSET">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="HEADER" form="unqualified" nillable="true" type="ns1:sequence_lsqb_string_rsqb_" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ROWVALUES" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__ROW_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_RETURN" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_RETURN" ae:type="class" name="SQL__RETURN">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="STATUS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SQL" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ERROR__DESC" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLOSURE" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RETURNVALUE" form="unqualified" nillable="true" type="ns0:SQL__RETURNVALUE" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_RETURNVALUE" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_RETURNVALUE" ae:type="class" name="SQL__RETURNVALUE">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLOSURE" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="OUTBINDS" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__BIND_rsqb_" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="RESULTSETS" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__RESULTSET_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_ROW" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_ROW" ae:type="class" name="SQL__ROW">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ROW" form="unqualified" nillable="true" type="ns1:sequence_lsqb_any_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_STATEMENT" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_STATEMENT" ae:type="class" name="SQL__STATEMENT">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="MAXROWS" form="unqualified" nillable="true" type="ae:i4" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="SQL__STRING" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="CLOSURE" form="unqualified" nillable="true" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="BINDS" form="unqualified" nillable="true" type="ns0:sequence_lsqb_SQL__BIND_rsqb_" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/SQL_STATUS" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.SQL_STATUS" ae:type="class" name="SQL__STATUS">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="ID" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="STATUS" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="MESSAGE" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/TERMINATE" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.TERMINATE" ae:type="class" name="TERMINATE"/>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/^reply^SQL_OPS^SQL_BATCHEXECUTE" name="__caret_reply_caret_SQL__OPS_caret_SQL__BATCHEXECUTE">
+        <complexContent>
+            <extension base="ae:new-operationReplyType">
+                <sequence>
+                    <element name="__caret_hasException_caret_" form="unqualified" nillable="true" type="ae:boolean" minOccurs="0"/>
+                    <element name="__caret_exceptionName_caret_" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+                    <element name="__caret_exceptionData_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                    <element name="__caret_returnValue_caret_" form="unqualified" nillable="true" type="ns0:SQL__BATCHRETURN" minOccurs="0"/>
+                    <element name="__caret_closure_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                    <element name="__caret_userClosure_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/^reply^SQL_OPS^SQL_EXECUTE" name="__caret_reply_caret_SQL__OPS_caret_SQL__EXECUTE">
+        <complexContent>
+            <extension base="ae:new-operationReplyType">
+                <sequence>
+                    <element name="__caret_hasException_caret_" form="unqualified" nillable="true" type="ae:boolean" minOccurs="0"/>
+                    <element name="__caret_exceptionName_caret_" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+                    <element name="__caret_exceptionData_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                    <element name="__caret_returnValue_caret_" form="unqualified" nillable="true" type="ns0:SQL__RETURN" minOccurs="0"/>
+                    <element name="__caret_closure_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                    <element name="__caret_userClosure_caret_" form="unqualified" nillable="true" type="anyType" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/^request^SQL_OPS^SQL_BATCHEXECUTE" name="__caret_request_caret_SQL__OPS_caret_SQL__BATCHEXECUTE">
+        <complexContent>
+            <extension base="ae:new-operationRequestType">
+                <sequence>
+                    <element name="STATEMENTS" form="unqualified" type="ns0:sequence_lsqb_SQL__STATEMENT_rsqb_" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/^request^SQL_OPS^SQL_EXECUTE" name="__caret_request_caret_SQL__OPS_caret_SQL__EXECUTE">
+        <complexContent>
+            <extension base="ae:new-operationRequestType">
+                <sequence>
+                    <element name="STATEMENT" form="unqualified" type="ns0:SQL__STATEMENT" minOccurs="0"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType ae:typename="/tibco/public/class/ae/ADB/adbmetadata/adbDateTime" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#class.adbDateTime" ae:type="class" name="adbDateTime">
+        <sequence>
+            <element ae:readable="true" ae:key="false" ae:writeable="true" name="dateTime" form="unqualified" nillable="true" type="ae:string" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/adbmetadata/sequence[SQL_BIND]" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#sequence.sequence[SQL_BIND]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_SQL__BIND_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ns0:SQL__BIND" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/adbmetadata/sequence[SQL_RESULTSET]" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#sequence.sequence[SQL_RESULTSET]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_SQL__RESULTSET_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ns0:SQL__RESULTSET" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/adbmetadata/sequence[SQL_RETURNVALUE]" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#sequence.sequence[SQL_RETURNVALUE]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_SQL__RETURNVALUE_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ns0:SQL__RETURNVALUE" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/adbmetadata/sequence[SQL_ROW]" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#sequence.sequence[SQL_ROW]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_SQL__ROW_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ns0:SQL__ROW" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/adbmetadata/sequence[SQL_STATEMENT]" ae:directory="/AESchemas/ae/ADB/adbmetadata.aeschema#sequence.sequence[SQL_STATEMENT]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_SQL__STATEMENT_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ns0:SQL__STATEMENT" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <element name="ADB__PREREGLISTENER" type="ns0:ADB__PREREGLISTENER"/>
+    <element name="ADB__PUBINFO" type="ns0:ADB__PUBINFO"/>
+    <element name="ADB__RELINFO" type="ns0:ADB__RELINFO"/>
+    <element name="ADB__REQREPINFO" type="ns0:ADB__REQREPINFO"/>
+    <element name="ADB__SUBINFO" type="ns0:ADB__SUBINFO"/>
+    <element name="ADB__SUBSCRIBER__STATUS" type="ns0:ADB__SUBSCRIBER__STATUS"/>
+    <element name="ADB__TABLEMAPPING" type="ns0:ADB__TABLEMAPPING"/>
+    <element name="CUSTOM__OP__OUTPUT__OPTION" type="ns0:CUSTOM__OP__OUTPUT__OPTION"/>
+    <element name="ExplicitNull" type="ns0:ExplicitNull"/>
+    <element name="MULTIROW__MESSAGE" type="ns0:MULTIROW__MESSAGE"/>
+    <element name="NEW__PUBLICATION" type="ns0:NEW__PUBLICATION"/>
+    <element name="NEW__SUBSCRIPTION" type="ns0:NEW__SUBSCRIPTION"/>
+    <element name="POLL__COMMAND" type="ns0:POLL__COMMAND"/>
+    <element name="SPLIT__MESSAGE" type="ns0:SPLIT__MESSAGE"/>
+    <element name="SQL__BATCHRETURN" type="ns0:SQL__BATCHRETURN"/>
+    <element name="SQL__BIND" type="ns0:SQL__BIND"/>
+    <element name="SQL__COMMAND" type="ns0:SQL__COMMAND"/>
+    <element name="SQL__REQUEST" type="ns0:SQL__REQUEST"/>
+    <element name="SQL__RESULTSET" type="ns0:SQL__RESULTSET"/>
+    <element name="SQL__RETURN" type="ns0:SQL__RETURN"/>
+    <element name="SQL__RETURNVALUE" type="ns0:SQL__RETURNVALUE"/>
+    <element name="SQL__ROW" type="ns0:SQL__ROW"/>
+    <element name="SQL__STATEMENT" type="ns0:SQL__STATEMENT"/>
+    <element name="SQL__STATUS" type="ns0:SQL__STATUS"/>
+    <element name="__caret_reply_caret_SQL__OPS_caret_SQL__BATCHEXECUTE" type="ns0:__caret_reply_caret_SQL__OPS_caret_SQL__BATCHEXECUTE"/>
+    <element name="__caret_reply_caret_SQL__OPS_caret_SQL__EXECUTE" type="ns0:__caret_reply_caret_SQL__OPS_caret_SQL__EXECUTE"/>
+    <element name="__caret_request_caret_SQL__OPS_caret_SQL__BATCHEXECUTE" type="ns0:__caret_request_caret_SQL__OPS_caret_SQL__BATCHEXECUTE"/>
+    <element name="__caret_request_caret_SQL__OPS_caret_SQL__EXECUTE" type="ns0:__caret_request_caret_SQL__OPS_caret_SQL__EXECUTE"/>
+    <element name="adbDateTime" type="ns0:adbDateTime"/>
+    <element name="sequence_lsqb_SQL__BIND_rsqb_" type="ns0:sequence_lsqb_SQL__BIND_rsqb_"/>
+    <element name="sequence_lsqb_SQL__RESULTSET_rsqb_" type="ns0:sequence_lsqb_SQL__RESULTSET_rsqb_"/>
+    <element name="sequence_lsqb_SQL__RETURNVALUE_rsqb_" type="ns0:sequence_lsqb_SQL__RETURNVALUE_rsqb_"/>
+    <element name="sequence_lsqb_SQL__ROW_rsqb_" type="ns0:sequence_lsqb_SQL__ROW_rsqb_"/>
+    <element name="sequence_lsqb_SQL__STATEMENT_rsqb_" type="ns0:sequence_lsqb_SQL__STATEMENT_rsqb_"/>
+</schema>

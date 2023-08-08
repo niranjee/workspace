@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/crm/Processes/Application/FFPDB/InsertSynchronizeProfileALMS_Error-Start-Input.xsd" xmlns:ns="http://www.hp.com/schemas/services/exception" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:ns2="http://www.tibco.com/pe/DeployedVarsType" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/Processes/Application/FFPDB/InsertSynchronizeProfileALMS_Error-Start-Input.xsd">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="profileID" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="ErrorCode" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="ErrorDescription" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="StatusReprocess" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

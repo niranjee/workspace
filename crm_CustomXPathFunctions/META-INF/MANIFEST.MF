@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: crm_CustomXPathFunctions
+Bundle-SymbolicName: crm_CustomXPathFunctions; singleton:=true
+Bundle-Version: 1.0.0
+Import-Package:  com.tibco.xml.cxf.common.annotations
+Export-Package: com.hp.tibco.bw.functions.json.cxf,
+ com.hp.tibco.bw.functions.string.cxf
+Bundle-ClassPath: .,
+ lib/customXPathFunction.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Service-Component: OSGI-INF/JSON_cxf.xml,
+ OSGI-INF/StringFunctions_cxf.xml

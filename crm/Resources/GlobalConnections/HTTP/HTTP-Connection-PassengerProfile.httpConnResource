@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:oasis-200401-wss-wssecurity-utility-1.0.xsd="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sslserver="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslserver" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmi:id="_Lg-8gCSeEe6RLdqQXA7E6w" name="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile" type="httpconnector:HttpConnectorConfiguration" policySets="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer-PolicySet" identitySets="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer-IdentitySet">
+  <policySet xmi:id="_Lg-8giSeEe6RLdqQXA7E6w" appliesTo="namedresource" name="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer-PolicySet" provides="confidentiality">
+    <sca:intentMap xmi:id="_Lg-8gySeEe6RLdqQXA7E6w" provides="sca:confidentiality">
+      <sca:qualifier xmi:id="_Lg-8hCSeEe6RLdqQXA7E6w" name="transport">
+        <wsp:Policy xmi:id="_Lg-8hSSeEe6RLdqQXA7E6w" oasis-200401-wss-wssecurity-utility-1.0.xsd:Id="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer">
+          <sp:TransportBinding xmi:id="_Lg-8hiSeEe6RLdqQXA7E6w">
+            <wsp:Policy xmi:id="_Lg-8hySeEe6RLdqQXA7E6w">
+              <sp:TransportToken xmi:id="_Lg-8iCSeEe6RLdqQXA7E6w">
+                <wsp:Policy xmi:id="_Lg-8iSSeEe6RLdqQXA7E6w">
+                  <sp:HttpsToken xmi:id="_Lg-8iiSeEe6RLdqQXA7E6w"/>
+                </wsp:Policy>
+              </sp:TransportToken>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:Policy>
+      </sca:qualifier>
+    </sca:intentMap>
+  </policySet>
+  <identitySet xmi:id="_Lg-8iySeEe6RLdqQXA7E6w" appliesTo="NamedResource" name="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer-IdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_Lg-8jCSeEe6RLdqQXA7E6w" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_Lg-8jSSeEe6RLdqQXA7E6w" name="transport">
+        <id:IdentityReference xmi:id="_Lg_jkCSeEe6RLdqQXA7E6w" URI="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile-sslServer" type="sslserver:SSLServerConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_Lg-8gSSeEe6RLdqQXA7E6w" lingerTime="270000" uriEncoding="" useSSL="true">
+    <substitutionBindings xmi:id="_LhGRQCSeEe6RLdqQXA7E6w" template="host" propName="PassengerProfile/Environment/HTTP/Host"/>
+    <substitutionBindings xmi:id="_LhG4USSeEe6RLdqQXA7E6w" template="port" propName="PassengerProfile/Environment/HTTP/Port0"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/api_ticket_upgrade_req" xmlns:tns="http://www.example.org/api_ticket_upgrade_req" elementFormDefault="qualified">
+
+    <complexType name="AwardInformationRequest">
+    	<sequence>
+    		<element name="CompanyIdentifier" type="string"></element>
+    		<element name="AwardCompany" type="string"></element>
+    		<element name="AwdCode" type="string"></element>
+    		<element name="IsVoucher" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="AwardInformationRequest" type="tns:AwardInformationRequest"></element>
+
+    <complexType name="FlightInformation">
+    	<sequence>
+    		<element name="Origin" type="string"></element>
+    		<element name="Destination" type="string"></element>
+    		<element name="OriginalBookingClass" type="string"></element>
+    		<element name="ReservationId" type="string"></element>
+    		<element name="FlightNumber" type="string"></element>
+    		<element name="CarrierCode" type="string"></element>
+    		<element name="SecondSegment" type="string"></element>
+    		<element name="DepartDate" type="string"></element>
+    		<element name="BookedCabinClass" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="FlightInformation" type="tns:FlightInformation"></element>
+
+    <complexType name="PassengerDetail">
+    	<sequence>
+    		<element name="SponsorFFPnumber" type="string"></element>
+    		<element name="TicketNumber" type="string"></element>
+    		<element name="FirstName" type="string"></element>
+    		<element name="PaxSequenceNumber" type="string"></element>
+    		<element name="FfpProgramId" type="string"></element>
+    		<element name="CouponNumber" type="string"></element>
+    		<element name="Title" type="string"></element>
+    		<element name="FfpCardNumber" type="string"></element>
+    		<element name="SurName" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="PassengerDetail" type="tns:PassengerDetail"></element>
+
+    <complexType name="SponsorPassengerDetail">
+    	<sequence>
+    		<element name="SponsorFFPnumber" type="string"></element>
+    		<element name="TicketNumber" type="string"></element>
+    		<element name="FirstName" type="string"></element>
+    		<element name="PaxSequenceNumber" type="string"></element>
+    		<element name="FfpProgramId" type="string"></element>
+    		<element name="CouponNumber" type="string"></element>
+    		<element name="Title" type="string"></element>
+    		<element name="FfpCardNumber" type="string"></element>
+    		<element name="SurName" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="SponsorPassengerDetail" type="tns:SponsorPassengerDetail"></element>
+
+    <complexType name="UpgradeAward">
+    	<sequence>
+    		<element name="AwardInformationRequest" type="tns:AwardInformationRequest"></element>
+    		<element name="FlightInformation" type="tns:FlightInformation"></element>
+    		<element name="PassengerDetails" type="tns:PassengerDetail"></element>
+    	</sequence>
+    </complexType>
+</schema>

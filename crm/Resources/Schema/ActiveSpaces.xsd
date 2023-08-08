@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/as" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="ActivityInput">
+		<xs:sequence>
+			<xs:element name="Tuple" type="tns:Tuple" form="unqualified" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Result">
+		<xs:sequence>
+			<xs:element name="Status" type="xs:string" form="unqualified"/>
+			<xs:element name="Tuple" type="tns:Tuple" form="unqualified" minOccurs="0"/>
+			<xs:element name="HasError" type="xs:boolean" form="unqualified"/>
+			<xs:element name="Error" type="xs:string" form="unqualified" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResultList">
+		<xs:sequence>
+			<xs:element name="HasError" type="xs:boolean" form="unqualified"/>
+			<xs:element name="Result" type="tns:Result" form="unqualified" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SearchResponse">
+		<xs:sequence>
+			<xs:element name="Tuple" type="tns:Tuple" form="unqualified" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="IsPartialResult" type="xs:boolean" form="unqualified"/>
+			<xs:element name="TotalCount" type="xs:int" form="unqualified"/>
+			<xs:element name="HasError" type="xs:boolean" form="unqualified" minOccurs="0"/>
+			<xs:element name="Error" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="ErrorCode" type="xs:string" form="unqualified" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Tuple">
+		<xs:sequence>
+			<xs:element name="FrequentFlyerNumber" type="xs:int" form="unqualified"/>
+			<xs:element name="UserName" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="EmailAddress" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="Title" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="FirstName" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="MiddleName" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="Surname" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="CommunicationLanguage" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="MilesAwardBalance" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="TierLevelStatus" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="ZIPCode" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneLocationType" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneTechType" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneAreaCityCode" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneCountryAccessCode" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhonePhoneNumber" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneExtension" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PreferredPhoneRemark" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="PIN" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="Status" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="DateOfBirth" type="xs:dateTime" form="unqualified" minOccurs="0"/>
+			<xs:element name="ProcessStatus" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="CreationDate" type="xs:dateTime" form="unqualified" minOccurs="0"/>
+			<xs:element name="LastModifiedDate" type="xs:dateTime" form="unqualified" minOccurs="0"/>
+			<xs:element name="ModifiedBy" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="FullProfile" type="xs:base64Binary" form="unqualified" minOccurs="0"/>
+			<xs:element name="Passport" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="DrivingLicense" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="NationalID" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="SecundaryPassport" type="xs:string" form="unqualified" minOccurs="0"/>
+			<xs:element name="ForceSync" type="xs:boolean" form="unqualified" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActivityInput" type="tns:ActivityInput"/>
+	<xs:element name="ResultList" type="tns:ResultList"/>
+	<xs:element name="SearchResponse" type="tns:SearchResponse"/>
+</xs:schema>

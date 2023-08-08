@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <enterpriseArchive>
+        <sharedArchive name="Shared Archive">
+            <resourceType>shared.archive.resource</resourceType>
+            <authorProperty>perezpaf</authorProperty>
+            <sharedResources>/Resources/Shared/AliasLibrary.aliaslib</sharedResources>
+            <sharedFiles/>
+            <sharedJarFiles/>
+        </sharedArchive>
+        <processArchive name="PassengerProfileServiceSyncFromFile">
+            <resourceType>process.archive.resource</resourceType>
+            <authorProperty>perezpaf</authorProperty>
+            <processProperty>/ReferenceLibraries/Logging/Services/Application/JMS/UpdateConfigurationReceiver.process,/ReferenceLibraries/Logging/Services/Application/LoggerInit.process,/ReferenceLibraries/Logging/Processes/Appenders/Log4j.process,/ReferenceLibraries/Logging/Processes/Appenders/JDBC.process,/Services/Application/Business/Poller/FilePollerProfile.process</processProperty>
+        </processArchive>
+        <versionProperty>1.1</versionProperty>
+        <authorProperty>falconi</authorProperty>
+        <addServiceSettableGvars>true</addServiceSettableGvars>
+        <name>PassengerProfileServiceSyncFromFile</name>
+        <designer>
+            <lockedProperties/>
+            <fixedChildren/>
+            <resourceDescriptions/>
+        </designer>
+        <fileLocationProperty>C:\PassengerProfileServiceSyncFromFile.ear</fileLocationProperty>
+    </enterpriseArchive>
+</Repository:repository>

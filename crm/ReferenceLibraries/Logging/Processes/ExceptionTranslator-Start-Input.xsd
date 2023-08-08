@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="/crm/ReferenceLibraries/Logging/Processes/ExceptionTranslator-Start-Input.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/ReferenceLibraries/Logging/Processes/ExceptionTranslator-Start-Input.xsd">
+    <xs:element name="exception-detail" type="xs:anyType"/>
+</xs:schema>

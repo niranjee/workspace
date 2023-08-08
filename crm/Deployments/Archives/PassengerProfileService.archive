@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <enterpriseArchive>
+        <sharedArchive name="Shared Archive">
+            <resourceType>shared.archive.resource</resourceType>
+            <authorProperty>perezpaf</authorProperty>
+            <sharedResources>/Resources/Shared/AliasLibrary.aliaslib</sharedResources>
+            <sharedFiles/>
+            <sharedJarFiles/>
+        </sharedArchive>
+        <processArchive name="PassengerProfileService">
+            <resourceType>process.archive.resource</resourceType>
+            <authorProperty>mcardozo</authorProperty>
+            <processProperty>/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfile-service0.serviceagent,/ReferenceLibraries/Logging/Services/Application/LoggerInit.process,/ReferenceLibraries/Logging/Services/Application/JMS/UpdateConfigurationReceiver.process,/ReferenceLibraries/Logging/Processes/Appenders/JDBC.process,/ReferenceLibraries/Logging/Processes/Appenders/Log4j.process,/Services/Application/Business/WS/PassengerProfileValidate/Implementation/PassengerProfile-Validate.serviceagent</processProperty>
+        </processArchive>
+        <versionProperty>1.2</versionProperty>
+        <authorProperty>mcardozo</authorProperty>
+        <addServiceSettableGvars>true</addServiceSettableGvars>
+        <name>PassengerProfileService</name>
+        <designer>
+            <lockedProperties/>
+            <fixedChildren/>
+            <resourceDescriptions/>
+        </designer>
+        <fileLocationProperty>C:\Deployments\BW5\PassengerProfileService\PassengerProfileServiceAZR_1.2.ear</fileLocationProperty>
+    </enterpriseArchive>
+</Repository:repository>

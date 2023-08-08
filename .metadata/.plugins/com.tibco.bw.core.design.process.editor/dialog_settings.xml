@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CatchingOfActivityErrorVariableSettings">
+		<item value="false" key="RemoveActivityErrorVariableOfExistingActivities"/>
+		<item value="true" key="CreateActivityErrorVariableForExistingActivities"/>
+	</section>
+</section>

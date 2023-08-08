@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/D:/workspace/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1689598324179'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='2'>
+    <unit id='crm_CustomXPathFunctions' version='1.0.0'>
+      <update id='crm_CustomXPathFunctions' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='crm_CustomXPathFunctions'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='crm_CustomXPathFunctions' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='crm_CustomXPathFunctions' version='1.0.0'/>
+        <provided namespace='java.package' name='com.hp.tibco.bw.functions.json.cxf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.hp.tibco.bw.functions.string.cxf' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='com.tibco.xml.cxf.common.annotations' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='crm_CustomXPathFunctions' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: crm_CustomXPathFunctions; singleton:=true&#xA;Bundle-Version: 1.0.0&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='crm' version='1.0.0.202307171821' singleton='false'>
+      <update id='crm' range='[0.0.0,1.0.0.202307171821)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='crm'/>
+        <property name='org.eclipse.equinox.p2.provider' value='TIBCO Software Inc.'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='crm' version='1.0.0.202307171821'/>
+        <provided namespace='osgi.bundle' name='crm' version='1.0.0.202307171821'/>
+        <provided namespace='java.package' name='Processes.Util.getPassword' version='0.0.0'/>
+        <provided namespace='java.package' name='com' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='java.package' name='com.tibco.bw.palette.java.runtime' range='0.0.0'/>
+        <required namespace='java.package' name='com.tibco.bw.runtime' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='crm' version='1.0.0.202307171821'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: crm&#xA;Bundle-Version: 1.0.0.202307171821
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

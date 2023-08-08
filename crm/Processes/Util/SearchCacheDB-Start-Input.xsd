@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/crm/Processes/Util/SearchCacheDB-Start-Input.xsd" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:ns1="http://schemas.tibco.com/bw/plugins/as/5.0/asExceptions" xmlns:ns12="http://www.hp.com/schemas/services/exception" xmlns:ns2="http://www.tibco.com/pe/EngineTypes" xmlns:ns3="http://www.tibco.com/pe/DeployedVarsType" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://webservices.lms.ama.com/" xmlns:pfx2="http://www.tibco.com/schemas/crm/Resources/Schema/Schema.xsd" xmlns:pfx3="http://www.tibco.com/schemas/crm/Resources/Schema/ActiveSpaces.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/Processes/Util/SearchCacheDB-Start-Input.xsd">
+    <xsd:import namespace="http://www.tibco.com/namespaces/tnt/plugins/as" schemaLocation="../../Resources/Schema/ActiveSpaces.xsd"/>
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="filter" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="queryLimit" type="xsd:int"/>
+                <xsd:element minOccurs="0" name="sorting" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

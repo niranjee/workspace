@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete Operation &apos;Search&apos;" description="Delete Operation &apos;Search&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.delete.operation" stamp="1689669936363"/>&#x0A;<refactoring comment="Delete Operation &apos;ValidateDataForFFAssignment&apos;" description="Delete Operation &apos;ValidateDataForFFAssignment&apos;" flags="7" id="com.tibco.bw.core.design.refactoring.delete.operation" stamp="1689669987889"/>
+</session>

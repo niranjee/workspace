@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/as" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="root">
+		<xs:sequence>
+			<xs:element name="profileID" type="xs:string" form="unqualified"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SynchronizeProfile" type="tns:root"/>
+</xs:schema>

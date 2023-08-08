@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/crm/Processes/Batch/UpdateProfile-End-Output.xsd" xmlns:JSON="java://com.hp.tibco.bw.functions.json.JSON" xmlns:StringUtil="java://com.hp.tibco.bw.functions.string.StringFunctions" xmlns:ns="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns1="http://www.tibco.com/pe/EngineTypes" xmlns:ns12="http://www.hp.com/schemas/services/exception" xmlns:ns13="http://www.hp.com/schemas/services/logger" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:pfx2="http://www.opentravel.org/OTA/2003/05" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/Processes/Batch/UpdateProfile-End-Output.xsd">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="countUpdateProfile" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

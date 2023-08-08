@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_LaAx0CSeEe6RLdqQXA7E6w" name="Resources.GlobalConnections.DB.JDBC-Connection-ForceSync" type="jdbc:JdbcDataSource">
+  <jndi:description>Conexion creada para ForceSync = 1</jndi:description>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_LaBY4CSeEe6RLdqQXA7E6w" username="%%PassengerProfile/Environment/ForceSync/UserName%%" password="%%PassengerProfile/Environment/ForceSync/Password%%">
+    <substitutionBindings xmi:id="_LaBY4SSeEe6RLdqQXA7E6w" template="maxConnections" propName="PassengerProfile/Environment/ForceSync/MaxConnections"/>
+    <substitutionBindings xmi:id="_LaBY4iSeEe6RLdqQXA7E6w" template="maxConnections" propName="Conn"/>
+    <substitutionBindings xmi:id="_LaEcMiSeEe6RLdqQXA7E6w" template="username" propName="PassengerProfile/Environment/ForceSync/UserName"/>
+    <substitutionBindings xmi:id="_LaFDQCSeEe6RLdqQXA7E6w" template="password" propName="PassengerProfile/Environment/ForceSync/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_LaBY4ySeEe6RLdqQXA7E6w" jdbcDriver="%%PassengerProfile/Environment/ForceSync/Driver%%" dbURL="%%PassengerProfile/Environment/ForceSync/URL%%">
+      <substitutionBindings xmi:id="_LaBY5CSeEe6RLdqQXA7E6w" template="loginTimeout" propName="PassengerProfile/Environment/ForceSync/LoginTimeout"/>
+      <substitutionBindings xmi:id="_LaBY5SSeEe6RLdqQXA7E6w" template="loginTimeout" propName="Timeout"/>
+      <substitutionBindings xmi:id="_LaEcMCSeEe6RLdqQXA7E6w" template="jdbcDriver" propName="PassengerProfile/Environment/ForceSync/Driver"/>
+      <substitutionBindings xmi:id="_LaEcMSSeEe6RLdqQXA7E6w" template="dbURL" propName="PassengerProfile/Environment/ForceSync/URL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Lj-mICSeEe6RLdqQXA7E6w" name="Resources.GlobalConnections.JMS.SynchronizrProfile-Process-JMS-Connection" type="jms:JMSConnectionFactory">
+  <jndi:reference xmi:id="_Lj-mISSeEe6RLdqQXA7E6w" key="jndiConnectionJNDIName" type="jms:JNDIConnection" value="Resources.GlobalConnections.JMS.SynchronizrProfile-Process-JMS-ConnectionJNDI"/>
+  <jndi:configuration xsi:type="jms:JNDIConnectionFactory" xmi:id="_Lj-mIiSeEe6RLdqQXA7E6w" factoryType="Queue/Topic" jndiName="%%PassengerProfile/Environment/JMS/QueueFactory%%" topicFactoryJNDIName="%%PassengerProfile/Environment/JMS/TopicFactory%%">
+    <substitutionBindings xmi:id="_LkBCYCSeEe6RLdqQXA7E6w" template="jndiName" propName="PassengerProfile/Environment/JMS/QueueFactory"/>
+    <substitutionBindings xmi:id="_LkBCYSSeEe6RLdqQXA7E6w" template="topicFactoryJNDIName" propName="PassengerProfile/Environment/JMS/TopicFactory"/>
+    <userCredentials xmi:id="_Lj-mIySeEe6RLdqQXA7E6w" username="%%PassengerProfile/Environment/JMS/userName%%" password="%%PassengerProfile/Environment/JMS/password%%">
+      <substitutionBindings xmi:id="_LkBCYiSeEe6RLdqQXA7E6w" template="username" propName="PassengerProfile/Environment/JMS/userName"/>
+      <substitutionBindings xmi:id="_LkBCYySeEe6RLdqQXA7E6w" template="password" propName="PassengerProfile/Environment/JMS/password"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

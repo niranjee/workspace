@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Lj2DQCSeEe6RLdqQXA7E6w" name="Resources.GlobalConnections.JMS.SynchronizrProfile-Process-JMS-ConnectionJNDI" type="jms:JNDIConnection">
+  <jndi:configuration xsi:type="jms:JNDIConnectionConfiguration" xmi:id="_Lj2qUCSeEe6RLdqQXA7E6w" providerUrl="%%PassengerProfile/Environment/JMS/URL%%">
+    <substitutionBindings xmi:id="_Lj8J4CSeEe6RLdqQXA7E6w" template="providerUrl" propName="PassengerProfile/Environment/JMS/URL"/>
+    <userCredentials xmi:id="_Lj2qUSSeEe6RLdqQXA7E6w" username="%%PassengerProfile/Environment/JMS/jndiUserName%%" password="%%PassengerProfile/Environment/JMS/jndipassword%%">
+      <substitutionBindings xmi:id="_Lj8w8CSeEe6RLdqQXA7E6w" template="username" propName="PassengerProfile/Environment/JMS/jndiUserName"/>
+      <substitutionBindings xmi:id="_Lj8w8SSeEe6RLdqQXA7E6w" template="password" propName="PassengerProfile/Environment/JMS/jndipassword"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ae="http://www.tibco.com/xmlns/ae2xsd/2002/05" xmlns:ns1="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/scalar" targetNamespace="http://www.tibco.com/xmlns/ae2xsd/2002/05/ae/ADB/scalar" elementFormDefault="qualified" attributeFormDefault="qualified">
+    <import namespace="http://www.tibco.com/xmlns/ae2xsd/2002/05" schemaLocation="../../ae2xsd.xsd"/>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/scalar/sequence[any]" ae:directory="/AESchemas/ae/ADB/scalar.aeschema#sequence.sequence[any]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_any_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType ae:typename="/tibco/public/sequence/ae/class/ae/ADB/scalar/sequence[string]" ae:directory="/AESchemas/ae/ADB/scalar.aeschema#sequence.sequence[string]" ae:type="sequence" ae:isSequence="true" name="sequence_lsqb_string_rsqb_">
+        <sequence>
+            <element name="item" form="unqualified" type="ae:string" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <element name="sequence_lsqb_any_rsqb_" type="ns1:sequence_lsqb_any_rsqb_"/>
+    <element name="sequence_lsqb_string_rsqb_" type="ns1:sequence_lsqb_string_rsqb_"/>
+</schema>

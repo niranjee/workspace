@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <metaspace>
+        <metaspaceName>Profile_ms</metaspaceName>
+        <WorkerThreadCount>32</WorkerThreadCount>
+        <ConnectTimeout>30000</ConnectTimeout>
+        <MemberTimeout>5000</MemberTimeout>
+        <ClusterSuspendThreshold>-1</ClusterSuspendThreshold>
+        <MemberName>bw_leech_charly_145</MemberName>
+        <Discovery>tcp://148.91.165.145:10701?remote=true</Discovery>
+        <Listen/>
+        <securemetaspace>false</securemetaspace>
+        <domainRole>CONTROLLER</domainRole>
+        <credentials>USERPWD</credentials>
+        <designer>
+            <lockedProperties/>
+            <fixedChildren/>
+            <resourceDescriptions/>
+        </designer>
+    </metaspace>
+</Repository:repository>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:oasis-200401-wss-wssecurity-utility-1.0.xsd="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmi:id="_SyI18CSeEe6RLdqQXA7E6w" name="Processes.Application.Login.Validate-LoginEndpoint0Binding-HttpClientResource" type="http:HttpClientConfiguration" policySets="Processes.Application.Login.F-1973067493-ilE-T-sslClient-PolicySet" identitySets="Processes.Application.Login.F-1973067493-ilE-T-sslClient-IdentitySet">
+  <policySet xmi:id="_Syy9QCSeEe6RLdqQXA7E6w" appliesTo="namedresource" name="Processes.Application.Login.F-1973067493-ilE-T-sslClient-PolicySet" provides="confidentiality">
+    <sca:intentMap xmi:id="_Syy9QSSeEe6RLdqQXA7E6w" provides="sca:confidentiality">
+      <sca:qualifier xmi:id="_Syy9QiSeEe6RLdqQXA7E6w" name="transport">
+        <wsp:Policy xmi:id="_Syy9QySeEe6RLdqQXA7E6w" oasis-200401-wss-wssecurity-utility-1.0.xsd:Id="Processes.Application.Login.F-1973067493-ilE-T-sslClient">
+          <sp:TransportBinding xmi:id="_Syy9RCSeEe6RLdqQXA7E6w">
+            <wsp:Policy xmi:id="_Syy9RSSeEe6RLdqQXA7E6w">
+              <sp:TransportToken xmi:id="_Syy9RiSeEe6RLdqQXA7E6w">
+                <wsp:Policy xmi:id="_Syy9RySeEe6RLdqQXA7E6w">
+                  <sp:HttpsToken xmi:id="_Syy9SCSeEe6RLdqQXA7E6w"/>
+                </wsp:Policy>
+              </sp:TransportToken>
+            </wsp:Policy>
+          </sp:TransportBinding>
+        </wsp:Policy>
+      </sca:qualifier>
+    </sca:intentMap>
+  </policySet>
+  <identitySet xmi:id="_Syy9SSSeEe6RLdqQXA7E6w" appliesTo="NamedResource" name="Processes.Application.Login.F-1973067493-ilE-T-sslClient-IdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_Syy9SiSeEe6RLdqQXA7E6w" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_Syy9SySeEe6RLdqQXA7E6w" name="transport">
+        <id:IdentityReference xmi:id="_Syy9TCSeEe6RLdqQXA7E6w" URI="Processes.Application.Login.F-1973067493-ilE-T-sslClient" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_SyI18SSeEe6RLdqQXA7E6w">
+    <tcpDetails xmi:id="_SyI18iSeEe6RLdqQXA7E6w" port="9009"/>
+  </jndi:configuration>
+</jndi:namedResource>

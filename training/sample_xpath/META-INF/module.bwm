@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_kn5iEAp9Ee62M41WjoZU_w" targetNamespace="http://tns.tibco.com/bw/composite/sample_xpath" name="sample_xpath" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_mPWoEAp9Ee62M41WjoZU_w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mPtNYAp9Ee62M41WjoZU_w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mP2-YAp9Ee62M41WjoZU_w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mQDLoAp9Ee62M41WjoZU_w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mQYi0Ap9Ee62M41WjoZU_w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mQkJAAp9Ee62M41WjoZU_w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mQsE0Ap9Ee62M41WjoZU_w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mQ110Ap9Ee62M41WjoZU_w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mRA08Ap9Ee62M41WjoZU_w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_lj7FcAp9Ee62M41WjoZU_w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lj86oAp9Ee62M41WjoZU_w" processName="sample_xpath.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_Z3Xa4AqBEe62M41WjoZU_w" name="ComponentProcess1" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Z3Xa4QqBEe62M41WjoZU_w" processName="sample_xpath.Process1"/>
+  </sca:component>
+</sca:composite>

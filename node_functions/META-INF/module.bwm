@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_pZMfgCDGEe6h15VxMzcvcA" targetNamespace="http://tns.tibco.com/bw/composite/node_functions" name="node_functions" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_pwoIECDGEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pwu1wCDGEe6h15VxMzcvcA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pwzHMCDGEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pw2KgCDGEe6h15VxMzcvcA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pw7DACDGEe6h15VxMzcvcA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pw_UcCDGEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pxE0ACDGEe6h15VxMzcvcA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pxJsgCDGEe6h15VxMzcvcA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pxPMECDGEe6h15VxMzcvcA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_pirysCDGEe6h15VxMzcvcA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pirysSDGEe6h15VxMzcvcA" processName="node_functions.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_Y6HEoCDLEe6h15VxMzcvcA" name="Componenttokenize_iterate" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Y6HEoSDLEe6h15VxMzcvcA" processName="node_functions.tokenize_iterate"/>
+  </sca:component>
+</sca:composite>

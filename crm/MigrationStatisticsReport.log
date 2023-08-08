@@ -1,0 +1,78 @@
+2023-07-17 18:07:08,956 [Worker-6] INFO  com.tibco.bw.migration.stats  - Migrating Business Works 5.x projects to version 6 using arguments:: 
+[Target Project Directory: d:\workspace/crm ]
+[Source Project Directory: D:\downloads\ProfileServiceBW5\crm ]
+[Project Name: crm ]
+
+
+------------------ Migration Statistics ----------------
+
+Project Migration Time [Millisecond]: 230371
+
+Process Migration Time [Millisecond]
+1. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/ValidateDataForFFAssignment.process: 8030
+2. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/InserProfileUpdate.process: 1472
+3. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/PutProfile.process: 1760
+4. D:/downloads/ProfileServiceBW5/crm/Processes/Util/SendMail.process: 1399
+5. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/GetTierCode.process: 1880
+6. D:/downloads/ProfileServiceBW5/crm/Processes/Util/PutCacheDB.process: 1626
+7. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfilesearch.process: 1952
+8. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/JMS/SynchronizeProfile_Bkp.process: 2560
+9. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/UpdateProfile.process: 1344
+10. D:/downloads/ProfileServiceBW5/crm/Processes/Util/GetCacheDB.process: 1494
+11. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/ForceSync/ForceSync.process: 3168
+12. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Poller/FilePollerProfile.process: 2144
+13. D:/downloads/ProfileServiceBW5/crm/Processes/Util/SearchCacheDB.process: 1997
+14. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Search.process: 5728
+15. D:/downloads/ProfileServiceBW5/crm/ReferenceLibraries/Logging/Processes/ExceptionTranslator.process: 976
+16. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/SendMessage.process: 1816
+17. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/JMS/SynchronizeProfileByID.process: 2903
+18. D:/downloads/ProfileServiceBW5/crm/Processes/Application/ActiveSpaces/GetCache.process: 2624
+19. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/ListProfile.process: 3745
+20. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfilegetLight.process: 2495
+21. D:/downloads/ProfileServiceBW5/crm/Processes/Application/PPBR/ValidateDataForFFAssignment.process: 3253
+22. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/JMS/SynchronizeProfileALMS.process: 2850
+23. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfileValidate/Implementation/PassengerProfileget.process: 5418
+24. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize.process: 4831
+25. D:/downloads/ProfileServiceBW5/crm/Processes/Application/ActiveSpaces/SearchCache.process: 1177
+26. D:/downloads/ProfileServiceBW5/crm/Processes/Util/testSendJMS.process: 1233
+27. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/SynchronizeFromFile.process: 1773
+28. D:/downloads/ProfileServiceBW5/crm/Processes/Application/Amadeus/GetUpdateProfileFromAmadeus.process: 2050
+29. D:/downloads/ProfileServiceBW5/crm/Processes/Application/Amadeus/NotifyUpdatedProfileList.process: 2013
+30. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/SendMail.process: 1962
+31. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/Synchronize.process: 2329
+32. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/SearchProfile.process: 1532
+33. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize_OLD.process: 5637
+34. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/UnitTest/Test PassengerUpdateProfile.process: 1979
+35. D:/downloads/ProfileServiceBW5/crm/Processes/Application/ActiveSpaces/PutCache.process: 1082
+36. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/UnitTest/testTimer.process: 822
+37. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfileValidate/Implementation/PassengerProfilesearch.process: 1517
+38. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/SetContextSynchronize.process: 1479
+39. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/SynchronizeProfileByID.process: 1201
+40. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfilevalidateDataForFFAssignment.process: 2091
+41. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Get.process: 19021
+42. D:/downloads/ProfileServiceBW5/crm/Processes/Application/Amadeus/GetProfileFromAmadeus.process: 2232
+43. D:/downloads/ProfileServiceBW5/crm/Processes/Application/Login/Validate.process: 2859
+44. D:/downloads/ProfileServiceBW5/crm/Processes/Util/test.process: 753
+45. D:/downloads/ProfileServiceBW5/crm/Processes/Util/getPassword.process: 1527
+46. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/JMS/SynchronizeProfileError.process: 2648
+47. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfilelistProfile.process: 2978
+48. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfileValidate/Implementation/PassengerProfilegetLight.process: 1625
+49. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/synchronize.process: 2049
+50. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/GetProfile.process: 2027
+51. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfileValidate/Implementation/PassengerProfilevalidateDataForFFAssignment.process: 1518
+52. D:/downloads/ProfileServiceBW5/crm/Processes/Util/GetTierCode.process: 2595
+53. D:/downloads/ProfileServiceBW5/crm/Processes/Batch/UpdateProfile.process: 7818
+54. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/SynchronizeFromFile.process: 2739
+55. D:/downloads/ProfileServiceBW5/crm/Processes/Business/PassengerProfile/Synchronize/SynchronizeProfile.process: 1463
+56. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/Process Definition.process: 801
+57. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfileget.process: 2063
+58. D:/downloads/ProfileServiceBW5/crm/Processes/Util/TestZip.process: 1274
+59. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/PassengerUpdateProfile.process: 2087
+60. D:/downloads/ProfileServiceBW5/crm/Processes/Application/FFPDB/InsertSynchronizeProfileALMS_Error.process: 1300
+61. D:/downloads/ProfileServiceBW5/crm/Services/Application/Business/Timer/PassengerProfile/UnitTest/Test Synchronize.process: 1628
+
+Artifacts Migrated [Count]
+1. Process Migrated:61
+2. WSDL Migrated:6
+3. Schema Migrated:24
+4. XSLT Migrated:0

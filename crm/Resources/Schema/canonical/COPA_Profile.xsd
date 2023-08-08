@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) by Franco Perez (Hewlett-Packard Co) --><xs:schema xmlns="http://www.copaair.com/schemas/trn/crm/passengerprofile" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" id="COPA2014A" targetNamespace="http://www.copaair.com/schemas/trn/crm/passengerprofile" version="0.01">
+	<xs:include schemaLocation="OTA_SimpleTypes.xsd"/>
+	<xs:include schemaLocation="OTA_CommonTypes.xsd"/>
+	<xs:annotation>
+		<xs:documentation source="Description" xml:lang="en"/>
+	</xs:annotation>
+	<xs:attributeGroup name="RPH_DocumentGroup">
+		<xs:annotation>
+			<xs:documentation>Used to provide an Id of a Document</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="RPH" type="RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation source="Description" xml:lang="en">The unique reference for an object within this message.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="RPH_RelationGroup">
+		<xs:annotation>
+			<xs:documentation>Used to provide an Id of a Nominee</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="RPH" type="RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation source="Description" xml:lang="en">The unique reference for an object within this message.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="RPH_PreferenceGroup">
+		<xs:annotation>
+			<xs:documentation>Used to provide an Id of a Preference</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="RPH" type="RPH_Type" use="optional">
+			<xs:annotation>
+				<xs:documentation source="Description" xml:lang="en">The unique reference for an object within this message.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:complexType name="CopaProfileExt">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Extensions to Profile. To place in //element(*,ProfileType)/Customer/TPA_Extensions</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="ProfileProcessStatus" type="xs:string"/>
+			<xs:element minOccurs="0" name="FrequentFlyerNumber" type="xs:string"/>
+			<xs:element minOccurs="0" name="UserName" type="xs:string"/>
+			<xs:element minOccurs="0" name="Status" type="xs:string"/>
+			<xs:element minOccurs="0" name="Title" type="xs:string"/>
+			<xs:element minOccurs="0" name="Prefix" type="xs:string"/>
+			<xs:element minOccurs="0" name="MarriageDate" type="xs:date"/>
+			<xs:element minOccurs="0" name="EnrollmentSource" type="xs:string"/>
+			<xs:element minOccurs="0" name="ReferringMemberID" type="xs:string"/>
+			<xs:element minOccurs="0" name="NameOnCard" type="xs:string"/>
+			<xs:element minOccurs="0" name="PlaceOfBirth" type="xs:string"/>
+			<xs:element minOccurs="0" name="JobTitle" type="xs:string"/>
+			<xs:element minOccurs="0" name="PO_Box" type="xs:string"/>
+			<xs:element minOccurs="0" name="Loyalty" type="Loyalty"/>
+			<xs:element minOccurs="0" name="Extensions" type="Extensions"/>
+			<xs:element minOccurs="0" name="Consents" type="Consents"/>
+			<xs:element minOccurs="0" name="Preferences" type="Preferences"/>
+			<xs:element minOccurs="0" name="Accounts" type="Accounts"/>			
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Relationships" type="Relation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CopaDocumentExt">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Extensions to the documents of a Profile. To place in //element(*,ProfileType)/Customer/Document/TPA_Extensions</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="RPH_DocumentGroup"/>
+	</xs:complexType>
+	<xs:complexType name="Loyalty">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Extensions to Loyalty Information of a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="QualifyingMiles" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="QualifyingSectors" type="xs:int"/>
+			<xs:element minOccurs="0" name="TotalAwardMilesSinceEnrollment" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="TotalQualifyingMilesSinceEnrollment" type="xs:decimal"/>
+			<xs:element minOccurs="0" name="TierCode" type="xs:string"/>
+			<xs:element minOccurs="0" name="SoftTierCode" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Relation">
+		<xs:annotation>
+			<xs:documentation>Extensions of a Profile to model a relation</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="RPH_RelationGroup"/>
+	</xs:complexType>
+	<xs:complexType name="Consents">
+		<xs:annotation>
+			<xs:documentation>Consent Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Consent" type="Consent"/>
+		</xs:sequence>
+	</xs:complexType>	
+	<xs:complexType name="Consent">
+		<xs:annotation>
+			<xs:documentation>Consent Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Name" type="xs:string"/>
+			<xs:element minOccurs="0" name="Value" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Extensions">
+		<xs:annotation>
+			<xs:documentation>Extension Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Extension" type="Extension"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Extension">
+		<xs:annotation>
+			<xs:documentation>Extension Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Name" type="xs:string"/>
+			<xs:element minOccurs="0" name="Value" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Preferences">
+		<xs:annotation>
+			<xs:documentation>Preference Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Preference" type="Preference"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Preference">
+		<xs:annotation>
+			<xs:documentation>Preference Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Name" type="xs:string"/>
+			<xs:element minOccurs="0" name="Value" type="xs:string"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="RPH_PreferenceGroup"/>
+	</xs:complexType>
+	<xs:complexType name="Accounts">
+		<xs:annotation>
+			<xs:documentation>Account Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Account" type="Account"/>
+		</xs:sequence>
+	</xs:complexType>	
+	<xs:complexType name="Account">
+		<xs:annotation>
+			<xs:documentation>Extension Mapping to a Profile</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="ActionType" type="xs:string"/>
+			<xs:element minOccurs="0" name="HolderName" type="xs:string"/>
+			<xs:element minOccurs="0" name="ID" type="xs:string"/>
+			<xs:element minOccurs="0" name="Type" type="xs:string"/>
+			<xs:element minOccurs="0" name="Active" type="xs:string"/>
+			<xs:element minOccurs="0" name="CloseDate" type="xs:date"/>
+			<xs:element minOccurs="0" name="CompanyCode" type="xs:string"/>
+			<xs:element minOccurs="0" name="CompanyName" type="xs:string"/>									
+			<xs:element minOccurs="0" name="StartDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="CopaProfileExt" type="CopaProfileExt">
+		<xs:annotation>
+			<xs:documentation>Extensions to Profile. To place in //element(*,ProfileType)/Customer/TPA_Extensions</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CopaDocumentExt" type="CopaDocumentExt">
+		<xs:annotation>
+			<xs:documentation>Extensions to the documents of a Profile. To place in //element(*,ProfileType)/Customer/Document/TPA_Extensions</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ValidateDataForFFAssigmentType" type="ValidateDataForFFAssigmentType">
+		<xs:annotation>
+			<xs:documentation>Information with which a reservation is identify to a FFPId</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ValidateDataForFFAssigmentType">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Information with which a reservation is identify to a FFPId</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TravelerName" type="PersonNameType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">The name of the traveler for whom the reservation is requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FrequentFlyerNumber" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

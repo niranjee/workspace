@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_JeRWECn9Ee6a54TxmpX_kg" targetNamespace="http://tns.tibco.com/bw/composite/FUNCTIONS" name="FUNCTIONS" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_J9x8kCn9Ee6a54TxmpX_kg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J9-J0Cn9Ee6a54TxmpX_kg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-GssCn9Ee6a54TxmpX_kg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-MMQCn9Ee6a54TxmpX_kg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-S58Cn9Ee6a54TxmpX_kg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-ZAkCn9Ee6a54TxmpX_kg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-egICn9Ee6a54TxmpX_kg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-kmwCn9Ee6a54TxmpX_kg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_J-r7gCn9Ee6a54TxmpX_kg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_xL4eUCn-Ee6a54TxmpX_kg" name="ComponentABS" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_xL4eUSn-Ee6a54TxmpX_kg" processName="nemeric.numerical_below0-5"/>
+  </sca:component>
+  <sca:component xmi:id="_zt7DoCoGEe6a54TxmpX_kg" name="Componentformate-number" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zt7DoSoGEe6a54TxmpX_kg" processName="nemeric.formate-number"/>
+  </sca:component>
+  <sca:component xmi:id="_X8utQCoJEe6a54TxmpX_kg" name="Componentnumber" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_X8utQSoJEe6a54TxmpX_kg" processName="nemeric.number"/>
+  </sca:component>
+  <sca:component xmi:id="_R79zgC0QEe6euPu_MVdJoA" name="Componentsrting_join" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_R79zgS0QEe6euPu_MVdJoA" processName="string.srting_join"/>
+  </sca:component>
+  <sca:component xmi:id="_CQw0AC0SEe6euPu_MVdJoA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_CQw0AS0SEe6euPu_MVdJoA" processName="string.Translate"/>
+  </sca:component>
+  <sca:component xmi:id="_LunZEC0TEe6euPu_MVdJoA" name="Componentstarts_with" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LunZES0TEe6euPu_MVdJoA" processName="string.starts_with"/>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) by Franco Perez (Hewlett-Packard Co) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.copaair.com/schemas/trn/authentication" targetNamespace="http://www.copaair.com/schemas/trn/authentication" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.01" id="COPA2014A">
+	<xs:annotation>
+		<xs:documentation source="Description" xml:lang="en"/>
+	</xs:annotation>
+	<xs:complexType name="CredentialType">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Information with which a traveller's identification is verified</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="UserName" type="xs:string" minOccurs="0"/>
+				<xs:element name="MembershipID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Email" type="xs:string" minOccurs="0"/>
+			</xs:choice>
+			<xs:element name="Password" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="IdentityProviderId" type="xs:string">
+			<xs:annotation>
+				<xs:documentation source="Description" xml:lang="en">Indicates the id of the identity provider to be use to validate the credentials.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="AuthenticationTokenType">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Token to be use in identify the user's session</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AuthToken" default="-">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AuthenticationType">
+		<xs:annotation>
+			<xs:documentation source="Description" xml:lang="en">Information with which a passenger's session is validated</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AuthToken" type="AuthenticationTokenType"/>
+			<xs:element name="MembershipID" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AuthenticationTokenType" type="AuthenticationTokenType"/>
+	<xs:element name="AuthenticationType" type="AuthenticationType"/>
+	<xs:element name="CredentialType" type="CredentialType"/>
+</xs:schema>

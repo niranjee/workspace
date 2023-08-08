@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:passengerprofile="http://www.copaair.com/services/trn/crm/passengerprofile" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_JcNtsCCTEe6h15VxMzcvcA" targetNamespace="http://tns.tibco.com/bw/composite/importwsdl" name="importwsdl" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_RxRCMCCVEe6h15VxMzcvcA" name="Loyalty-Passenger-Profile-Get-and-Light" promote="ComponentProcess/Loyalty-Passenger-Profile-Get-and-Light">
+    <sca:interface.wsdl xmi:id="_RxivACCVEe6h15VxMzcvcA" interface="http://www.copaair.com/services/trn/crm/passengerprofile#wsdl.interface(Loyalty-Passenger-Profile-Get-and-Light)"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_WizekCCVEe6h15VxMzcvcA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/717e370cfa644ba5b9a3628df587656a/SOAPServiceBinding" portTypeQName="passengerprofile:Loyalty-Passenger-Profile-Get-and-Light" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/importwsdl/Service%20Descriptors/Loyalty%20-%20Passenger%20Profile.wsdl">
+      <bindingType xmi:id="_WjO8YCCVEe6h15VxMzcvcA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_bRZ7sCCVEe6h15VxMzcvcA" endpointURI="/SOAPServiceBinding/loyalty-Passenger-Profile-Get-and-Light/" httpConnector="importwsdl.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_WjUb8CCVEe6h15VxMzcvcA" operationName="GetLight" action="GetLight" actionNeeded="true">
+        <bindingType xmi:id="_WjUb8SCVEe6h15VxMzcvcA"/>
+        <messageConfiguration xmi:id="_WjUb8iCVEe6h15VxMzcvcA" messageQName="passengerprofile:GetLight_InputMessage" wsdlLocation="platform:/resource/importwsdl/Service%20Descriptors/Loyalty%20-%20Passenger%20Profile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_WjUb8yCVEe6h15VxMzcvcA" partName="parameters" partElementName="passengerprofile:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_WjUb9CCVEe6h15VxMzcvcA" messageQName="passengerprofile:GetLight_OutputMessage" messageDirection="OUTPUT" wsdlLocation="platform:/resource/importwsdl/Service%20Descriptors/Loyalty%20-%20Passenger%20Profile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_WjUb9SCVEe6h15VxMzcvcA" partName="parameters" partElementName="passengerprofile:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_WjVqECCVEe6h15VxMzcvcA">
+          <inputMapping xmi:id="_WjXfQCCVEe6h15VxMzcvcA"/>
+          <outputMapping xmi:id="_WjXfQSCVEe6h15VxMzcvcA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_WjUb9iCVEe6h15VxMzcvcA" operationName="Get" action="Get" actionNeeded="true">
+        <bindingType xmi:id="_WjUb9yCVEe6h15VxMzcvcA"/>
+        <messageConfiguration xmi:id="_WjUb-CCVEe6h15VxMzcvcA" messageQName="passengerprofile:Get_InputMessage" wsdlLocation="platform:/resource/importwsdl/Service%20Descriptors/Loyalty%20-%20Passenger%20Profile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_WjUb-SCVEe6h15VxMzcvcA" partName="parameters" partElementName="passengerprofile:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_WjUb-iCVEe6h15VxMzcvcA" messageQName="passengerprofile:Get_OutputMessage" messageDirection="OUTPUT" wsdlLocation="platform:/resource/importwsdl/Service%20Descriptors/Loyalty%20-%20Passenger%20Profile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_WjUb-yCVEe6h15VxMzcvcA" partName="parameters" partElementName="passengerprofile:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_WjXfQiCVEe6h15VxMzcvcA">
+          <inputMapping xmi:id="_WjXfQyCVEe6h15VxMzcvcA"/>
+          <outputMapping xmi:id="_WjXfRCCVEe6h15VxMzcvcA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_WjYGUCCVEe6h15VxMzcvcA" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_KHsToCCTEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KH3SwCCTEe6h15VxMzcvcA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KH9ZYCCTEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KIBq0CCTEe6h15VxMzcvcA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KIF8QCCTEe6h15VxMzcvcA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KIKNsCCTEe6h15VxMzcvcA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KIOfICCTEe6h15VxMzcvcA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KITXoCCTEe6h15VxMzcvcA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KIY3MCCTEe6h15VxMzcvcA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_85BA8CCUEe6h15VxMzcvcA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_85BA8SCUEe6h15VxMzcvcA" processName="importwsdl.Process"/>
+    <sca:service xmi:id="_RxGqICCVEe6h15VxMzcvcA" name="Loyalty-Passenger-Profile-Get-and-Light">
+      <sca:interface.wsdl xmi:id="_RxIfUCCVEe6h15VxMzcvcA" interface="http://www.copaair.com/services/trn/crm/passengerprofile#wsdl.interface(Loyalty-Passenger-Profile-Get-and-Light)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_5P2BMCCcEe6h15VxMzcvcA" name="Componenthttp" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_5P2BMSCcEe6h15VxMzcvcA" processName="importwsdl.http"/>
+  </sca:component>
+</sca:composite>

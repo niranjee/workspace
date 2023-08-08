@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/crm/Processes/Business/PassengerProfile/Get-Start-Input.xsd" xmlns:JSON="java://com.hp.tibco.bw.functions.json.JSON" xmlns:StringUtil="java://com.hp.tibco.bw.functions.string.StringFunctions" xmlns:Utilities="java://Utilities" xmlns:ns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:ns12="http://www.hp.com/schemas/services/exception" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://webservices.lms.ama.com/" xmlns:pfx2="http://www.opentravel.org/OTA/2003/05" xmlns:pfx3="http://www.tibco.com/pe/DeployedVarsType" xmlns:pfx4="http://www.copaair.com/schemas/trn/crm/passengerprofile" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/crm/Processes/Business/PassengerProfile/Get-Start-Input.xsd">
+    <xsd:import namespace="http://www.opentravel.org/OTA/2003/05" schemaLocation="../../../Resources/Schema/OTA_PassengerProfile_RQ_RS.xsd"/>
+    <xsd:element name="getRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="light" type="xsd:boolean"/>
+                <xsd:element name="useCache" type="xsd:boolean"/>
+                <xsd:element ref="pfx2:OTA_ReadRQ">
+                    <xsd:annotation>
+                        <xsd:documentation xml:lang="en">A generic message, available as an action on several OpenTravel services which requests a server to read and return the document type identified by the UniqueID element.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

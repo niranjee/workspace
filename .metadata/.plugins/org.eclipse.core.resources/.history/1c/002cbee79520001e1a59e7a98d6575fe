@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<wsdl:definitions xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:tns="http://www.copaair.com/services/trn/crm/passengerprofile" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.copaair.com/services/trn/crm/passengerprofile" tibex:src="file:/C:/Users/NiranjanBatana/Desktop/wsdl/Loyalty%20-%20Passenger%20Profile.wsdl">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:ns0="http://www.opentravel.org/OTA/2003/05" xmlns:ns1="http://www.copaair.com/schemas/trn/crm/passengerprofile" xmlns:ns2="http://www.copaair.com/schemas/trn/crm/common" xmlns:ns4="http://www.copaair.com/schemas/trn/crm/common" xmlns:ns5="http://www.copaair.com/schemas/trn/crm/passengerprofile" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" id="OTA2014A" targetNamespace="http://www.opentravel.org/OTA/2003/05" version="4.000">
+      <xs:import namespace="http://www.copaair.com/schemas/trn/crm/common"/>
+      <xs:import namespace="http://www.copaair.com/schemas/trn/crm/passengerprofile"/>
+      <xs:annotation>
+        <xs:documentation source="Description" xml:lang="en">ALL SCHEMA FILES IN THE OPENTRAVEL ALLIANCE SPECIFICATION ARE MADE AVAILABLE ACCORDING TO THE TERMS DEFINED BY THE OPENTRAVEL LICENSE AGREEMENT AT http://www.opentravel.org/Specifications/Default.aspx.</xs:documentation>
+      </xs:annotation>
+      <xs:element name="COPA_ValidateDataForFFAssignmentRQ">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A message to verify user's credentials</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ValidateDataForFFAssigmentType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="COPA_ValidateDataForFFAssignmentRS">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Response a standard message to a logout request.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="Errors" type="xs:string">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">Standard way to indicate that an error occurred during the processing of an CopaAir message.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:sequence>
+              <xs:element name="Success" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation xml:lang="en-us">Standard way to indicate successful processing of an CopaAir message.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element minOccurs="0" name="Warnings" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation xml:lang="en-us">A successfully processed of an CopaAir message, but one in which warnings are generated.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ValidationResultCode" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Result of the Validation. Refer to Copa Code List Profile ValidateData Code (PVC).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:choice>
+          <xs:attribute name="AltLangID" type="xs:language">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">The alternate language for a customer or message encoded as ISO 639-3.</xs:documentation>
+              <xs:documentation source="Reference" xml:lang="en">ISO 639 (3) character language codes: http://en.wikipedia.org/wiki/Lists_of_ISO_639_codes</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="CorrelationID" type="xs:string">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">Allows end-to-end correlation of log messages with the corresponding Web service message throughout the processing of the Web service message.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="EchoToken" type="xs:string">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">A reference for additional message identification, assigned by the requesting host system.</xs:documentation>
+              <xs:documentation source="Implementer" xml:lang="en">Implementer: A reference for additional message identification, assigned by the requesting host system. When a request message includes an echo token the corresponding response message MUST include an echo token with an identical value.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="PrimaryLangID" type="xs:language">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">The primary language preference for the message encoded as ISO 639-3.</xs:documentation>
+              <xs:documentation source="Reference" xml:lang="en">ISO 639 (3) character language codes: http://en.wikipedia.org/wiki/Lists_of_ISO_639_codes</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="RetransmissionIndicator" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">When true, indicates the message is being re-sent after a failure.</xs:documentation>
+              <xs:documentation source="Implementer" xml:lang="en">Implementer: It is recommended that this attribute is used (i.e., set to TRUE) only when a message is retransmitted.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="SequenceNmbr" type="xs:nonNegativeInteger">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">The sequence number of the transaction assigned by the sending system for ordered message processing or message resynchronization.</xs:documentation>
+              <xs:documentation source="Implementer" xml:lang="en">Implementer: Message resynchronization typically is required if a system has been off-line and needs to retrieve messages that were missed.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="Target">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">Test or Production target system indicator.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Test">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">A test system.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Production">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">A production system.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="TargetName" type="xs:string">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">The name of the Test or Production system.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="TimeStamp" type="xs:dateTime">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">ISO 8601 encoded timestamp indicating the creation date and time of the message.</xs:documentation>
+              <xs:documentation source="Reference" xml:lang="en">http://www.iso.org/iso/support/faqs/faqs_widely_used_standards/widely_used_standards_other/date_and_time_format.htm</xs:documentation>
+              <xs:documentation source="Example" xml:lang="en">YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock:
+20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="TransactionIdentifier" type="xs:string">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">Unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="TransactionStatusCode">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">This indicates where this message falls within a sequence of messages.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Start">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">This is the first message within a transaction.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="End">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">This is the last message within a transaction.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Rollback">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">This indicates that all messages within the current transaction must be ignored.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="InSeries">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">This is any message that is not the first or last message within a transaction.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Continuation">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">Specifies that this is a followup request asking for more of what was requested in the previous request.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Subsequent">
+                  <xs:annotation>
+                    <xs:documentation source="Description" xml:lang="en">This request message is a subsequent request based on the previous message sent in this transaction.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="Version" type="xs:decimal" use="required">
+            <xs:annotation>
+              <xs:documentation source="Description" xml:lang="en">The OpenTravel message version indicated by a decimal value.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OTA_ProfileReadRS">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Returns a single or multiple customer profile(s) in response to a ReadRQ request of Type=Profile.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OTA_ReadRQ">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A generic message, available as an action on several OpenTravel services which requests a server to read and return the document type identified by the UniqueID element.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLight_InputMessage">
+    <wsdl:part element="OTA_ReadRQ" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetLight_OutputMessage">
+    <wsdl:part element="tns:OTA_ProfileReadRS" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="Get_InputMessage">
+    <wsdl:part element="tns:OTA_ReadRQ" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="Get_OutputMessage">
+    <wsdl:part element="tns:OTA_ProfileReadRS" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Loyalty-Passenger-Profile-Get-and-Light">
+    <wsdl:operation name="GetLight">
+      <wsdl:input message="tns:GetLight_InputMessage"/>
+      <wsdl:output message="tns:GetLight_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Get">
+      <wsdl:input message="tns:Get_InputMessage"/>
+      <wsdl:output message="tns:Get_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Loyalty-Passenger-Profile-Get-and-Light" type="tns:Loyalty-Passenger-Profile-Get-and-Light">
+    <binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetLight">
+      <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfile-service0.serviceagent/PassengerProfileEndpoint0/GetLight"/>
+      <wsdl:input>
+        <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get">
+      <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="/Services/Application/Business/WS/PassengerProfile/Implementation/PassengerProfile-service0.serviceagent/PassengerProfileEndpoint0/Get"/>
+      <wsdl:input>
+        <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Loyalty-Passenger-Profile-Get-and-Light">
+    <wsdl:port binding="tns:Loyalty-Passenger-Profile-Get-and-Light" name="Loyalty-Passenger-Profile-Get-and-Light">
+      <address xmlns="http://schemas.xmlsoap.org/wsdl/soap/" location="https://api-uat.copa.com/loyalty/v1/PassengerprofilesGets"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

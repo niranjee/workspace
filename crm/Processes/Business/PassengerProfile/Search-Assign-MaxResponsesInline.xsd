@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ns="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns1="http://www.copaair.com/schemas/trn/crm/common" xmlns:ns12="http://www.hp.com/schemas/services/exception" xmlns:ns2="http://www.copaair.com/schemas/trn/crm/passengerprofile" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.opentravel.org/OTA/2003/05" xmlns:pfx2="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:tns="/Processes/Business/PassengerProfile/Search.process/Assign-MaxResponses" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/Processes/Business/PassengerProfile/Search.process/Assign-MaxResponses">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="MaxResponses" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

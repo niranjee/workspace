@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1687414976995" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1687414976995">
+  <complexType name="upgradetionElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="AwardInformation">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="CompanyIdentifier" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="AwardCompany" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="AwdCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="IsVoucher" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="SegmentDetail">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="Origin" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="Destination" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="OriginalBookingClass" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="ReservationId" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="FlightNumber" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="CarrierCode" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="SecondSegment" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="DepartDate" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="BookedCabinClass" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="1" minOccurs="0" name="PassengerDetails">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="PassengersDetail">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="SponsorFFPnumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="TicketNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FirstName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="PaxSequenceNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FfpProgramId" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="CouponNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="Title" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FfpCardNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="SurName" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="SponsorPassengerDetail">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="SponsorFFPnumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="TicketNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FirstName" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="PaxSequenceNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FfpProgramId" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="CouponNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="Title" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="FfpCardNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="SurName" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="upgradetionElement" type="tns:upgradetionElementType"/>
+</schema>

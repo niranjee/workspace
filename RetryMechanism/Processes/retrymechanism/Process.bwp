@@ -844,12 +844,16 @@
                         sca-bpel:internal="true" type="xsd:string"/>
                     <bpws:variable element="ns:FaultDetail"
                         name="FaultDetails1" sca-bpel:internal="true"/>
-                    <bpws:variable name="repeatOnError_success_flag1"
-                        sca-bpel:internal="true" type="xsd:boolean"/>
                     <bpws:variable name="FaultName2"
                         sca-bpel:internal="true" type="xsd:string"/>
                     <bpws:variable element="ns:FaultDetail"
                         name="FaultDetails2" sca-bpel:internal="true"/>
+                    <bpws:variable name="repeatOnError_success_flag1"
+                        sca-bpel:internal="true" type="xsd:boolean"/>
+                    <bpws:variable name="FaultName3"
+                        sca-bpel:internal="true" type="xsd:string"/>
+                    <bpws:variable element="ns:FaultDetail"
+                        name="FaultDetails3" sca-bpel:internal="true"/>
                 </bpws:variables>
                 <bpws:repeatUntil name="repeatUntil" tibex:counterName="index1">
                     <tibex:DesignExpression>
@@ -859,7 +863,7 @@
                     <bpws:scope name="innerScope">
                         <bpws:faultHandlers>
                             <bpws:catchAll
-                                tibex:faultDetailsVar="FaultDetails2" tibex:faultNameVar="FaultName2">
+                                tibex:faultDetailsVar="FaultDetails3" tibex:faultNameVar="FaultName3">
                                 <bpws:if name="if">
                                     <bpws:condition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$index1=2]]></bpws:condition>
                                     <bpws:rethrow name="Rethrow"/>
@@ -887,7 +891,7 @@
                             </bpws:empty>
                             <bpws:assign name="GroupEnd"
                                 tibex:group="groupEnd"
-                                tibex:xpdlId="99b95b78-ab6d-4ae6-bdd0-a0879cdf1d45" validate="no">
+                                tibex:xpdlId="3a07e72d-0877-4439-8cf9-1649cd04355b" validate="no">
                                 <bpws:targets>
                                     <bpws:target linkName="JDBCQueryToGroupEnd"/>
                                 </bpws:targets>

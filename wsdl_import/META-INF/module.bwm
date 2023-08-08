@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_c8siACU5Ee6RLdqQXA7E6w" targetNamespace="http://tns.tibco.com/bw/composite/wsdl_import" name="wsdl_import" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_fnnHwCVHEe6RLdqQXA7E6w" name="PassengerProfile" promote="ComponentProcess/PassengerProfile">
+    <sca:interface.wsdl xmi:id="_fnqyICVHEe6RLdqQXA7E6w" interface="http://www.copaair.com/services/trn/crm/passengerprofile-abstract#wsdl.interface(PassengerProfile)" scaext:wsdlLocation="../Service%20Descriptors/PassengerProfile_gen1.wsdl"/>
+  </sca:service>
+  <sca:property xmi:id="_dx8vACU5Ee6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dyhWwCU5Ee6RLdqQXA7E6w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dykaECU5Ee6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dyp5oCU5Ee6RLdqQXA7E6w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dys88CU5Ee6RLdqQXA7E6w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dzUoACU5Ee6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dzXEQCU5Ee6RLdqQXA7E6w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dzdK4CU5Ee6RLdqQXA7E6w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_dzgOMCU5Ee6RLdqQXA7E6w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_dLJ0wCU5Ee6RLdqQXA7E6w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_dLJ0wSU5Ee6RLdqQXA7E6w" processName="wsdl_import.Process"/>
+    <sca:service xmi:id="_fnlSkCVHEe6RLdqQXA7E6w" name="PassengerProfile">
+      <sca:interface.wsdl xmi:id="_fnl5oCVHEe6RLdqQXA7E6w" interface="http://www.copaair.com/services/trn/crm/passengerprofile-abstract#wsdl.interface(PassengerProfile)" scaext:wsdlLocation="../Service%20Descriptors/PassengerProfile_gen1.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

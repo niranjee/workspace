@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) by Franco Perez (Hewlett-Packard Co) --><xs:schema xmlns="http://www.copaair.com/schemas/trn/crm/common" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" id="COPA2014A" targetNamespace="http://www.copaair.com/schemas/trn/crm/common" version="0.01">
+	<xs:include schemaLocation="OTA_SimpleTypes.xsd"/>
+	<xs:include schemaLocation="OTA_CommonTypes.xsd"/>
+	<xs:annotation>
+		<xs:documentation source="Description" xml:lang="en"/>
+	</xs:annotation>
+	<xs:complexType name="SearchQualifierType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Search qualifiers that can be used to avail special search data.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element maxOccurs="5" minOccurs="0" name="SortColumnName">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Provides the name of the column to apply sorting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="SortOrderCode" type="OTA_CodeType" use="optional">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">Specifies the order in which the response information should be sorted. Refer to Copa Code List Sort Order (CCS).</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SearchQualifierType" type="SearchQualifierType">
+		<xs:annotation>
+			<xs:documentation>Search qualifiers that can be used to avail special search data.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

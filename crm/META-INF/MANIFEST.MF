@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: crm
+Bundle-SymbolicName: crm
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: TIBCO Software Inc.
+Export-Package: Processes.Util.getPassword,
+ com
+TIBCO-BW-Version: 6.5.0 V63 2018-08-08
+Import-Package: com.tibco.bw.palette.java.runtime,
+ com.tibco.bw.runtime
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-Edition: bwe
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.jdbc)",
+ com.tibco.bw.palette; filter:="(name=bw.rescue)",
+ com.tibco.bw.palette; filter:="(name=bw.file)",
+ com.tibco.bw.palette; filter:="(name=bw.mail)",
+ com.tibco.bw.palette; filter:="(name=bw.java)",
+ com.tibco.bw.palette; filter:="(name=bw.jms)",
+ com.tibco.bw.palette; filter:="(name=bw.xml)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jdbc)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jndiconfiguration)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.smtp)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslserver)",
+ com.tibco.bw.binding.model; filter:="(name=bw.soap)"
+TIBCO-BW-ApplicationModule: META-INF/module.bwm

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension id="StringFunctionsCustomXPathFunctionGroup"
+        name="StringFunctionsCustomXPathFunctionGroup" point="com.tibco.xml.cxf.common.customXPathFunction">
+        <customXPathFunctionGroup
+            class="com.hp.tibco.bw.functions.string.cxf.StringFunctionsCustomXPathFunctionGroup" id="com.hp.tibco.bw.functions.string.cxf"/>
+    </extension>
+    <extension id="JSONCustomXPathFunctionGroup"
+        name="JSONCustomXPathFunctionGroup" point="com.tibco.xml.cxf.common.customXPathFunction">
+        <customXPathFunctionGroup
+            class="com.hp.tibco.bw.functions.json.cxf.JSONCustomXPathFunctionGroup" id="com.hp.tibco.bw.functions.jsonJSON.cxf"/>
+    </extension>
+</plugin>

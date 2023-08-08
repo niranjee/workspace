@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://www.opentravel.org/OTA/2003/05" xmlns:tns="http://www.copaair.com/services/trn/crm/passengerprofile-abstract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.copaair.com/services/trn/crm/passengerprofile-abstract">
+    <import location="../../../../../../Resources/Schema/OTA_PassengerProfile_RQ_RS.xsd" namespace="http://www.opentravel.org/OTA/2003/05"/>
+    <message name="GetRequest">
+        <part element="ns:OTA_ReadRQ" name="parameter"/>
+    </message>
+    <message name="GetResponse">
+        <part element="ns:OTA_ProfileReadRS" name="parameter"/>
+    </message>
+    <message name="SearchRequest">
+        <part element="ns:OTA_ReadRQ" name="parameter"/>
+    </message>
+    <message name="SearchResponse">
+        <part element="ns:OTA_ProfileReadRS" name="parameter"/>
+    </message>
+    <message name="ValidateDataForFFAssignmentRequest">
+        <part element="ns:COPA_ValidateDataForFFAssignmentRQ" name="parameter"/>
+    </message>
+    <message name="ValidateDataForFFAssignmentResponse">
+        <part element="ns:COPA_ValidateDataForFFAssignmentRS" name="parameter"/>
+    </message>
+    <message name="ListProfileRequest">
+        <part element="ns:OTA_ReadRQ" name="parameter"/>
+    </message>
+    <message name="ListProfileResponse">
+        <part element="ns:OTA_ProfileReadRS" name="parameter"/>
+    </message>
+    <portType name="PassengerProfile">
+        <operation name="Get">
+            <input message="tns:GetRequest"/>
+            <output message="tns:GetResponse"/>
+        </operation>
+        <operation name="GetLight">
+            <input message="tns:GetRequest"/>
+            <output message="tns:GetResponse"/>
+        </operation>
+        <operation name="Search">
+            <input message="tns:SearchRequest"/>
+            <output message="tns:SearchResponse"/>
+        </operation>
+        <operation name="ValidateDataForFFAssignment">
+            <input message="tns:ValidateDataForFFAssignmentRequest"/>
+            <output message="tns:ValidateDataForFFAssignmentResponse"/>
+        </operation>
+        <operation name="ListProfile">
+            <input message="tns:ListProfileRequest"/>
+            <output message="tns:ListProfileResponse"/>
+        </operation>
+    </portType>
+</definitions>

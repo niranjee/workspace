@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<logging:logger-list xmlns:logging = "http://www.hp.com/schemas/services/logger" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation = "http://www.hp.com/schemas/services/logger Resources/Schema/Logger.xsd">
+	<logging:item>
+		<logging:logger>com.copair.services</logging:logger>
+		<logging:level>ERROR</logging:level>
+		<logging:appender>Console</logging:appender>                  
+		<logging:appender>Log4j</logging:appender>
+	</logging:item>
+	<logging:item>
+		<logging:logger>com.copair.services.log</logging:logger>
+		<logging:level>INFO</logging:level>
+		<logging:appender>Console</logging:appender>    
+	</logging:item>
+	<logging:item>
+		<logging:logger>com.copair.services.audit</logging:logger>
+		<logging:level>INFO</logging:level>
+		<logging:appender>Console</logging:appender> 
+	</logging:item>
+	<logging:item>
+		<logging:logger>com.copair.services.integration</logging:logger>
+		<logging:level>INFO</logging:level>
+		<logging:appender>Console</logging:appender>     	         
+	</logging:item>
+</logging:logger-list>

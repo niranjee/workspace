@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GetLightfields" xmlns:tns="http://www.example.org/GetLightfields" elementFormDefault="qualified">
+
+    <complexType name="UniqueID">
+    	<attribute name="ID" type="string"></attribute>
+    	<attribute name="Type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="ReadRequest">
+    	<sequence>
+    		<element name="UniqueID" type="tns:UniqueID"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ReadRequests">
+    	<sequence>
+    		<element name="ReadRequest" type="tns:ReadRequest"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="OTA_ReadRQ" type="tns:OTA_ReadRQ"></element>
+
+    <complexType name="OTA_ReadRQ">
+    	<sequence>
+    		<element name="ReadRequests" type="tns:ReadRequests"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="OTA_ProfileReadRS">
+    	<sequence>
+    		<element name="Profiles" type="tns:ProfileInfo"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ProfileInfo">
+    	<sequence>
+    		<element name="Profile" type="tns:Profile"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Profile">
+    	<sequence>
+    		<element name="Customer" type="tns:Customer"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="Customer">
+    	<sequence>
+    		<element name="PersonName" type="tns:PersonName"></element>
+    		<element name="Telephone" type="tns:Telephone"></element>
+    		<element name="Email" type="string"></element>
+    		<element name="Address" type="tns:Address"></element>
+    		<element name="CustLoyalty" type="tns:CustLoyalty"></element>
+    		<element name="TPA_Extensions" type="tns:TPA_Extensions"></element>
+    	</sequence>
+    	<attribute name="BirthDate" type="string"></attribute>
+    	<attribute name="Language" type="string"></attribute>
+    </complexType>
+
+    <complexType name="PersonName">
+    	<sequence>
+    		<element name="GivenName" type="string"></element>
+    		<element name="MiddleName" type="string"></element>
+    		<element name="Surname" type="string"></element>
+    	</sequence>
+    	<attribute name="DefaultInd" type="string"></attribute>
+    </complexType>
+
+    <complexType name="Telephone">
+    	<attribute name="RPH" type="string"></attribute>
+    	<attribute name="PhoneLocationType" type="string"></attribute>
+    	<attribute name="PhoneTechType" type="string"></attribute>
+    	<attribute name="CountryAccessCode" type="string"></attribute>
+    	<attribute name="AreaCityCode" type="string"></attribute>
+    	<attribute name="PhoneNumber" type="string"></attribute>
+    	<attribute name="Extension" type="string"></attribute>
+    	<attribute name="Remark" type="string"></attribute>
+    	<attribute name="DefaultInd" type="string"></attribute>
+    </complexType>
+
+    <complexType name="Address">
+    	<sequence>
+    		<element name="PostalCode" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CustLoyalty">
+    	<sequence>
+    		<element name="SubAccountBalance" type="tns:SubAccountBalance"></element>
+    	</sequence>
+    	<attribute name="LoyalLevel" type="string"></attribute>
+    	<attribute name="ProgramID" type="string"></attribute>
+    	<attribute name="MembershipID" type="string"></attribute>
+    </complexType>
+
+    <complexType name="SubAccountBalance">
+    	<attribute name="Balance" type="string"></attribute>
+    </complexType>
+
+    <complexType name="CopaProfileExt">
+    	<sequence>
+    		<element name="ProfileProcessStatus" type="string"></element>
+    		<element name="FrequentFlyerNumber" type="string"></element>
+    		<element name="UserName" type="string"></element>
+    		<element name="Status" type="string"></element>
+    		<element name="Title" type="string"></element>
+    		<element name="Loyalty" type="tns:Loyalty"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Loyalty">
+    	<sequence>
+    		<element name="TierCode" type="string"></element>
+    		<element name="SoftTierCode" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="TPA_Extensions">
+    	<sequence>
+    		<element name="CopaProfileExt" type="tns:CopaProfileExt"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="OTA_ProfileReadRS" type="tns:OTA_ProfileReadRS"></element>
+</schema>

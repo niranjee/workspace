@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:OTA_2003_05="http://www.opentravel.org/OTA/2003/05" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:passengerprofile-abstract="http://www.copaair.com/services/trn/crm/passengerprofile-abstract" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:smtp="http://xsd.tns.tibco.com/bw/models/sharedresource/smtp" xmi:id="_INSXICSeEe6RLdqQXA7E6w" targetNamespace="http://tns.tibco.com/bw/composite/crm" name="crm" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_njk98CU1Ee6RLdqQXA7E6w" name="PassengerProfile" promote="ComponentProcess/PassengerProfile">
+    <sca:interface.wsdl xmi:id="_njllACU1Ee6RLdqQXA7E6w" interface="http://www.copaair.com/services/trn/crm/passengerprofile-abstract#wsdl.interface(PassengerProfile)" scaext:wsdlLocation="../Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_sc3oICU1Ee6RLdqQXA7E6w" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/8abc4924845a40ecad0e1d9ca24e9e87/SOAPServiceBinding" portTypeQName="passengerprofile-abstract:PassengerProfile" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+      <bindingType xmi:id="_sdQpsCU1Ee6RLdqQXA7E6w"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_wRB2QCU1Ee6RLdqQXA7E6w" endpointURI="/SOAPServiceBinding/passengerProfile/" httpConnector="Resources.GlobalConnections.HTTP.HTTP-Connection-PassengerProfile"/>
+      <operationConfiguration xmi:id="_sdR30CU1Ee6RLdqQXA7E6w" operationName="Get" action="Get" actionNeeded="true">
+        <bindingType xmi:id="_sdR30SU1Ee6RLdqQXA7E6w"/>
+        <messageConfiguration xmi:id="_sdR30iU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:GetRequest" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdR30yU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_sdR31CU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:GetResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdR31SU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_sdSe8iU1Ee6RLdqQXA7E6w">
+          <inputMapping xmi:id="_sdTF8CU1Ee6RLdqQXA7E6w"/>
+          <outputMapping xmi:id="_sdTF8SU1Ee6RLdqQXA7E6w" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_sdR31iU1Ee6RLdqQXA7E6w" operationName="GetLight" action="GetLight" actionNeeded="true">
+        <bindingType xmi:id="_sdR31yU1Ee6RLdqQXA7E6w"/>
+        <messageConfiguration xmi:id="_sdR32CU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:GetRequest" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdR32SU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_sdR32iU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:GetResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdR32yU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_sdTtACU1Ee6RLdqQXA7E6w">
+          <inputMapping xmi:id="_sdTtASU1Ee6RLdqQXA7E6w"/>
+          <outputMapping xmi:id="_sdTtAiU1Ee6RLdqQXA7E6w" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_sdSe4CU1Ee6RLdqQXA7E6w" operationName="Search" action="Search" actionNeeded="true">
+        <bindingType xmi:id="_sdSe4SU1Ee6RLdqQXA7E6w"/>
+        <messageConfiguration xmi:id="_sdSe4iU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:SearchRequest" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe4yU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_sdSe5CU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:SearchResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe5SU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_sdTtAyU1Ee6RLdqQXA7E6w">
+          <inputMapping xmi:id="_sdTtBCU1Ee6RLdqQXA7E6w"/>
+          <outputMapping xmi:id="_sdTtBSU1Ee6RLdqQXA7E6w" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_sdSe5iU1Ee6RLdqQXA7E6w" operationName="ValidateDataForFFAssignment" action="ValidateDataForFFAssignment" actionNeeded="true">
+        <bindingType xmi:id="_sdSe5yU1Ee6RLdqQXA7E6w"/>
+        <messageConfiguration xmi:id="_sdSe6CU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:ValidateDataForFFAssignmentRequest" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe6SU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:COPA_ValidateDataForFFAssignmentRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_sdSe6iU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:ValidateDataForFFAssignmentResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe6yU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:COPA_ValidateDataForFFAssignmentRS"/>
+        </messageConfiguration>
+        <context xmi:id="_sdTtBiU1Ee6RLdqQXA7E6w">
+          <inputMapping xmi:id="_sdTtByU1Ee6RLdqQXA7E6w"/>
+          <outputMapping xmi:id="_sdTtCCU1Ee6RLdqQXA7E6w" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_sdSe7CU1Ee6RLdqQXA7E6w" operationName="ListProfile" action="ListProfile" actionNeeded="true">
+        <bindingType xmi:id="_sdSe7SU1Ee6RLdqQXA7E6w"/>
+        <messageConfiguration xmi:id="_sdSe7iU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:ListProfileRequest" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe7yU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ReadRQ"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_sdSe8CU1Ee6RLdqQXA7E6w" messageQName="passengerprofile-abstract:ListProfileResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/crm/Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_sdSe8SU1Ee6RLdqQXA7E6w" partName="parameter" partElementName="OTA_2003_05:OTA_ProfileReadRS"/>
+        </messageConfiguration>
+        <context xmi:id="_sdTtCSU1Ee6RLdqQXA7E6w">
+          <inputMapping xmi:id="_sdTtCiU1Ee6RLdqQXA7E6w"/>
+          <outputMapping xmi:id="_sdUUECU1Ee6RLdqQXA7E6w" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_sdUUESU1Ee6RLdqQXA7E6w" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_INSXISSeEe6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXIiSeEe6RLdqQXA7E6w" name="BW.APPNODE.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXIySeEe6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXJCSeEe6RLdqQXA7E6w" name="BW.HOST.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXJSSeEe6RLdqQXA7E6w" name="BW.DOMAIN.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXJiSeEe6RLdqQXA7E6w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXJySeEe6RLdqQXA7E6w" name="BW.APPSPACE.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXKCSeEe6RLdqQXA7E6w" name="BW.MODULE.VERSION" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INSXKSSeEe6RLdqQXA7E6w" name="BW.MODULE.NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QxIAcCSeEe6RLdqQXA7E6w" name="ResourcesGlobalConnectionsDBJDBC-Connection" type="jdbc:JdbcDataSource" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Q0sR0CSeEe6RLdqQXA7E6w" name="PassengerProfile-Configuration-FFPDB-MaximumRows-1" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Q1uzoCSeEe6RLdqQXA7E6w" name="PassengerProfile-Configuration-FFPDB-Timeout-1" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_azSo8CSeEe6RLdqQXA7E6w" name="SendMail-Send-Mail-SMTPResource" type="smtp:SmtpConfiguration" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bJ7AQCSeEe6RLdqQXA7E6w" name="ResourcesGlobalConnectionsJMSSynchronizrProfile-Process-JMS-Connection" type="jms:JMSConnectionFactory" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_iqvGUCSeEe6RLdqQXA7E6w" name="PassengerProfile-Configuration-FilePollerSync-IntervalSeconds-1" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jDKNYCSeEe6RLdqQXA7E6w" name="ResourcesGlobalConnectionsDBJDBC-Connection-ForceSync" type="jdbc:JdbcDataSource" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jhGGkCSeEe6RLdqQXA7E6w" name="PassengerProfile-Configuration-timer-1" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBIMCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/Driver" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBvQCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/MaxConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBvQSSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/LoginTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBvQiSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBvQySeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/Password" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LXBvRCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ForceSync/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi0CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/Driver" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi0SSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/MaxConnections" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi0iSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/LoginTimeout" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi0ySeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi1CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LaKi1SSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/FFPDB/Password" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LcznICSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/HTTP/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LcznISSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/HTTP/Port" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhG4UCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/HTTP/Port0" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpUCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpUSSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/TopicFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpUiSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/QueueFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpUySeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/jndiUserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpVCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/jndipassword" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpVSSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/userName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LhQpViSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/JMS/password" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PuVtwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ALMS/Timeout" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PuWU0CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ALMS/Endpoint" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WN7nYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ALMS/User" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_SrjFwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Login/Timeout" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Srjs0CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Login/Endpoint" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_TJBr8CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/PPBR/Timeout" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_TJCTACSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/PPBR/Endpoint" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_aGIoACSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/ActiveSpaces/queryLimit" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_cEnt8CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/MessageService/Endpoint" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_f2AU4CSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Mail/Smpt" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jMVXgCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Mail/to" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jNRLoCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Mail/from" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jN_kYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Mail/SubjectOK" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jUOvQCSeEe6RLdqQXA7E6w" name="PassengerProfile/Environment/Mail/SubjectError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_i95S4CSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/TimerForceSync" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jeYJwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/timer" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lA6TgCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/timer_start" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LkMokCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/HTTP/Security/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LkMokSSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/HTTP/Security/Pass" type="property:password" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QwnDECSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/Timeout" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QwnDESSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/MaximumRows" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QwnqICSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/Schema" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QwnqISSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/Catalog" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_QwoRMCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/GetProfile" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RGNfoCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/GetTierCode" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_R4_AYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/PutProfile" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_i9558CSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/TimeoutExec" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_i9558SSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FFPDB/UpdProfile" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_T9jgMCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Batch/CreationDate" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_T-AMICSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Batch/maxRecords" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_U9lZ0CSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Service/UseCache" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_a6KtACSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Service/SendNotificationSync" type="XMLSchema:boolean" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_cp8okCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Synchronize/maxRecords" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_a3WpkCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Synchronize/mail/mailFrom" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_a4huQCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/Synchronize/mail/mailTo" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ciZPECSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/JMS/topicSynchronize" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_g2NNoCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/JMS/MaxSessions" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_g2NNoSSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/JMS/queueSynhronizeALMS" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_inryUCSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FilePollerSync/IntervalSeconds" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_inryUSSeEe6RLdqQXA7E6w" name="PassengerProfile/Configuration/FilePollerSync/FileName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_P5-WACSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Logger/INTEGRATION" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hmZUcCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Logger/LOG" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jsDZYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Logger/AUDIT" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XGkfkCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/ProgramID" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XKKmICSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/Found" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XL988CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/PreAssigned" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XIkqsCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/ProcessStatus/Success" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YmtcoCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/ProcessStatus/Preassigned" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YrICkCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/ProcessStatus/OK" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Yvp9QCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Profile/ProcessStatus/NOTOK" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_fjEKwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Codes/PVC/VALID" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_fkB0ECSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Codes/PVC/NOTVALID" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_fmOMcCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Codes/PVC/PREASSIGNED" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_fnhM8CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/Service/Codes/PVC/NOTFOUND" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XrKaYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/FFPDB/ModifiedBy" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hGEOkCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/FFPDB/StatusReprocess" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZM4EwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/OTA/OTA_Version" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YjuaECSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/OTA/Codes/EWT/UNKNOWN" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ldwAgCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/OTA/Codes/EWT/APPLICATION_ERROR" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_erhewCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/OTA/Codes/UIT/PROFILE" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZRQOcCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/Unknown" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZSqjsCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/UnknowMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gq25QCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/ServiceUnavailable" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_grGJ0CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/ServiceUnavailableMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_grSXECSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/TimeOut" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_graS4CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Generic/TimeOutMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZUAngCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNDataNotFoundError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZVkGsCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNDataNotFoundErrorMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_agV3wCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNInvalidError" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_aiIngCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNInvalidErrorMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gtIxMCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNInvalidMemberID" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gtUXYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/FFNInvalidMemberIDMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gtjn8CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/SearchInvalidParameterLength" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gt0tsCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/SearchInvalidParameterLengthMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oG07kCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/NotImplemented" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_oHHPcCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ErrorCode/Profile/NotImplementedMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_bF5b4CSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/JMS/SynchronizeProfileQueue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_hxrXYCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/JMS/SynchronizeProfileErrorQueue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_flGyICSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ALMS/ProcessStatusCode/PRE-ASSIGNED" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_fs4OECSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ALMS/ProcessStatusCode/FOUND" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gr-TkCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ALMS/ErrorCode/InternalError" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gsJ5wCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ALMS/ErrorCode/PassengerProfile/FFNNotFound" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_gs6uwCSeEe6RLdqQXA7E6w" name="PassengerProfile/Constants/ALMS/ErrorCode/PassengerProfile/InvalidMemberId" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_hKy9kCSeEe6RLdqQXA7E6w" name="Services.Application.Business.JMS.SynchronizeProfileALMSComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_hKy9kSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.JMS.SynchronizeProfileALMS"/>
+  </sca:component>
+  <sca:component xmi:id="_hn3UECSeEe6RLdqQXA7E6w" name="Services.Application.Business.JMS.SynchronizeProfileByIDComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_hn3UESSeEe6RLdqQXA7E6w" processName="Services.Application.Business.JMS.SynchronizeProfileByID"/>
+  </sca:component>
+  <sca:component xmi:id="_iEgMwCSeEe6RLdqQXA7E6w" name="Services.Application.Business.JMS.SynchronizeProfileErrorComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_iEgMwSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.JMS.SynchronizeProfileError"/>
+  </sca:component>
+  <sca:component xmi:id="_igAdACSeEe6RLdqQXA7E6w" name="Services.Application.Business.JMS.SynchronizeProfile_BkpComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_igAdASSeEe6RLdqQXA7E6w" processName="Services.Application.Business.JMS.SynchronizeProfile_Bkp"/>
+  </sca:component>
+  <sca:component xmi:id="_i1dvoCSeEe6RLdqQXA7E6w" name="Services.Application.Business.Poller.FilePollerProfileComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_i1dvoSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Poller.FilePollerProfile"/>
+  </sca:component>
+  <sca:component xmi:id="_jWIMsCSeEe6RLdqQXA7E6w" name="Services.Application.Business.Timer.ForceSync.ForceSyncComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jWIMsSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Timer.ForceSync.ForceSync"/>
+  </sca:component>
+  <sca:component xmi:id="_jsvV4CSeEe6RLdqQXA7E6w" name="Services.Application.Business.Timer.PassengerProfile.PassengerUpdateProfileComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_jsvV4SSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Timer.PassengerProfile.PassengerUpdateProfile"/>
+  </sca:component>
+  <sca:component xmi:id="_j03XICSeEe6RLdqQXA7E6w" name="ActivatorComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_j03XISSeEe6RLdqQXA7E6w" processName="Activator"/>
+  </sca:component>
+  <sca:component xmi:id="_kRr2ACSeEe6RLdqQXA7E6w" name="Services.Application.Business.Timer.PassengerProfile.synchronizeComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kRr2ASSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Timer.PassengerProfile.synchronize"/>
+  </sca:component>
+  <sca:component xmi:id="_lDo3YCSeEe6RLdqQXA7E6w" name="Services.Application.Business.Timer.PassengerProfile.UnitTest.testTimerComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lDo3YSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Timer.PassengerProfile.UnitTest.testTimer"/>
+  </sca:component>
+  <sca:component xmi:id="_lNc6sCSeEe6RLdqQXA7E6w" name="Services.Application.Business.Timer.Process-DefinitionComponent" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lNc6sSSeEe6RLdqQXA7E6w" processName="Services.Application.Business.Timer.Process-Definition"/>
+  </sca:component>
+  <sca:component xmi:id="_JS9fICU1Ee6RLdqQXA7E6w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_JS9fISU1Ee6RLdqQXA7E6w" processName="crm.Process"/>
+    <sca:service xmi:id="_njkW4CU1Ee6RLdqQXA7E6w" name="PassengerProfile">
+      <sca:interface.wsdl xmi:id="_njkW4SU1Ee6RLdqQXA7E6w" interface="http://www.copaair.com/services/trn/crm/passengerprofile-abstract#wsdl.interface(PassengerProfile)" scaext:wsdlLocation="../Services/Application/Business/WS/PassengerProfile/Interface/PassengerProfile.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

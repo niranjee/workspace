@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:smtp="http://xsd.tns.tibco.com/bw/models/sharedresource/smtp" xmi:id="_azzmUCSeEe6RLdqQXA7E6w" name="Processes.Business.PassengerProfile.Synchronize.SendMail-Send-Mail-SMTPResource" type="smtp:SmtpConfiguration">
+  <jndi:configuration xsi:type="smtp:SmtpConfiguration" xmi:id="_az2CkCSeEe6RLdqQXA7E6w">
+    <tcpDetails xmi:id="_az2CkSSeEe6RLdqQXA7E6w" port="25">
+      <substitutionBindings xmi:id="_az33wCSeEe6RLdqQXA7E6w" template="host" propName=""/>
+    </tcpDetails>
+    <userCredentials xmi:id="_az2CkiSeEe6RLdqQXA7E6w"/>
+  </jndi:configuration>
+</jndi:namedResource>

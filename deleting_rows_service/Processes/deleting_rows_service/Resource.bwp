@@ -1362,7 +1362,8 @@
                                 </tibex:activityExtension>
                             </bpws:extensionActivity>
                             <bpws:scope name="Iterate"
-                                tibex:group="iterate" tibex:xpdlId="44cff2c7-586b-46ee-b757-02d7d45d7d39">
+                                tibex:group="iterate"
+                                tibex:indexToGlobal="false" tibex:xpdlId="44cff2c7-586b-46ee-b757-02d7d45d7d39">
                                 <bpws:targets>
                                     <bpws:target linkName="RenderJSONToIterate"/>
                                 </bpws:targets>

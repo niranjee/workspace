@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:StringUtil="java://com.hp.tibco.bw.functions.string.StringFunctions" xmlns:ns="http://www.tibco.com/namespaces/tnt/plugins/as" xmlns:ns1="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns12="http://www.hp.com/schemas/services/exception" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx="http://www.opentravel.org/OTA/2003/05" xmlns:pfx2="http://www.tibco.com/pe/GenerateErrorActivity/InputSchema" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:tns="/Processes/Business/PassengerProfile/ListProfile.process/Map-Filter" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/Processes/Business/PassengerProfile/ListProfile.process/Map-Filter">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" name="filter" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
